@@ -1,17 +1,10 @@
 "use client";
 
-import { Metadata } from "next";
 import Link from "next/link";
 import { useState } from "react";
 
-export const metadata: Metadata = {
-  title: "Book Now| Nature Win Yala",
-};
-
 export default function Navbar() {
-    const [open, setOpen] = useState(false);
-    
-
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="w-full bg-white dark:bg-black shadow-md fixed top-0 left-0 z-50">
@@ -21,24 +14,19 @@ export default function Navbar() {
           href="/"
           className="text-2xl font-bold text-gray-900 dark:text-white"
         >
-          NATURE WIN YALA
+          Syntrix
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-lg font-medium items-center">
+        <div className="hidden md:flex space-x-8 text-lg font-medium">
           <Link href="/" className="hover:text-fuchsia-500 transition">
             Home
           </Link>
-          <Link href="/about-us" className="hover:text-fuchsia-500 transition">
+          <Link href="/about" className="hover:text-fuchsia-500 transition">
             About Us
           </Link>
-
-          {/* Book Now Button */}
-          <Link
-            href="/book-now"
-            className="bg-fuchsia-600 text-white px-5 py-2 rounded-lg shadow-md hover:bg-fuchsia-700 transition"
-          >
-            Book Now
+          <Link href="/contact" className="hover:text-fuchsia-500 transition">
+            Contact Us
           </Link>
         </div>
 
@@ -58,17 +46,11 @@ export default function Navbar() {
             <Link href="/" onClick={() => setOpen(false)}>
               Home
             </Link>
-            <Link href="/about-us" onClick={() => setOpen(false)}>
+            <Link href="/about" onClick={() => setOpen(false)}>
               About Us
             </Link>
-
-            {/* Mobile Book Now Button */}
-            <Link
-              href="/book-now"
-              onClick={() => setOpen(false)}
-              className="bg-fuchsia-600 text-center text-white px-5 py-3 rounded-lg shadow-md hover:bg-fuchsia-700 transition"
-            >
-              Book Now
+            <Link href="/contact" onClick={() => setOpen(false)}>
+              Contact Us
             </Link>
           </div>
         </div>
