@@ -14,7 +14,7 @@ export default function Navbar() {
           href="/"
           className="text-2xl font-bold text-gray-900 dark:text-white"
         >
-          Syntrix
+          Syntrix Team
         </Link>
 
         {/* Desktop Menu */}
