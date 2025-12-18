@@ -3,6 +3,15 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
+
+const navLinkClass =
+  "relative font-bold text-[#124734] transition " +
+  "after:absolute after:left-0 after:-bottom-1 " +
+  "after:h-[2px] after:w-0 after:bg-[#124734] " +
+  "after:transition-all after:duration-300 " +
+  "hover:after:w-full";
+
 
 export const metadata: Metadata = {
   title: "Book Now| Nature Win Yala",
@@ -14,29 +23,37 @@ export default function Navbar() {
 
 
   return (
-    <nav className="w-full bg-white dark:bg-black shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full bg-white dark:bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Brand */}
         <Link
           href="/"
-          className="text-2xl font-bold text-gray-900 dark:text-white"
+          className="flex items-center gap-3 text-2xl font-bold text-[#124734]"
         >
-          NATURE WIN YALA
+          <Image
+            src="/assets/images/LogoVersion2.png"
+            alt="Nature Win Yala Logo"
+            width={300}
+            height={300}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-lg font-medium items-center">
-          <Link href="/" className="hover:text-fuchsia-500 transition">
-            Home
-          </Link>
-          <Link href="/about-us" className="hover:text-fuchsia-500 transition">
-            About Us
-          </Link>
+          <Link href="/" className={navLinkClass}>Home</Link>
+          <Link href="/about-us" className={navLinkClass}>Explore</Link>
+          <Link href="/about-us" className={navLinkClass}>Contact US</Link>
+
 
           {/* Book Now Button */}
           <Link
             href="/book-now"
-            className="bg-fuchsia-600 text-white px-5 py-2 rounded-lg shadow-md hover:bg-fuchsia-700 transition"
+            className="bg-[#124734] text-white px-5 py-2 rounded-lg shadow-md
+           border border-transparent font-bold
+           hover:bg-white hover:text-[#124734] hover:border-[#124734]
+           transition-all duration-300"
           >
             Book Now
           </Link>
