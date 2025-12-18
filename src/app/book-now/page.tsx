@@ -1,106 +1,120 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Image from "next/image";
+import VillaDetails from "../components/VillaOneDetails";
+import BookingForm from "../components/BookNow";
 
-const BookNow: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    date: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Booking Data:", formData);
-    alert("Your booking request has been sent!");
-  };
-
+const BookNow = () => {
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-black pt-28 px-6 pb-16">
-      <div className="max-w-lg mx-auto bg-white dark:bg-neutral-900 p-8 rounded-xl shadow-lg">
-        <h1 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-6">
-          Book Now
-        </h1>
+    <div className="flex flex-col min-h-screen">
+      {/* Navbar */}
+      <Navbar />
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Name */}
-          <div>
-            <label className="text-gray-700 dark:text-gray-300 font-medium">
-              Full Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Enter your name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 rounded-lg bg-zinc-100 dark:bg-neutral-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-fuchsia-500 outline-none"
-            />
-          </div>
+      {/* Hero Section */}
+      <div className="relative w-full h-[60vh] flex items-center justify-center">
+        {/* Background Image */}
+        <Image
+          src="/assets/images/houseimg1.png"
+          alt="Nature Win Yala"
+          fill
+          style={{ objectFit: "cover" }}
+          className="opacity-20"
+        />
 
-          {/* Phone */}
-          <div>
-            <label className="text-gray-700 dark:text-gray-300 font-medium">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              required
-              placeholder="0771234567"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 rounded-lg bg-zinc-100 dark:bg-neutral-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-fuchsia-500 outline-none"
-            />
-          </div>
+        {/* Green overlay */}
+        <div className="absolute inset-0 bg-[#124734]/70"></div>
 
-          {/* Date */}
-          <div>
-            <label className="text-gray-700 dark:text-gray-300 font-medium">
-              Date
-            </label>
-            <input
-              type="date"
-              name="date"
-              required
-              value={formData.date}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 rounded-lg bg-zinc-100 dark:bg-neutral-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-fuchsia-500 outline-none"
-            />
-          </div>
-
-          {/* Message */}
-          <div>
-            <label className="text-gray-700 dark:text-gray-300 font-medium">
-              Message (Optional)
-            </label>
-            <textarea
-              name="message"
-              rows={3}
-              placeholder="Any special request..."
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 rounded-lg bg-zinc-100 dark:bg-neutral-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-fuchsia-500 outline-none"
-            />
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-fuchsia-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-fuchsia-700 transition shadow-md"
-          >
-            Submit Booking
-          </button>
-        </form>
+        {/* Text */}
+        <div className="relative text-center text-white px-4">
+          <h1 className="text-5xl md:text-6xl font-serif mb-4">
+            Find the Perfect Stay
+          </h1>
+          <p className="text-lg md:text-xl">
+            Home &gt; <span className="text-[#F9C170]">Book Now</span>
+          </p>
+        </div>
       </div>
+
+      {/* Second Section */}
+      <div className="flex-1 bg-white py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="h-[1px] w-12 md:w-24 bg-gray-300"></div>
+              <span className="uppercase tracking-widest text-[#124734] font-medium text-sm">
+                Choose Your Cabana
+              </span>
+              <div className="h-[1px] w-12 md:w-24 bg-gray-300"></div>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-serif text-[#124734] mb-6">
+              Pick Your Cabana & Begin Your Journey
+            </h2>
+            
+            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Choose your preferred cabana and follow the steps to check details and secure your booking
+            </p>
+          </div>
+
+          {/* Cabana Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+            
+            {/* Two-Bedroom Villa Card */}
+            <div className="group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02]">
+              <div className="relative h-[300px] w-full">
+                <Image
+                  src="/assets/images/houseimg1.png"
+                  alt="Two-Bedroom Villa"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="bg-[#124734] text-center p-6">
+                <h3 className="text-white text-2xl font-serif mb-1">Two-Bedroom Villa</h3>
+                <p className="text-gray-300">LKR 12,500/night</p>
+              </div>
+            </div>
+
+            {/* Three-Bedroom Villa Card (Coming Soon) */}
+            <div className="group rounded-xl overflow-hidden border border-gray-200 shadow-md">
+              <div className="relative h-[300px] w-full bg-gray-100">
+                <Image
+                  src="/assets/images/houseimg2.png"
+                  alt="Three-Bedroom Villa"
+                  fill
+                  className="object-cover opacity-60 grayscale-[50%]"
+                />
+                {/* Coming Soon Badge */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="bg-white px-8 py-3 rounded-full text-[#124734] font-bold shadow-xl border border-gray-100">
+                    Coming Soon
+                  </span>
+                </div>
+              </div>
+              <div className="bg-white text-center p-6 border-t border-gray-100">
+                <h3 className="text-[#124734] text-2xl font-serif mb-1">Three-Bedroom Villa</h3>
+                <p className="text-gray-500">LKR 12,500/night</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Third Section */}
+
+      <VillaDetails />
+
+      {/* Fourth Section: New Booking Form */}
+      <BookingForm />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
