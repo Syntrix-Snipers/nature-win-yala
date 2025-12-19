@@ -42,7 +42,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-lg font-medium items-center">
-          <Link href="/" className={navLinkClass}>Home</Link>
+          <Link href="/home" className={navLinkClass}>Home</Link>
           <Link href="/about-us" className={navLinkClass}>Explore</Link>
           <Link href="/about-us" className={navLinkClass}>Contact US</Link>
 
