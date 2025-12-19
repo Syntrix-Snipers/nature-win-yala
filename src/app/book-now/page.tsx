@@ -107,12 +107,48 @@ const BookNow = () => {
       </div>
 
       {/* Third Section */}
-
       <VillaDetails />
 
       {/* Fourth Section: New Booking Form */}
       <BookingForm />
 
+      {/* Need Help CTA Section */}
+      <div className="bg-[#124734] py-12 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          
+          {/* Text Content */}
+          <div className="text-white">
+            <h2 className="text-3xl md:text-4xl font-serif mb-2">
+              Need Help With Your Booking?
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Have questions or want to book faster? Reach us anytime
+            </p>
+          </div>
+
+          {/* Action Button */}
+          <a 
+            href="/about-us" 
+            className="bg-white text-[#124734] px-8 py-4 rounded-md font-semibold flex items-center gap-3 transition-all hover:bg-gray-100 group whitespace-nowrap"
+          >
+            Contact Us Now
+            <svg 
+              className="h-5 w-5 transition-transform group-hover:translate-x-1" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="9 5l7 7-7 7" 
+              />
+            </svg>
+          </a>
+
+        </div>
+      </div>
       {/* Footer */}
       <Footer />
     </div>
