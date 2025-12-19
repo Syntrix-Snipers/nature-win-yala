@@ -11,7 +11,6 @@ import {
 const VillaDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Ensure these file paths point to the 5 distinct images you want
   const images = [
     "/assets/images/thumb-1.png",
     "/assets/images/thumb-2.png",
@@ -40,102 +39,115 @@ const VillaDetails = () => {
   };
 
   return (
-    <section className="bg-[#124734] py-16 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto border border-dashed border-emerald-600/50 p-6 md:p-10">
+    <section className="bg-[#124734] py-12 px-4 md:px-8 overflow-hidden">
+      <div className="max-w-6xl mx-auto border border-dashed border-emerald-600/50 p-5 md:p-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
           
+          {/* Slider Section */}
           <div className="space-y-4">
-            {/* Main Slider Display */}
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden group">
-                <div 
-                    className="flex transition-transform duration-500 ease-out h-full w-full"
-                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                >
-                    {images.map((src, idx) => (
-                    <div key={`main-${idx}`} className="relative min-w-full w-full h-full flex-shrink-0">
-                        <Image
-                            src={src}
-                            alt={`Villa View ${idx + 1}`}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            className="object-cover"
-                            priority={idx === 0}
-                        />
-                    </div>
-                    ))}
-                </div>
+              <div 
+                className="flex transition-transform duration-500 ease-out h-full w-full"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {images.map((src, idx) => (
+                  <div key={`main-${idx}`} className="relative min-w-full w-full h-full flex-shrink-0">
+                    <Image
+                      src={src}
+                      alt={`Villa View ${idx + 1}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                      priority={idx === 0}
+                    />
+                  </div>
+                ))}
+              </div>
 
-                <button 
-                  onClick={prevSlide}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full text-gray-800 shadow-md hover:bg-white z-10"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                <button 
-                  onClick={nextSlide}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full text-gray-800 shadow-md hover:bg-white z-10"
-                >
-                  <ChevronRight size={20} />
-                </button>
+              {/* Slider Arrows */}
+              <button 
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full text-gray-800 shadow-md hover:bg-white z-10 transition-transform active:scale-90"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <button 
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full text-gray-800 shadow-md hover:bg-white z-10 transition-transform active:scale-90"
+              >
+                <ChevronRight size={18} />
+              </button>
             </div>
 
-            {/* Clickable Thumbnails - FIXED Mapping */}
+            {/* Clickable Thumbnails */}
             <div className="grid grid-cols-5 gap-2">
-                {images.map((src, i) => (
+              {images.map((src, i) => (
                 <button 
-                    key={`thumb-${i}`} // Used a more descriptive key
-                    onClick={() => setCurrentIndex(i)}
-                    className={`relative aspect-square rounded overflow-hidden border-2 transition-all ${
-                    i === currentIndex ? 'border-yellow-400 scale-95 opacity-100' : 'border-transparent opacity-60 hover:opacity-100'
-                    }`}
+                  key={`thumb-${i}`}
+                  onClick={() => setCurrentIndex(i)}
+                  className={`relative aspect-square rounded overflow-hidden border-2 transition-all ${
+                    i === currentIndex ? 'border-yellow-400 scale-95 opacity-100' : 'border-transparent opacity-60'
+                  }`}
                 >
-                    <Image
-                        src={src}
-                        alt={`Thumbnail ${i + 1}`}
-                        fill
-                        className="object-cover"
-                    />
+                  <Image
+                    src={src}
+                    alt={`Thumbnail ${i + 1}`}
+                    fill
+                    className="object-cover"
+                  />
                 </button>
-                ))}
+              ))}
             </div>
           </div>
 
+          {/* Villa Details Info */}
           <div className="text-white flex flex-col justify-center">
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">Two-Bedroom Villa</h2>
-            <div className="space-y-1 text-gray-200 mb-6 font-light">
+            <h2 className="text-3xl md:text-5xl font-serif mb-6">Two-Bedroom Villa</h2>
+            
+            <div className="space-y-2 text-gray-200 mb-6 font-light text-sm md:text-base">
               <p><span className="font-semibold text-white">Number of guests :</span> 6 Members</p>
               <p><span className="font-semibold text-white">Villa Size :</span> 1000 m²</p>
               <p><span className="font-semibold text-white">Bedroom 1 :</span> 3 twin beds</p>
               <p><span className="font-semibold text-white">Bedroom 2 :</span> 1 full bed</p>
               <p><span className="font-semibold text-white">Living room :</span> 1 sofa bed</p>
             </div>
+
             <p className="text-gray-300 leading-relaxed mb-8 text-sm md:text-base">
               The air-conditioned villa has 2 bedrooms, 1 bathroom and a kitchen. 
               The villa&apos;s kitchen is available for cooking and storing food. 
               This villa features a flat-screen TV. The unit has 5 beds.
             </p>
+
             <div className="mb-8">
               <span className="text-3xl font-semibold">LKR 12,500.00</span>
               <span className="text-gray-300 text-xl font-light"> / Night Per Person</span>
             </div>
-            <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
+
+            <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-4 rounded-md font-bold w-full md:w-fit hover:bg-gray-100 transition-colors">
               Book Now <ChevronRightIcon size={18} />
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Amenities Grid: 
+            - grid-cols-2: two columns on mobile
+            - grid-rows-4: forces exactly 4 rows
+            - grid-flow-col: fills vertically (1,2,3,4 on left | 5,6,7,8 on right)
+            - lg overrides: returns to 4-column horizontal layout for desktop
+        */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 grid-flow-col lg:grid-flow-row gap-3 md:gap-4">
           {amenities.map((item, index) => (
             <div 
               key={index} 
-              className="flex items-center gap-4 border border-emerald-700/50 rounded-lg p-4 text-white/90 hover:bg-emerald-800/30 transition-colors"
+              className="flex items-center gap-3 border border-emerald-700/50 rounded-lg p-3 md:p-4 text-white/90 hover:bg-emerald-800/30 transition-colors"
             >
-              <div className="text-emerald-400">{item.icon}</div>
-              <span className="text-sm font-medium">{item.label}</span>
+              <div className="text-emerald-400 shrink-0">{item.icon}</div>
+              <span className="text-xs sm:text-sm font-medium leading-tight">{item.label}</span>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
