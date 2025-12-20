@@ -10,6 +10,7 @@ import { ChevronRightIcon } from "lucide-react";
 import HomeTopImageCollage from "../components/HomeTopImageCollage";
 import VillaHomeCard from "../components/villaHomeCard";
 import Link from "next/link";
+import HomeTestimonialSection from "../components/HomeTestimonialSection";
 
 const Home = () => {
   return (
@@ -242,10 +243,10 @@ const Home = () => {
         explore, and create memories that stay with you long after your journey ends."
         headingColor="#124734"
         paragraphColor="#124734"
-        buttonText="Learn More"
+        buttonText="Download Menu"
         button={
-          <button className="flex items-center justify-center gap-2 bg-[#124734] text-white px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
-            Learn More <ChevronRightIcon size={18} />
+          <button className="flex items-center justify-center gap-2 bg-[#124734] text-white px-8 py-3 rounded-md font-semibold w-fit">
+            Download Menu <ChevronRightIcon size={18} />
           </button>
         }
         aboutText="Dine With Us"
@@ -253,6 +254,23 @@ const Home = () => {
         reverse={true}
       />
 
+      {/* Sixth Section */}
+      <div className="flex-1 bg-[#124734] py-16 px-4">
+        <div className="text-center mb-4 py-2">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="h-[1px] w-24 md:w-64 bg-[#ffffff]"></div>
+            <span className="text-sm md:text-xl font-serif font-semibold whitespace-nowrap text-[#ffffff]">
+              Testimonial
+            </span>
+            <div className="h-[1px] w-24 md:w-64 bg-[#ffffff]"></div>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-serif font-medium text-[#ffffff] mb-6">
+            What Our Clients Say About Us
+          </h2>
+          <HomeTestimonialSection />
+        </div>
+      </div>
       {/* Footer */}
       <Footer />
     </div>
