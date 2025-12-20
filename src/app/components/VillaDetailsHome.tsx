@@ -1,38 +1,63 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { ChevronRightIcon } from "lucide-react";
 
-const VillaDetailsHome = () => {
+type VillaDetailsHomeProps = {
+  bgColor?: string;
+  images: string[];
+  heading: string;
+  paragraph: string;
+  buttonText?: string;
+  button?: React.ReactNode;
+  aboutText?: string;
+  reverse?: boolean; // add this prop to control layout direction
+  headingColor?: string;
+  paragraphColor?: string;
+  aboutTextColor?: string; // new prop
+};
+
+const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
+  bgColor = "#124734",
+  images,
+  heading,
+  paragraph,
+  buttonText,
+  button,
+  aboutText = "About Us",
+  reverse = false,
+  headingColor,
+  paragraphColor,
+  aboutTextColor,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Ensure these file paths point to the 5 distinct images you want
-  const images = [
-    "/assets/images/thumb-1.png",
-    "/assets/images/thumb-2.png",
-    "/assets/images/thumb-3.png",
-    "/assets/images/thumb-4.png",
-    "/assets/images/thumb-5.png",
-  ];
-
+  // Function to go to next slide
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  // Automatically change slide every 3 seconds
-  React.useEffect(() => {
+  // Auto-slide every 3 seconds
+  useEffect(() => {
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
-    <section className="bg-[#124734] py-16 px-4 md:px-8">
+    <section
+      className="py-16 px-4 md:px-8"
+      style={{ backgroundColor: bgColor }}
+    >
       <div className="max-w-6xl mx-auto p-8 md:p-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-          <div className="space-y-4">
-            {/* Main Slider Display */}
+        <div
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 ${
+            reverse ? "lg:flex-row-reverse" : ""
+          }`}
+        >
+          {/* Slider Section */}
+          <div className={`space-y-4 ${reverse ? "order-2 lg:order-2" : ""}`}>
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+              {/* Slider Images */}
               <div
                 className="flex transition-transform duration-500 ease-out h-full w-full"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -53,30 +78,69 @@ const VillaDetailsHome = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Dots Indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {images.map((_, idx) => (
+                  <button
+                    key={`dot-${idx}`}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+                      idx === currentIndex
+                        ? "bg-white scale-110"
+                        : "bg-white/50 hover:bg-white/80"
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="text-white flex flex-col justify-center">
+          {/* Content Section */}
+          <div
+            className={`text-white flex flex-col justify-center ${
+              reverse ? "order-1 lg:order-1" : ""
+            }`}
+          >
             <div className="flex items-center gap-4 mb-6">
-              <p className="text-sm md:text-xl font-serif whitespace-nowrap">
-                About Us
+              <p
+                className="text-sm md:text-xl font-serif whitespace-nowrap"
+                style={aboutTextColor ? { color: aboutTextColor } : undefined}
+              >
+                {aboutText}
               </p>
-              <div className="h-px bg-white flex-grow"></div>
+              <div
+                className="h-px flex-grow"
+                style={{ backgroundColor: aboutTextColor || "white" }}
+              ></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">
-              A Tranquil Escape in the Heart of Yala
+
+            <h2
+              className="text-4xl md:text-5xl font-serif mb-6"
+              style={headingColor ? { color: headingColor } : undefined}
+            >
+              {heading}
             </h2>
-            <p className="text-gray-300 leading-relaxed mb-8 text-sm md:text-base">
-              Nature Win Yala is where comfort meets the wild. Our cozy cabanas
-              sit beside the untouched beauty of Yala, surrounded by birdsong,
-              starry skies, and the warmth of campfire nights. It’s a peaceful
-              escape for friends, families, and nature lovers - a place to
-              unwind, explore, and create memories that stay with you long after
-              your journey ends.
+
+            <p
+              className="leading-relaxed mb-8 text-sm md:text-base"
+              style={
+                paragraphColor
+                  ? { color: paragraphColor }
+                  : { color: "#d1d5db" }
+              }
+            >
+              {paragraph}
             </p>
-            <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
-              Discover More <ChevronRightIcon size={18} />
-            </button>
+
+            {button
+              ? button
+              : buttonText && (
+                  <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
+                    {buttonText}
+                  </button>
+                )}
           </div>
         </div>
       </div>
