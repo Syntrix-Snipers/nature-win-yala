@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ExploreContent from "./ExploreContent";
+import ExploreContent from "./components/ExploreContent";
 import Script from "next/script";
 
 export const metadata: Metadata = {
