@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import VillaDetailsHome from "../components/VillaDetailsHome";
 import HomeOfferCard from "../components/HomeOfferCard";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
   return (
@@ -152,6 +153,7 @@ const Home = () => {
         </div>
       </div>
 
+      <ContactUs />
     </div>
   );
 };

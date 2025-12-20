@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import VillaDetailsHome from "./components/VillaDetailsHome";
 import HomeOfferCard from "./components/HomeOfferCard";
+import ContactUs from "./components/ContactUs";
 
 export default function Home() {
   return (
@@ -150,6 +151,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Contact Section */}
+      <ContactUs />
     </main>
   );
 }
