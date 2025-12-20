@@ -1,4 +1,11 @@
+
 "use client";
+// SEO metadata for the Two-Bedroom Villa page
+export const metadata = {
+  title: "Two-Bedroom Villa | Luxury Safari Accommodation in Yala | Nature Win Yala",
+  description:
+    "Experience luxury and comfort at Nature Win Yala's two-bedroom villa. Perfect for families and groups, featuring private kitchen, pet-friendly amenities, balcony views, and easy access to Yala National Park safaris.",
+};
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -12,11 +19,26 @@ const VillaDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    "/assets/images/thumb-1.png",
-    "/assets/images/thumb-2.png",
-    "/assets/images/thumb-3.png",
-    "/assets/images/thumb-4.png",
-    "/assets/images/thumb-5.png",
+    {
+      src: "/assets/images/thumb-1.png",
+      alt: "Luxury two-bedroom villa exterior with private pool at Nature Win Yala"
+    },
+    {
+      src: "/assets/images/thumb-2.png",
+      alt: "Spacious bedroom with twin beds in Yala safari villa at Nature Win Yala"
+    },
+    {
+      src: "/assets/images/thumb-3.png",
+      alt: "Modern kitchen and dining area in private villa near Yala National Park"
+    },
+    {
+      src: "/assets/images/thumb-4.png",
+      alt: "Balcony view overlooking Yala National Park jungle from villa"
+    },
+    {
+      src: "/assets/images/thumb-5.png",
+      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
+    }
   ];
 
   const amenities = [
@@ -51,11 +73,11 @@ const VillaDetails = () => {
                 className="flex transition-transform duration-500 ease-out h-full w-full"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {images.map((src, idx) => (
+                {images.map((img, idx) => (
                   <div key={`main-${idx}`} className="relative min-w-full w-full h-full flex-shrink-0">
                     <Image
-                      src={src}
-                      alt={`Villa View ${idx + 1}`}
+                      src={img.src}
+                      alt={img.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
@@ -82,7 +104,7 @@ const VillaDetails = () => {
 
             {/* Clickable Thumbnails */}
             <div className="grid grid-cols-5 gap-2">
-              {images.map((src, i) => (
+              {images.map((img, i) => (
                 <button 
                   key={`thumb-${i}`}
                   onClick={() => setCurrentIndex(i)}
@@ -91,8 +113,8 @@ const VillaDetails = () => {
                   }`}
                 >
                   <Image
-                    src={src}
-                    alt={`Thumbnail ${i + 1}`}
+                    src={img.src}
+                    alt={img.alt + ' (thumbnail)'}
                     fill
                     className="object-cover"
                   />
