@@ -31,10 +31,9 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-lg font-medium items-center">
-          <Link href="/home" className={navLinkClass}>Home</Link>
-          <Link href="/about-us" className={navLinkClass}>Explore</Link>
+          <Link href="/" className={navLinkClass}>Home</Link>
+          <Link href="/explore" className={navLinkClass}>Explore</Link>
           <Link href="/contact" className={navLinkClass}>Contact Us</Link>
-
           <Link
             href="/book-now"
             className="bg-[#124734] text-white px-5 py-2 rounded-lg shadow-md border border-[#124734] font-bold hover:bg-white hover:text-[#124734] transition-all duration-300"
@@ -60,13 +59,25 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col px-6 py-6 space-y-6 text-lg">
-          <Link href="/" className={navLinkClass} onClick={() => setOpen(false)}>
+          <Link
+            href="/"
+            className={navLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Home
           </Link>
-          <Link href="/about-us" className={navLinkClass} onClick={() => setOpen(false)}>
+          <Link
+            href="/about-us"
+            className={navLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Explore
           </Link>
-          <Link href="/contact" className={navLinkClass} onClick={() => setOpen(false)}>
+          <Link
+            href="/contact"
+            className={navLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Contact Us
           </Link>
 
