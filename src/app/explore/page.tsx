@@ -3,6 +3,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import HeroSection from "./components/HeroSection";
+import WhereWildness from "./components/WhereWildness";
+import GoldenEvening from "./components/GoldenEvening";
+
 
 const Explore: React.FC = () => {
   return (
@@ -10,9 +14,12 @@ const Explore: React.FC = () => {
       {/* Navbar */}
       <Navbar />
       {/* Main Content */}
-      <div className="mt-50">
-        <h1>Explore Page</h1>
+      <div>
+        <HeroSection />
+        <WhereWildness />
+        <GoldenEvening />
       </div>
+
 
       {/* Footer */}
       <Footer />
