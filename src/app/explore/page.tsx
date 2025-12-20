@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import HeroSection from "./components/HeroSection";
 import WhereWildness from "./components/WhereWildness";
 import GoldenEvening from "./components/GoldenEvening";
@@ -62,9 +60,8 @@ function FAQSection() {
               </span>
             </button>
             <div
-              className={`px-6 pb-4 text-gray-700 text-base transition-all duration-300 ease-in-out ${
-                openIndex === idx ? "block" : "hidden"
-              }`}
+              className={`px-6 pb-4 text-gray-700 text-base transition-all duration-300 ease-in-out ${openIndex === idx ? "block" : "hidden"
+                }`}
             >
               {faq.answer}
             </div>
@@ -78,8 +75,6 @@ function FAQSection() {
 const Explore: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
-      <Navbar />
       {/* Main Content */}
       <div>
         <HeroSection />
@@ -90,8 +85,6 @@ const Explore: React.FC = () => {
         <CTA />
         <FAQSection />
       </div>
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };

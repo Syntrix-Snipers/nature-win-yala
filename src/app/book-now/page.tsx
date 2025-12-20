@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Image from "next/image";
 import VillaDetails from "../components/VillaOneDetails";
 import BookingForm from "../components/BookNow";
@@ -10,9 +8,6 @@ import BookingForm from "../components/BookNow";
 const BookNow = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
-      <Navbar />
-
       {/* Hero Section */}
       <div className="relative w-full h-[60vh] flex items-center justify-center">
         {/* Background Image */}
@@ -41,7 +36,7 @@ const BookNow = () => {
       {/* Second Section */}
       <div className="flex-1 bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -51,11 +46,11 @@ const BookNow = () => {
               </span>
               <div className="h-[1px] w-12 md:w-24 bg-gray-300"></div>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-serif text-[#124734] mb-6">
               Pick Your Cabana & Begin Your Journey
             </h2>
-            
+
             <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Choose your preferred cabana and follow the steps to check details and secure your booking
             </p>
@@ -63,7 +58,7 @@ const BookNow = () => {
 
           {/* Cabana Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-            
+
             {/* Two-Bedroom Villa Card */}
             <div className="group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02]">
               <div className="relative h-[300px] w-full">
@@ -115,7 +110,7 @@ const BookNow = () => {
       {/* Need Help CTA Section */}
       <div className="bg-[#124734] py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-          
+
           {/* Text Content */}
           <div className="text-white">
             <h2 className="text-3xl md:text-4xl font-serif mb-2">
@@ -127,30 +122,28 @@ const BookNow = () => {
           </div>
 
           {/* Action Button */}
-          <a 
-            href="/about-us" 
+          <a
+            href="/about-us"
             className="bg-white text-[#124734] px-8 py-4 rounded-md font-semibold flex items-center gap-3 transition-all hover:bg-gray-100 group whitespace-nowrap"
           >
             Contact Us Now
-            <svg 
-              className="h-5 w-5 transition-transform group-hover:translate-x-1" 
-              fill="none" 
-              viewBox="0 0 24 24" 
+            <svg
+              className="h-5 w-5 transition-transform group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="9 5l7 7-7 7" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="9 5l7 7-7 7"
               />
             </svg>
           </a>
 
         </div>
       </div>
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };

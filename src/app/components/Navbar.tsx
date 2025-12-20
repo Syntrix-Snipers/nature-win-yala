@@ -54,9 +54,8 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out ${
-          open ? "max-h-screen border-t border-gray-100" : "max-h-0"
-        }`}
+        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-screen border-t border-gray-100" : "max-h-0"
+          }`}
       >
         <div className="flex flex-col px-6 py-6 space-y-6 text-lg">
           <Link
@@ -67,7 +66,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href="/about-us"
+            href="/explore"
             className={navLinkClass}
             onClick={() => setOpen(false)}
           >
