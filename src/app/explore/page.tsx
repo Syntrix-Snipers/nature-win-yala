@@ -6,6 +6,9 @@ import Footer from "../components/Footer";
 import HeroSection from "./components/HeroSection";
 import WhereWildness from "./components/WhereWildness";
 import GoldenEvening from "./components/GoldenEvening";
+import Destinations from "./components/Destinations";
+import HeartOfYala from "./components/HeartOfYala";
+import CTA from "./components/CTA";
 
 
 const Explore: React.FC = () => {
@@ -18,6 +21,9 @@ const Explore: React.FC = () => {
         <HeroSection />
         <WhereWildness />
         <GoldenEvening />
+        <Destinations />
+        <HeartOfYala />
+        <CTA />
       </div>
 
 
