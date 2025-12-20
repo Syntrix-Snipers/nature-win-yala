@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nature Win Yala 🌿🦒
 
-## Getting Started
+![Nature Win Yala Logo](https://www.naturewinyala.com/_next/image?url=%2Fassets%2Fimages%2FFooterLogo.png&w=640&q=75)
 
-First, run the development server:
+**Your private getaway for comfort, relaxation, and celebration in Yala National Park, Sri Lanka**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?logo=typescript)](https://www.typescriptlang.org/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Live Site:** [www.naturewinyala.com](https://www.naturewinyala.com)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A modern, responsive web application built for **Nature Win Yala** – an exclusive luxury villa experience nestled in the wild heart of Yala National Park. Offering private two-bedroom (and upcoming three-bedroom) villas with authentic rustic charm, combined with thrilling safari adventures.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Gallery
 
-## Learn More
+![Rustic elevated villa surrounded by lush greenery](https://www.naturewinyala.com/_next/image?url=%2Fassets%2Fimages%2Fhouseimg1.png&w=1920&q=75)
 
-To learn more about Next.js, take a look at the following resources:
+![Traditional thatched-roof villa with external staircase](https://www.naturewinyala.com/_next/image?url=%2Fassets%2Fimages%2Fthumb-2.png&w=1080&q=75)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Cozy twin bedroom interior with wooden walls](https://www.naturewinyala.com/_next/image?url=%2Fassets%2Fimages%2Fthumb-4.png&w=1080&q=75)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Key Features
 
-## Deploy on Vercel
+- **Immersive Visuals** → Image sliders and galleries showcasing stunning villa exteriors, interiors, and natural surroundings
+- **Villa Details** → Interactive sections with amenities (private kitchen, pet-friendly, balcony views), pricing, and capacity info
+- **Easy Booking** → Full reservation form with date selection, guest details, and preferences – submissions sent via email using Nodemailer
+- **Responsive Design** → Tailwind CSS for flawless experience on desktop, tablet, and mobile
+- **SEO Optimized (2025 Standards)**:
+  - Next.js Metadata API & Open Graph tags
+  - Structured Data (JSON-LD for LodgingBusiness, Offers, and FAQ)
+  - Automatic `sitemap.xml` & `robots.txt`
+  - Optimized images with `next/image`
+  - Lightning-fast performance via Vercel Edge Network
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: Next.js 15 (App Router, Server Components)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Icons**: Lucide React
+- **Email Service**: Nodemailer + Gmail SMTP
+- **Deployment**: Vercel (with Analytics & Speed Insights)
+
+## 📞 Contact
+
+- **Email**: naturewinyala@gmail.com
+- **Phone**: +94 766 604 986 / +94 773 784 986
+- **Address**: Naturewin Yala, Rota Wewa Yaya, Uddhakandara, Thabarawa, Galkaduwa, Sri Lanka
+
+Escape to the wild. Book your private Yala adventure today! 🐆🌅
+
+*Built with passion for nature, luxury, and cutting-edge web performance.*

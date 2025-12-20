@@ -1,0 +1,31 @@
+import React from "react";
+
+interface HomeOfferCardProps {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const HomeOfferCard: React.FC<HomeOfferCardProps> = ({
+  icon,
+  title,
+  description,
+}) => {
+  return (
+    <div className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl w-72 hover:shadow-lg transition-shadow duration-400">
+      <img
+        src={`/assets/icons/${icon}`}
+        alt={title}
+        className="w-24 h-24 mb-2"
+      />
+      <h3 className="text-lg font-semibold font-serif text-center mb-2">
+        {title}
+      </h3>
+      <p className="text-sm text-[#124734] font-serif text-center">
+        {description}
+      </p>
+    </div>
+  );
+};
+
+export default HomeOfferCard;

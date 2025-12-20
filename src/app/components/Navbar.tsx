@@ -31,16 +31,9 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-lg font-medium items-center">
-          <Link href="/" className={navLinkClass}>
-            Home
-          </Link>
-          <Link href="/explore" className={navLinkClass}>
-            Explore
-          </Link>
-          <Link href="/contact" className={navLinkClass}>
-            Contact Us
-          </Link>
-
+          <Link href="/" className={navLinkClass}>Home</Link>
+          <Link href="/explore" className={navLinkClass}>Explore</Link>
+          <Link href="/contact" className={navLinkClass}>Contact Us</Link>
           <Link
             href="/book-now"
             className="bg-[#124734] text-white px-5 py-2 rounded-lg shadow-md border border-[#124734] font-bold hover:bg-white hover:text-[#124734] transition-all duration-300"
