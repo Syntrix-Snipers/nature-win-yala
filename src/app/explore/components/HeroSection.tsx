@@ -23,13 +23,13 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-6xl font-serif mb-4">
             Explore Nature Win Yala
           </h1>
-          <p className="text-lg md:text-xl">
-            <p className="flex items-center justify-center gap-2 text-lg md:text-xl">
+          <div className="text-lg md:text-xl">
+            <div className="flex items-center justify-center gap-2 text-lg md:text-xl">
               <span>Home</span>
               <ChevronRight size={18} className="opacity-70" />
               <span className="text-[#F9C170]">Explore</span>
-            </p>
-          </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

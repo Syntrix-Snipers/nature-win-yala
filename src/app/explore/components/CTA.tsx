@@ -23,7 +23,7 @@ const CTA = () => {
           {/* Right: CTA Button */}
           <div className="flex justify-start md:justify-end">
             <Link
-              href="/contact" // Change this to your actual contact/booking page
+              href="/#contact"
               className="inline-flex items-center px-8 py-4 bg-white text-green-900 font-medium text-lg rounded-lg hover:bg-gray-100 transition shadow-lg"
             >
               Contact Us Now
