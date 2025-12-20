@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,8 +57,6 @@ export const metadata: Metadata = {
   }
 };
 
-import Script from "next/script";
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
@@ -97,18 +96,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head />
+      <body className="antialiased">
         <Script
           id="ld-json-lodgingbusiness"
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
         {children}
         <Analytics />
       </body>
