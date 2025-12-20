@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { SOCIAL_LINKS } from "../../../data/links";
 
+import { contactData } from "../../../data/data";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -10,7 +12,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-16">
-        
+
           {/* Logo + Description + Socials */}
           <div className="flex flex-col items-start gap-4 md:w-1/3">
             <div className="flex items-center gap-4">
@@ -81,9 +83,9 @@ export default function Footer() {
             <div className="flex flex-col space-y-2 text-white w-full sm:w-1/2">
               <h3 className="text-lg font-bold text-[#F5C27B]">Contact Us</h3>
               <ul className="space-y-1 font-medium">
-                <li>Email: naturewinyala@gmail.com</li>
-                <li>Phone: 076 660 4986 / 077 378 4986</li>
-                <li>Address: Naturewin Yala, Rota Wewa Yaya, Uddhakandara, Thabarawa, Galkaduwa, Sri Lanka</li>
+                <li>Email: {contactData.email}</li>
+                <li>Phone: {contactData.phone}</li>
+                <li>Address: {contactData.address}</li>
               </ul>
             </div>
           </div>

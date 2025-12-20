@@ -21,11 +21,11 @@ const WhereWildness = () => {
 
           {/* Content */}
           <div>
-            <p className="font-serif text-[56px] md:text-[47px] leading-tight text-[#124734] mb-6">
+            <h2 className="font-serif text-[56px] md:text-[47px] leading-tight text-[#124734] mb-6">
               Where Wilderness Meets
               <br />
               Your Perfect Escape
-            </p>
+            </h2>
 
             <div className="grid grid-cols-1 w-[100%] md:grid-cols-2 gap-6 text-[#2f2f2f] text-[15px] leading-relaxed">
               <p className="text-justify">

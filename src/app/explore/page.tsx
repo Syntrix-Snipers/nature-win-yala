@@ -14,8 +14,28 @@ export const metadata: Metadata = {
     "luxury safari accommodation",
     "Nature Win Yala activities"
   ],
+  alternates: {
+    canonical: "https://naturewinyala.com/explore",
+  },
   openGraph: {
-    title: "Explore Yala | Safari Adventures & Nature Experiences",
+    title: "Explore Yala | Safari Adventures & Nature Experiences | Nature Win Yala",
+    description: "Discover the magic of Yala National Park. From thrilling wildlife safaris to serene bird watching and nature walks, explore the adventures awaiting you at Nature Win Yala.",
+    url: "https://naturewinyala.com/explore",
+    siteName: "Nature Win Yala",
+    images: [
+      {
+        url: "/assets/images/explore-images/Background.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Explore Nature Win Yala",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Explore Yala | Safari Adventures & Nature Experiences | Nature Win Yala",
     description: "Plan your ultimate wildlife adventure. Safaris, nature walks, and more at Nature Win Yala.",
     images: ["/assets/images/explore-images/Background.jpg"],
   }

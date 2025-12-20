@@ -5,6 +5,8 @@ import "./globals.css";
 import Script from "next/script";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppFloatingIcon from "./components/whatsapp";
+import { contactData } from "../../data/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,8 +67,8 @@ const jsonLd = {
   "name": "Nature Win Yala",
   "description": "Luxury two-bedroom villa for up to 6 guests near Yala National Park. Private kitchen, pet-friendly, balcony view, and unforgettable safari experiences in Sri Lanka.",
   "url": "https://naturewinyala.com/",
-  "telephone": "+94766604986",
-  "email": "naturewinyala@gmail.com",
+  "telephone": contactData.phone,
+  "email": contactData.email,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rota Wewa Yaya, Uddhakandara, Thabarawa, Galkaduwa",
@@ -110,6 +112,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <WhatsAppFloatingIcon />
         <Analytics />
       </body>
     </html>

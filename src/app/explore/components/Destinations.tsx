@@ -14,11 +14,11 @@ const Destinations = () => {
       <div className="max-w-7xl mx-auto text-center">
         {/* Header */}
         <div className="mb-12">
-          <p className="flex items-center justify-center gap-4 text-sm uppercase font-serif tracking-widest text-[#124734] mb-2">
+          <div className="flex items-center justify-center gap-4 text-sm uppercase font-serif tracking-widest text-[#124734] mb-2">
             <hr className="w-85 border-[#124734]" />
             <span>Explore</span>
             <hr className="w-85 border-[#124734]" />
-          </p>
+          </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900">
             Destinations You Can Explore Nearby
