@@ -2,13 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import VillaDetailsHome from "../components/VillaDetailsHome";
+import VillaDetailsHome from "./components/VillaDetailsHome";
 import HomeOfferCard from "./components/HomeOfferCard";
 import { ChevronRightIcon } from "lucide-react";
-import HomeTopImageCollage from "../components/HomeTopImageCollage";
+import HomeTopImageCollage from "./components/HomeTopImageCollage";
 import VillaHomeCard from "./components/villaHomeCard";
 import Link from "next/link";
 import HomeTestimonialSection from "./components/HomeTestimonialSection";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
   return (
@@ -266,6 +267,7 @@ const Home = () => {
           <HomeTestimonialSection />
         </div>
       </div>
+      <ContactUs />
     </div>
   );
 };
