@@ -14,7 +14,7 @@ import HomeGallerySection from "./components/HomeGallerySection";
 
 const Home = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="pt-0 md:pt-12 flex flex-col min-h-screen">
       {/* Hero Section */}
       <div className="relative w-full bg-[#ffffff] md:bg-[#000000] flex justify-center md:h-[100svh]">
         {/* Background Image (md+ only) */}
@@ -28,26 +28,29 @@ const Home = () => {
             priority
           />
           {/* Green overlay (md+ only) */}
-          <div className="absolute inset-0 bg-[#124734]/70"></div>
+          <div className="absolute inset-0 bg-[#124734]/40"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-6xl px-4 md:h-full">
-          <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0">
-            <div className="md:w-1/2 flex flex-col justify-center py-8 md:py-12 text-center md:text-left items-center md:items-start">
-              <h1 className="text-5xl md:text-6xl font-serif mb-4 text-[#124734] md:text-white">
+        <div className="relative z-10 w-full max-w-7xl px-4 md:h-full">
+          <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0 gap-10">
+            <div className="md:w-1/2 flex flex-col justify-center py-8 md:py-12 text-center md:text-left items-center md:items-start gap-6">
+              <h1 className="text-5xl md:text-6xl font-serif pt-32 md:pt-48 mb-4 text-[#124734] md:text-white">
                 Escape to the Heart of Yala’s Serenity
               </h1>
               <p className="mb-4 text-[#124734] md:text-white">
                 Unwind in spacious cabanas, enjoy campfire nights, and wake to
                 the sounds of nature like never before
               </p>
-              <button className="flex items-center justify-center md:justify-start gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
+              <button
+                className="flex items-center justify-center md:justify-start gap-2 px-8 py-3 rounded-md font-semibold w-fit transition-colors
+                  bg-[#124734] text-white hover:bg-[#0e3727] md:bg-white md:text-[#124734] md:hover:bg-gray-100"
+              >
                 Book Now <ChevronRightIcon size={18} />
               </button>
             </div>
 
-            <div className="md:w-1/2 mt-6 md:mt-0 flex flex-col py-8 md:py-12">
+            <div className="md:w-1/2 md:mt-0 flex flex-col py-8 md:py-12">
               <div className="flex-1 min-h-0 flex items-center justify-center md:justify-end">
                 <HomeTopImageCollage className="w-full md:h-full" />
               </div>
