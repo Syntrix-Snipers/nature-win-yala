@@ -10,6 +10,7 @@ import VillaHomeCard from "./components/villaHomeCard";
 import Link from "next/link";
 import HomeTestimonialSection from "./components/HomeTestimonialSection";
 import ContactUs from "../components/ContactUs";
+import HomeGallerySection from "./components/HomeGallerySection";
 
 const Home = () => {
   return (
@@ -267,6 +268,26 @@ const Home = () => {
           <HomeTestimonialSection />
         </div>
       </div>
+
+      {/* Seventh Section */}
+      <div className="flex-1 bg-[#ffffff] py-16 px-4">
+        <div className="text-center mb-4 py-2">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="h-[1px] w-24 md:w-56 bg-[#124734]"></div>
+            <span className="text-sm md:text-xl font-serif font-semibold whitespace-nowrap text-[#124734]">
+              Gallery
+            </span>
+            <div className="h-[1px] w-24 md:w-56 bg-[#124734]"></div>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-serif font-medium text-[#124734] mb-6">
+            Beauty Beyond the Cabana
+          </h2>
+          <HomeGallerySection />
+        </div>
+      </div>
+
+      {/* Eighth Section */}
       <ContactUs />
     </div>
   );
