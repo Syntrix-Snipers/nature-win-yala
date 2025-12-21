@@ -5,7 +5,7 @@ import Image from "next/image";
 
 type VillaDetailsHomeProps = {
   bgColor?: string;
-  images: string[];
+  images?: string[];
   heading: string;
   paragraph: string;
   buttonText?: string;
@@ -19,7 +19,7 @@ type VillaDetailsHomeProps = {
 
 const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
   bgColor = "#124734",
-  images,
+  images = [],
   heading,
   paragraph,
   buttonText,

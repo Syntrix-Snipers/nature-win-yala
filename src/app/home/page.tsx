@@ -3,12 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import VillaDetailsHome from "../components/VillaDetailsHome";
-import HomeOfferCard from "../components/HomeOfferCard";
+import HomeOfferCard from "./components/HomeOfferCard";
 import { ChevronRightIcon } from "lucide-react";
 import HomeTopImageCollage from "../components/HomeTopImageCollage";
-import VillaHomeCard from "../components/villaHomeCard";
+import VillaHomeCard from "./components/villaHomeCard";
 import Link from "next/link";
-import HomeTestimonialSection from "../components/HomeTestimonialSection";
+import HomeTestimonialSection from "./components/HomeTestimonialSection";
 
 const Home = () => {
   return (
