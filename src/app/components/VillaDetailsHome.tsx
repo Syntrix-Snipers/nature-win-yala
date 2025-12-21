@@ -67,12 +67,11 @@ const VillaDetailsHome = () => {
               A Tranquil Escape in the Heart of Yala
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8 text-sm md:text-base">
-              Nature Win Yala is where comfort meets the wild. Our cozy cabanas
-              sit beside the untouched beauty of Yala, surrounded by birdsong,
-              starry skies, and the warmth of campfire nights. It’s a peaceful
-              escape for friends, families, and nature lovers - a place to
-              unwind, explore, and create memories that stay with you long after
-              your journey ends.
+              Nature Win Yala is where comfort meets the wild in the heart of Tissamaharama. Our cozy luxury villa
+              sits beside the untouched beauty of Yala National Park, surrounded by birdsong,
+              starry skies, and the warmth of campfire nights. Experience the best of Yala with our private safari tours
+              and authentic Sri Lankan food. It’s a peaceful escape for families and nature lovers - a place to
+              unwind, explore, and create memories that stay with you long after your journey ends.
             </p>
             <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
               Discover More <ChevronRightIcon size={18} />
