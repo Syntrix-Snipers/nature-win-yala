@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Image from "next/image";
 import VillaDetailsHome from "../components/VillaDetailsHome";
 import HomeOfferCard from "../components/HomeOfferCard";
@@ -15,9 +13,6 @@ import HomeTestimonialSection from "../components/HomeTestimonialSection";
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
-      <Navbar />
-
       {/* Hero Section */}
       <div className="relative w-full h-[110vh] flex items-center bg-[#000000] justify-center">
         {/* Background Image */}
@@ -271,8 +266,6 @@ const Home = () => {
           <HomeTestimonialSection />
         </div>
       </div>
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
