@@ -17,25 +17,23 @@ const HeartOfYala = () => {
           className="object-cover"
           priority
         />
-
       </div>
 
       {/* Content Container */}
-      <div className="z-10 max-w-6xl mr-[640px] text-left text-white">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight mb-8">
+      <div className="z-10 w-full px-4 sm:px-6 md:px-8 lg:max-w-6xl lg:mr-[640px] text-left text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif leading-tight mb-4 sm:mb-6 md:mb-8">
           In the Heart of Yala's
           <br />
           Wilderness
         </h2>
 
-        <p className="text-xl w-[469px] md:text-1xl lg:text-1xl max-w-2xl leading-relaxed">
-          Located in Rota Wewa Yaya, near Tissamaharama, our villa is surrounded by lakes, forest
-          trails, and wildlife zones. We are perfectly positioned for easy access to the Yala National Park safari gates,
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl w-full sm:max-w-md md:max-w-lg lg:w-[469px] leading-relaxed">
+          Located in Rota Wewa Yaya, near Tissamaharama, our villa is surrounded
+          by lakes, forest trails, and wildlife zones. We are perfectly
+          positioned for easy access to the Yala National Park safari gates,
           giving you the perfect mix of peace and adventure.
         </p>
       </div>
-
-
     </section>
   );
 };
