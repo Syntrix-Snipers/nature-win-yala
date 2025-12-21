@@ -18,7 +18,7 @@ const HomeTopImageCollage: React.FC<HomeTopImageCollageProps> = ({
     <div
       className={[
         // Mobile: no background/radius, natural height (taller)
-        "w-full max-w-full bg-transparent rounded-none min-h-[540px] md:min-h-[725px]",
+        "w-full max-w-full bg-transparent rounded-none min-h-[540px] md:min-h-[730px]",
         // Desktop: keep existing look, allow filling parent height (wider)
         "md:bg-[#0a2a1a] md:rounded-none md:h-full md:w-[clamp(220px,90vw,560px)] md:max-w-[560px]",
         // Layout

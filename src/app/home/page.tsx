@@ -35,7 +35,7 @@ const Home = () => {
         <div className="relative z-10 w-full max-w-7xl px-4 md:h-full">
           <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0 gap-10">
             <div className="md:w-1/2 flex flex-col justify-center py-8 md:py-12 text-center md:text-left items-center md:items-start gap-6">
-              <h1 className="text-5xl md:text-6xl font-serif pt-32 md:pt-48 mb-4 text-[#124734] md:text-white">
+              <h1 className="text-5xl md:text-6xl font-serif pt-24 md:pt-48 mb-4 text-[#124734] md:text-white">
                 Escape to the Heart of Yala’s Serenity
               </h1>
               <p className="mb-4 text-[#124734] md:text-white">
@@ -50,7 +50,7 @@ const Home = () => {
               </button>
             </div>
 
-            <div className="md:w-1/2 md:mt-0 flex flex-col py-8 md:py-12">
+            <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-8 md:py-12">
               <div className="flex-1 min-h-0 flex items-center justify-center md:justify-end">
                 <HomeTopImageCollage className="w-full md:h-full" />
               </div>
