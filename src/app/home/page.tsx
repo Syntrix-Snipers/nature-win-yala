@@ -16,36 +16,41 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative w-full h-[110vh] flex items-center bg-[#000000] justify-center">
-        {/* Background Image */}
-        <Image
-          src="/assets/images/houseimg2.png"
-          alt="Nature Win Yala"
-          fill
-          style={{ objectFit: "cover" }}
-          className="opacity-20"
-        />
+      <div className="relative w-full bg-[#ffffff] md:bg-[#000000] flex justify-center md:h-[100svh]">
+        {/* Background Image (md+ only) */}
+        <div className="absolute inset-0 hidden md:block">
+          <Image
+            src="/assets/images/houseimg2.png"
+            alt="Nature Win Yala"
+            fill
+            style={{ objectFit: "cover" }}
+            className="opacity-20"
+            priority
+          />
+          {/* Green overlay (md+ only) */}
+          <div className="absolute inset-0 bg-[#124734]/70"></div>
+        </div>
 
-        {/* Green overlay */}
-        <div className="absolute inset-0 bg-[#124734]/70"></div>
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-6xl px-4 md:h-full">
+          <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0">
+            <div className="md:w-1/2 flex flex-col justify-center py-8 md:py-12 text-center md:text-left items-center md:items-start">
+              <h1 className="text-5xl md:text-6xl font-serif mb-4 text-[#124734] md:text-white">
+                Escape to the Heart of Yala’s Serenity
+              </h1>
+              <p className="mb-4 text-[#124734] md:text-white">
+                Unwind in spacious cabanas, enjoy campfire nights, and wake to
+                the sounds of nature like never before
+              </p>
+              <button className="flex items-center justify-center md:justify-start gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
+                Book Now <ChevronRightIcon size={18} />
+              </button>
+            </div>
 
-        {/* Text */}
-        <div className="relative text-center text-white px-4 flex flex-col md:flex-row md:items-center md:justify-between h-full min-h-[500px]">
-          <div className="md:w-1/2 flex flex-col justify-center h-full text-center md:text-left items-center md:items-start">
-            <h1 className="text-5xl md:text-6xl font-serif mb-4">
-              Escape to the Heart of Yala’s Serenity
-            </h1>
-            <p className="mb-4">
-              Unwind in spacious cabanas, enjoy campfire nights, and wake to the
-              sounds of nature like never before
-            </p>
-            <button className="flex items-center justify-center md:justify-start gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
-              Book Now <ChevronRightIcon size={18} />
-            </button>
-          </div>
-          <div className="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full">
-            <div className="w-full h-full flex items-center justify-center px-12 md:px-12 py-8 md:py-12">
-              <HomeTopImageCollage />
+            <div className="md:w-1/2 mt-6 md:mt-0 flex flex-col py-8 md:py-12">
+              <div className="flex-1 min-h-0 flex items-center justify-center md:justify-end">
+                <HomeTopImageCollage className="w-full md:h-full" />
+              </div>
             </div>
           </div>
         </div>
