@@ -22,22 +22,22 @@ const WhereWildness = () => {
 
           {/* Content */}
           <div className="space-y-6 sm:space-y-8">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[47px] xl:text-[56px] leading-tight text-[#124734]">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[47px] xl:text-[56px] leading-tight text-[#124734] text-center sm:text-left">
               Where Wilderness Meets
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
               Your Perfect Escape
             </h2>
 
-            <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6 text-[#2f2f2f] text-sm sm:text-[15px] leading-relaxed">
-              <p className="text-justify">
+            <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6 text-[#2f2f2f] text-sm sm:text-[15px] leading-relaxed text-center sm:text-justify">
+              <p>
                 Tucked away in Nature Win Yala sits in the heart of Sri Lanka's
                 untouched landscapes, where wildlife roams freely, skies turn
                 golden at dusk, and the calm of rural life melts into the thrill
                 of adventure.
               </p>
 
-              <p className="text-justify">
+              <p>
                 Here, every moment feels close to nature, whether it's the call
                 of birds at sunrise, the rustling forests around you, or the
                 serenity of open fields stretching into the horizon.

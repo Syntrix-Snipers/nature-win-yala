@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-// Update these paths to match your actual image locations
+// Images
 import Img1 from "../../../../public/assets/images/explore-images/Explore-Section-3-Img-1.png";
 import Img2 from "../../../../public/assets/images/explore-images/Explore-Section-3-Img-2.png";
 import Img3 from "../../../../public/assets/images/explore-images/Explore-Section-3-Img-3.png";
@@ -23,15 +23,15 @@ const Destinations = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900">
             Destinations You Can Explore Nearby
           </h2>
+
           <p className="mt-8 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
             At Nature Win Yala, every sunrise opens the door to a new adventure.
             Step outside your cabana, and the wild itself begins the journey.
           </p>
         </div>
 
-        {/* Yala National Park Section */}
+        {/* Yala National Park */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-          {/* Images - Left */}
           <div className="relative">
             <Image
               src={Img1}
@@ -42,39 +42,35 @@ const Destinations = () => {
             />
           </div>
 
-          {/* Text - Right */}
-          <div className="text-left lg:pl-12">
+          <div className="text-center lg:text-left lg:pl-12">
             <h3 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
               Yala National Park – The Untamed Icon
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-[420px] mx-auto lg:mx-0">
               Just a short drive away, Yala welcomes you with its world-famous
               wildlife. Leopards, elephants, bears, crocodiles, birds — this is
-              the place where nature puts on its greatest show. Perfect for
-              safari lovers and first-time explorers.
+              the place where nature puts on its greatest show.
             </p>
           </div>
         </div>
 
-        {/* Sithulpawwa Ancient Rock Temple Section */}
+        {/* Sithulpawwa */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-          {/* Text - Left */}
-          <div className="text-left lg:pr-12 order-2 lg:order-1">
+          <div className="text-center lg:text-left lg:pr-12 order-2 lg:order-1">
             <h3 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
               Sithulpawwa Ancient Rock Temple
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-[420px] mx-auto lg:mx-0">
               A peaceful spiritual retreat rising above the forest canopy. Climb
               the rock, breathe in the views, and explore centuries of Buddhist
               heritage surrounded by silence and nature.
             </p>
           </div>
 
-          {/* Images - Right */}
-          <div className="relative order-1 lg:order-2 ">
+          <div className="relative order-1 lg:order-2">
             <Image
               src={Img2}
-              alt="White stupa at Sithulpawwa Ancient Rock Temple"
+              alt="Sithulpawwa Ancient Rock Temple"
               width={625}
               height={361}
               className="w-full object-cover"
@@ -82,9 +78,8 @@ const Destinations = () => {
           </div>
         </div>
 
-        {/* Kirinda Beach Section */}
+        {/* Kirinda Beach */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-          {/* Images - Left */}
           <div className="relative">
             <Image
               src={Img3}
@@ -95,34 +90,31 @@ const Destinations = () => {
             />
           </div>
 
-          {/* Text - Right */}
-          <div className="text-left lg:pl-12">
+          <div className="text-center lg:text-left lg:pl-12">
             <h3 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
               Kirinda Beach & Temple
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Where the ocean meets mythology.Golden sands, crashing waves, and
+            <p className="text-lg text-gray-700 leading-relaxed max-w-[420px] mx-auto lg:mx-0">
+              Where the ocean meets mythology. Golden sands, crashing waves, and
               the historic Kirinda Vihara overlooking the sea — a perfect sunset
               spot.
             </p>
           </div>
         </div>
 
-        {/* Tissa Lake & Tissamaharama Temple Section */}
+        {/* Tissa Lake */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text - Left */}
-          <div className="text-left lg:pr-12 order-2 lg:order-1">
+          <div className="text-center lg:text-left lg:pr-12 order-2 lg:order-1">
             <h3 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
               Tissa Lake & Tissamaharama Temple
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-[420px] mx-auto lg:mx-0">
               Calm waters, starlit evenings, and a stunning temple backdrop.
               Ideal for photography, evening walks, or simply taking in the
               beauty of Southern Sri Lanka.
             </p>
           </div>
 
-          {/* Images - Right */}
           <div className="relative order-1 lg:order-2">
             <Image
               src={Img4}

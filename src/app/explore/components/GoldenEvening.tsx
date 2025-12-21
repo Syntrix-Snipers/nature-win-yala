@@ -16,7 +16,7 @@ const GoldenEvening = () => {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           {/* Left: Title */}
-          <div className="text-white w-full">
+          <div className="text-white w-full text-center lg:text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-serif leading-tight">
               Golden Evenings at
               <br />
@@ -25,7 +25,7 @@ const GoldenEvening = () => {
           </div>
 
           {/* Right: Description */}
-          <div className="text-white text-base sm:text-lg md:text-xl lg:text-[20px] text-justify">
+          <div className="text-white text-base sm:text-lg md:text-xl lg:text-[20px] text-center lg:text-justify">
             <p>
               Just minutes from the resort, Bembawa Wewa offers one of Yala's
               most magical sunsets — calm waters, golden skies, and a view that

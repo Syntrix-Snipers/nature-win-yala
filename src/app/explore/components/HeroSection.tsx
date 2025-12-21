@@ -15,11 +15,14 @@ const HeroSection = () => {
           alt="Nature Win Yala"
           fill
           priority
-          className="object-cover object-center"
+          className="
+  object-cover
+  object-[30%_45%]
+  sm:object-center
+  
+"
           sizes="100vw"
         />
-
-      
 
         {/* Text Content */}
         <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8 max-w-4xl mx-auto">
