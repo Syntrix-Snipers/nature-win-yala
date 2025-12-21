@@ -3,6 +3,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { contactData } from "../../../data/data";
 
 const ContactUs = () => {
     return (
@@ -71,6 +72,7 @@ const ContactUs = () => {
                             Submit <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
                         </button>
                     </form>
+
                 </div>
             </div>
         </section>
