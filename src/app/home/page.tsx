@@ -10,41 +10,50 @@ import VillaHomeCard from "./components/villaHomeCard";
 import Link from "next/link";
 import HomeTestimonialSection from "./components/HomeTestimonialSection";
 import ContactUs from "../components/ContactUs";
+import HomeGallerySection from "./components/HomeGallerySection";
 
 const Home = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="pt-0 md:pt-12 flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative w-full h-[110vh] flex items-center bg-[#000000] justify-center">
-        {/* Background Image */}
-        <Image
-          src="/assets/images/houseimg2.png"
-          alt="Nature Win Yala"
-          fill
-          style={{ objectFit: "cover" }}
-          className="opacity-20"
-        />
+      <div className="relative w-full bg-[#ffffff] md:bg-[#000000] flex justify-center md:h-[100svh]">
+        {/* Background Image (md+ only) */}
+        <div className="absolute inset-0 hidden md:block">
+          <Image
+            src="/assets/images/houseimg2.png"
+            alt="Nature Win Yala"
+            fill
+            style={{ objectFit: "cover" }}
+            className="opacity-20"
+            priority
+          />
+          {/* Green overlay (md+ only) */}
+          <div className="absolute inset-0 bg-[#124734]/40"></div>
+        </div>
 
-        {/* Green overlay */}
-        <div className="absolute inset-0 bg-[#124734]/70"></div>
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-7xl px-4 md:h-full">
+          <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0 gap-10">
+            <div className="md:w-1/2 flex flex-col justify-center py-8 md:py-12 text-center md:text-left items-center md:items-start gap-6">
+              <h1 className="text-5xl md:text-6xl font-serif pt-24 md:pt-48 mb-4 text-[#124734] md:text-white">
+                Escape to the Heart of Yala’s Serenity
+              </h1>
+              <p className="mb-4 text-[#124734] md:text-white">
+                Unwind in spacious cabanas, enjoy campfire nights, and wake to
+                the sounds of nature like never before
+              </p>
+              <button
+                className="flex items-center justify-center md:justify-start gap-2 px-8 py-3 rounded-md font-semibold w-fit transition-colors
+                  bg-[#124734] text-white hover:bg-[#0e3727] md:bg-white md:text-[#124734] md:hover:bg-gray-100"
+              >
+                Book Now <ChevronRightIcon size={18} />
+              </button>
+            </div>
 
-        {/* Text */}
-        <div className="relative text-center text-white px-4 flex flex-col md:flex-row md:items-center md:justify-between h-full min-h-[500px]">
-          <div className="md:w-1/2 flex flex-col justify-center h-full text-center md:text-left items-center md:items-start">
-            <h1 className="text-5xl md:text-6xl font-serif mb-4">
-              Escape to the Heart of Yala’s Serenity
-            </h1>
-            <p className="mb-4">
-              Unwind in spacious cabanas, enjoy campfire nights, and wake to the
-              sounds of nature like never before
-            </p>
-            <button className="flex items-center justify-center md:justify-start gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
-              Book Now <ChevronRightIcon size={18} />
-            </button>
-          </div>
-          <div className="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full">
-            <div className="w-full h-full flex items-center justify-center px-12 md:px-12 py-8 md:py-12">
-              <HomeTopImageCollage />
+            <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-8 md:py-12">
+              <div className="flex-1 min-h-0 flex items-center justify-center md:justify-end">
+                <HomeTopImageCollage className="w-full md:h-full" />
+              </div>
             </div>
           </div>
         </div>
@@ -267,6 +276,26 @@ const Home = () => {
           <HomeTestimonialSection />
         </div>
       </div>
+
+      {/* Seventh Section */}
+      <div className="flex-1 bg-[#ffffff] py-16 px-4">
+        <div className="text-center mb-4 py-2">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="h-[1px] w-24 md:w-56 bg-[#124734]"></div>
+            <span className="text-sm md:text-xl font-serif font-semibold whitespace-nowrap text-[#124734]">
+              Gallery
+            </span>
+            <div className="h-[1px] w-24 md:w-56 bg-[#124734]"></div>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-serif font-medium text-[#124734] mb-6">
+            Beauty Beyond the Cabana
+          </h2>
+          <HomeGallerySection />
+        </div>
+      </div>
+
+      {/* Eighth Section */}
       <ContactUs />
     </div>
   );
