@@ -45,13 +45,13 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
 
   return (
     <section
-      className="pt-18 pb-6 px-4 md:px-8"
+      className="pt-8 lg:pt-18 pb-6 px-4 md:px-8"
       style={{ backgroundColor: bgColor }}
     >
       <div className="max-w-6xl mx-auto p-8 md:p-10">
         {/* Small screens: About row on top */}
         <div
-          className="flex w-full items-center gap-4 mb-6 lg:hidden"
+          className="flex w-full items-center gap-4 mb-8 lg:hidden"
           style={{ color: aboutTextColor || "white" }}
         >
           <p className="text-sm md:text-xl font-serif whitespace-nowrap">
