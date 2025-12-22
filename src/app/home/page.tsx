@@ -51,7 +51,7 @@ const Home = () => {
                 the sounds of nature like never before
               </p>
                 <BtnComponent variant={typeof window !== "undefined" && window.innerWidth < 768 ? "btn_2" : "btn_1"}>
-                Book Now
+                <Link href="/book-now">Book Now</Link>
                 </BtnComponent>
             </div>
 
@@ -80,7 +80,7 @@ const Home = () => {
         heading="A Tranquil Escape in the Heart of Yala"
         paragraph="Nature Win Yala is where comfort meets the wild. Our cozy cabanas sit beside the untouched beauty of Yala, surrounded by birdsong, starry skies, and the warmth of campfire nights. It’s a peaceful escape for friends, families, and nature lovers - a place to unwind, explore, and create memories that stay with you long after your journey ends."
         buttonText="Discover More"
-        button={<BtnComponent variant="btn_1">Discover More</BtnComponent>}
+        button={<BtnComponent variant="btn_1"><Link href="/explore">Discover More</Link></BtnComponent>}
         aboutText="About Us"
         aboutTextColor="#ffffff"
       />
@@ -153,7 +153,7 @@ const Home = () => {
             </h2>
 
             <p className="text-gray-300 max-w-xl mx-auto leading-relaxed">
-              Whether you’re seeking relaxation, adventure, or a mix of both —
+              Whether you’re seeking relaxation, adventure, or a mix of both -
               we’ve crafted experiences to suit your style.
             </p>
           </div>
