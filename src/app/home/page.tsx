@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import VillaDetailsHome from "./components/VillaDetailsHome";
 import { images } from "../../../public/assets/images/images";
 import HomeOfferCard from "./components/HomeOfferCard";
 import { icons } from "../../../public/assets/icons/icon";
-import { ChevronRightIcon } from "lucide-react";
 import HomeTopImageCollage from "./components/HomeTopImageCollage";
 import VillaHomeCard from "./components/villaHomeCard";
 import Link from "next/link";
@@ -18,10 +16,10 @@ import { BtnComponent } from "../components/BtnComponent";
 const Home = () => {
   // Images for HomeTopImageCollage
   const collageImages = [
-    images.FireCampImg,
+    images.SunsetImg,
     images.VillaImg,
     images.ElephantImg,
-    images.SunsetImg,
+    images.FireCampImg,
   ];
   return (
     <div className="pt-0 md:pt-12 flex flex-col min-h-screen">

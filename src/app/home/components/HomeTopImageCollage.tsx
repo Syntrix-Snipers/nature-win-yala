@@ -39,12 +39,12 @@ const HomeTopImageCollage: React.FC<HomeTopImageCollageProps> = ({
       </div>
 
       {/* Bottom Right – SMALL */}
-      <div className="overflow-hidden md:rounded-b-none rounded-t-[15px] rounded-b-[15px]">
+      <div className="overflow-hidden md:rounded-t-none rounded-t-[15px] rounded-b-[15px]">
         <img src={images[0]} alt="3" className="h-full w-full object-cover" />
       </div>
 
       {/* Top Left – SMALL */}
-      <div className="overflow-hidden rounded-[15px] md:rounded-none">
+      <div className="overflow-hidden md:rounded-b-none rounded-t-[15px] rounded-b-[15px]">
         <img src={images[3]} alt="0" className="h-full w-full object-cover" />
       </div>
 
