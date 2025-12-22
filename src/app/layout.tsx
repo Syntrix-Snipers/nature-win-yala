@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nature Win Yala | Two-Bedroom Villa & Safari Accommodation in Yala National Park, Sri Lanka",
+  title: "Nature Win Yala | Luxury Villa & Safari Accommodation in Yala National Park, Sri Lanka",
   description:
-    "Nature Win Yala offers a luxury two-bedroom villa for up to 6 guests near Yala National Park. Enjoy private kitchen, pet-friendly stays, balcony views, and unforgettable safari experiences in Sri Lanka.",
+    "Experience the best of Yala with Nature Win Yala. Luxury two-bedroom villa, private safaris, authentic local food, and pet-friendly stays near Yala National Park. Perfect for families and nature lovers visiting Sri Lanka.",
   keywords: [
     "Yala villa",
     "two bedroom villa Yala",
@@ -32,12 +32,18 @@ export const metadata: Metadata = {
     "Yala National Park accommodation",
     "villa with kitchen Yala",
     "pet friendly villa Yala",
-    "balcony view villa Yala"
+    "balcony view villa Yala",
+    "best food in Yala",
+    "Yala safari tours",
+    "Sri Lanka wildlife tourism",
+    "Yala travel guide",
+    "accommodation near Yala entrance",
+    "family friendly villa Yala"
   ],
   openGraph: {
-    title: "Nature Win Yala | Two-Bedroom Villa & Safari Accommodation in Yala National Park, Sri Lanka",
+    title: "Nature Win Yala | Luxury Villa & Safari Accommodation in Yala National Park",
     description:
-      "Luxury two-bedroom villa for 6 guests near Yala National Park. Private kitchen, pet-friendly, balcony view, and safari experiences. Book your stay at Nature Win Yala.",
+      "Luxury two-bedroom villa near Yala National Park. Private kitchen, pet-friendly, local food, and safari experiences. Your ultimate Yala adventure starts here.",
     url: "https://naturewinyala.com/",
     type: "website",
     images: [
@@ -45,15 +51,15 @@ export const metadata: Metadata = {
         url: "/assets/images/thumb-1.png",
         width: 1200,
         height: 630,
-        alt: "Nature Win Yala Two-Bedroom Villa"
+        alt: "Nature Win Yala Luxury Villa and Safari"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nature Win Yala | Two-Bedroom Villa & Safari Accommodation in Yala National Park, Sri Lanka",
+    title: "Nature Win Yala | Villa & Safari in Yala, Sri Lanka",
     description:
-      "Luxury two-bedroom villa for 6 guests near Yala National Park. Private kitchen, pet-friendly, balcony view, and safari experiences. Book your stay at Nature Win Yala.",
+      "Luxury villa for 6 guests near Yala National Park. Private kitchen, pet-friendly, and safari experiences. Book your Yala stay today.",
     images: [
       "/assets/images/thumb-1.png"
     ],

@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import VillaDetailsHome from "./components/VillaDetailsHome";
+import { images } from "../../../public/assets/images/images";
 import HomeOfferCard from "./components/HomeOfferCard";
+import { icons } from "../../../public/assets/icons/icon";
 import { ChevronRightIcon } from "lucide-react";
 import HomeTopImageCollage from "./components/HomeTopImageCollage";
 import VillaHomeCard from "./components/villaHomeCard";
@@ -11,16 +13,42 @@ import Link from "next/link";
 import HomeTestimonialSection from "./components/HomeTestimonialSection";
 import ContactUs from "../components/ContactUs";
 import HomeGallerySection from "./components/HomeGallerySection";
+import { BtnComponent } from "../components/BtnComponent";
 
 const Home = () => {
+  // Images for HomeTopImageCollage
+  const collageImages = [
+    images.FireCampImg,
+    images.VillaImg,
+    images.ElephantImg,
+    images.SunsetImg,
+  ];
+  const [collageIndex, setCollageIndex] = useState(0);
+
+  // Loop through images, changing one at a time every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCollageIndex((prev) => (prev + 1) % collageImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Rotate the array so all images are unique in the collage
+  const dynamicImages = [
+    collageImages[(collageIndex + 0) % collageImages.length],
+    collageImages[(collageIndex + 1) % collageImages.length],
+    collageImages[(collageIndex + 2) % collageImages.length],
+    collageImages[(collageIndex + 3) % collageImages.length],
+  ];
+
   return (
     <div className="pt-0 md:pt-12 flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative w-full bg-[#ffffff] md:bg-[#000000] flex justify-center md:h-[100svh]">
+      <div className="relative w-full bg-[#ffffff] md:bg-[#000000] px-2 sm:px-8 flex justify-center md:h-[100svh]">
         {/* Background Image (md+ only) */}
         <div className="absolute inset-0 hidden md:block">
           <Image
-            src="/assets/images/houseimg2.png"
+            src={images.houseimg2}
             alt="Nature Win Yala"
             fill
             style={{ objectFit: "cover" }}
@@ -33,26 +61,26 @@ const Home = () => {
 
         {/* Content */}
         <div className="relative z-10 w-full max-w-7xl px-4 md:h-full">
-          <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0 gap-10">
+          <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0 gap-10 pl-6 md:pl-0 pt-10 md:pt-0 pb-16 md:pb-0">
             <div className="md:w-1/2 flex flex-col justify-center py-8 md:py-12 text-center md:text-left items-center md:items-start gap-6">
-              <h1 className="text-5xl md:text-6xl font-serif pt-24 md:pt-48 mb-4 text-[#124734] md:text-white">
+              <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-serif pt-24 md:pt-48 mb-4 text-[#124734] md:text-white">
                 Escape to the Heart of Yala’s Serenity
               </h1>
               <p className="mb-4 text-[#124734] md:text-white">
                 Unwind in spacious cabanas, enjoy campfire nights, and wake to
                 the sounds of nature like never before
               </p>
-              <button
-                className="flex items-center justify-center md:justify-start gap-2 px-8 py-3 rounded-md font-semibold w-fit transition-colors
-                  bg-[#124734] text-white hover:bg-[#0e3727] md:bg-white md:text-[#124734] md:hover:bg-gray-100"
-              >
-                Book Now <ChevronRightIcon size={18} />
-              </button>
+              <BtnComponent variant="btn_1">
+                <Link href="/book-now">Book Now</Link>
+              </BtnComponent>
             </div>
 
-            <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-8 md:py-12">
-              <div className="flex-1 min-h-0 flex items-center justify-center md:justify-end">
-                <HomeTopImageCollage className="w-full md:h-full" />
+            <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-10 sm:pb-0 md:pt-0 md:pb-0">
+              <div className="flex-1 min-h-0 flex items-end justify-center md:justify-end md:items-stretch">
+                <HomeTopImageCollage
+                  className="w-full md:h-full"
+                  images={dynamicImages}
+                />
               </div>
             </div>
           </div>
@@ -63,21 +91,22 @@ const Home = () => {
       <VillaDetailsHome
         bgColor="#124734"
         images={[
-          "/assets/images/thumb-1.png",
-          "/assets/images/thumb-2.png",
-          "/assets/images/thumb-3.png",
-          "/assets/images/thumb-4.png",
-          "/assets/images/thumb-5.png",
+          images.thumb1,
+          images.thumb2,
+          images.thumb3,
+          images.thumb4,
+          images.thumb5,
         ]}
         heading="A Tranquil Escape in the Heart of Yala"
         paragraph="Nature Win Yala is where comfort meets the wild. Our cozy cabanas sit beside the untouched beauty of Yala, surrounded by birdsong, starry skies, and the warmth of campfire nights. It’s a peaceful escape for friends, families, and nature lovers - a place to unwind, explore, and create memories that stay with you long after your journey ends."
         buttonText="Discover More"
         button={
-          <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
-            Discover More <ChevronRightIcon size={18} />
-          </button>
+          <BtnComponent variant="btn_1">
+            <Link href="/explore">Discover More</Link>
+          </BtnComponent>
         }
         aboutText="About Us"
+        aboutTextColor="#ffffffff"
       />
 
       {/* Third Section */}
@@ -97,32 +126,32 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16 mb-8 place-items-center">
             <HomeOfferCard
-              icon="CampIcon.png"
+              icon="CampIcon"
               title="Spacious Cabanas"
               description="Spacious, airy, and designed for groups who want comfort without losing the magic of the wild"
             />
             <HomeOfferCard
-              icon="FireIcon.png"
+              icon="FireIcon"
               title="Starlit Campfire Evenings"
               description="Unwind by the fire, share stories, and feel the calm of Yala's night sky - pure warmth, pure wonder"
             />
             <HomeOfferCard
-              icon="PlateIcon.png"
+              icon="PlateIcon"
               title="Fresh Local Meals"
               description="Delicious breakfast, lunch, and dinner prepared with homely flavors to complete your stay"
             />
             <HomeOfferCard
-              icon="ParkIcon.png"
+              icon="ParkIcon"
               title="Safe & Easy Parking"
               description="Park with ease and step straight into your nature escape - no hassle, no stress"
             />
             <HomeOfferCard
-              icon="ShowerIcon.png"
+              icon="ShowerIcon"
               title="Private Attached Bathrooms"
               description="Clean, comfortable, and built for modern convenience inside your rustic getaway"
             />
             <HomeOfferCard
-              icon="ElephantIcon.png"
+              icon="ElephantIcon"
               title="Close-to-Nature Experience"
               description="Delicious breakfast, lunch, and dinner prepared with homely flavors to complete your stay"
             />
@@ -156,75 +185,63 @@ const Home = () => {
           {/* Cabana Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
             <VillaHomeCard
-              image="/assets/images/houseimg1.png"
+              image={images.houseimg1}
               alt="Two-Bedroom Villa"
               title="Two-Bedroom Villa"
               price="Rs. 12,500.00/night"
               features={[
                 {
-                  icon: "/assets/icons/SmallHomeIcon.png",
+                  icon: icons.SmallHomeIcon,
                   text: "Entire villa",
                 },
                 {
-                  icon: "/assets/icons/SmallProfileIcon.png",
+                  icon: icons.SmallProfileIcon,
                   text: "6 Persons",
                 },
-                { icon: "/assets/icons/SmallBoxIcon.png", text: "1000 m²" },
+                { icon: icons.SmallBoxIcon, text: "1000 m²" },
                 {
-                  icon: "/assets/icons/SmallKitchenIcon.png",
+                  icon: icons.SmallKitchenIcon,
                   text: "Private kitchen",
                 },
                 {
-                  icon: "/assets/icons/SmallWashroomIcon.png",
+                  icon: icons.SmallWashroomIcon,
                   text: "Private bathroom",
                 },
               ]}
               actionButton={
-                <Link
-                  href="/book-now"
-                  className="bg-[#124734] text-white px-5 py-2 rounded-lg shadow-md
-                    border border-transparent font-bold
-                    hover:bg-white hover:text-[#124734] hover:border-[#124734]
-                    transition-all duration-300"
-                >
-                  Book Now
-                </Link>
+                <BtnComponent variant="btn_2">
+                  <Link href="/book-now">Book Now</Link>
+                </BtnComponent>
               }
             />
             <VillaHomeCard
-              image="/assets/images/houseimg2.png"
+              image={images.houseimg2}
               alt="Three-Bedroom Villa"
               title="Three-Bedroom Villa"
               price="Rs. 15,500.00/night"
               features={[
                 {
-                  icon: "/assets/icons/SmallHomeIcon.png",
+                  icon: icons.SmallHomeIcon,
                   text: "Entire villa",
                 },
                 {
-                  icon: "/assets/icons/SmallProfileIcon.png",
+                  icon: icons.SmallProfileIcon,
                   text: "6 Persons",
                 },
-                { icon: "/assets/icons/SmallBoxIcon.png", text: "1000 m²" },
+                { icon: icons.SmallBoxIcon, text: "1000 m²" },
                 {
-                  icon: "/assets/icons/SmallKitchenIcon.png",
+                  icon: icons.SmallKitchenIcon,
                   text: "Private kitchen",
                 },
                 {
-                  icon: "/assets/icons/SmallWashroomIcon.png",
+                  icon: icons.SmallWashroomIcon,
                   text: "Private bathroom",
                 },
               ]}
               actionButton={
-                <Link
-                  href="/book-now"
-                  className="bg-[#124734] text-white px-5 py-2 rounded-lg shadow-md
-                    border border-transparent font-bold
-                    hover:bg-white hover:text-[#124734] hover:border-[#124734]
-                    transition-all duration-300"
-                >
-                  Book Now
-                </Link>
+                <BtnComponent variant="btn_2">
+                  <Link href="/book-now">Book Now</Link>
+                </BtnComponent>
               }
               comingSoon={true}
             />
@@ -236,10 +253,10 @@ const Home = () => {
       <VillaDetailsHome
         bgColor="#fff"
         images={[
-          "/assets/images/dining1.png",
-          "/assets/images/dining2.png",
-          "/assets/images/dining3.png",
-          "/assets/images/dining4.png",
+          images.dining1,
+          images.dining2,
+          images.dining3,
+          images.dining4,
         ]}
         heading="A Tranquil Escape in the Heart of Yala"
         paragraph="Nature Win Yala is where comfort meets the wild. 
@@ -249,11 +266,7 @@ const Home = () => {
         headingColor="#124734"
         paragraphColor="#124734"
         buttonText="Download Menu"
-        button={
-          <button className="flex items-center justify-center gap-2 bg-[#124734] text-white px-8 py-3 rounded-md font-semibold w-fit">
-            Download Menu <ChevronRightIcon size={18} />
-          </button>
-        }
+        button={<BtnComponent variant="btn_2">Download Menu</BtnComponent>}
         aboutText="Dine With Us"
         aboutTextColor="#124734"
         reverse={true}

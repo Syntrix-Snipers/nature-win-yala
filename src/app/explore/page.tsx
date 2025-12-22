@@ -12,7 +12,12 @@ export const metadata: Metadata = {
     "bird watching Yala",
     "nature walks Yala",
     "luxury safari accommodation",
-    "Nature Win Yala activities"
+    "Nature Win Yala activities",
+    "best food in Yala",
+    "Yala tourism guide",
+    "Sri Lanka travel tips",
+    "how to get to Yala",
+    "safari booking Sri Lanka"
   ],
   alternates: {
     canonical: "https://naturewinyala.com/explore",
