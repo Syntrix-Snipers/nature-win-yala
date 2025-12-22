@@ -50,8 +50,8 @@ const Home = () => {
               </button>
             </div>
 
-            <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-8 md:py-12">
-              <div className="flex-1 min-h-0 flex items-center justify-center md:justify-end">
+            <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-10 sm:pb-0 md:pt-0 md:pb-0">
+              <div className="flex-1 min-h-0 flex items-end justify-center md:justify-end md:items-stretch">
                 <HomeTopImageCollage className="w-full md:h-full" />
               </div>
             </div>

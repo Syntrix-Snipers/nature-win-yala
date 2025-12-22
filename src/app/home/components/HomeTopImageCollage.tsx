@@ -17,10 +17,9 @@ const HomeTopImageCollage: React.FC<HomeTopImageCollageProps> = ({
   return (
     <div
       className={[
-        // Mobile: no background/radius, natural height (taller)
-        "w-full max-w-full bg-transparent rounded-none min-h-[540px] md:min-h-[645px]",
-        // Desktop: keep existing look, allow filling parent height (wider)
-        "md:bg-[#0a2a1a] md:rounded-none md:h-full md:w-[clamp(220px,90vw,560px)] md:max-w-[560px]",
+        "w-full max-w-full bg-transparent rounded-none h-[540px]",
+        // Desktop: fill the parent height (hero section controls it)
+        "md:bg-[#0a2a1a] md:rounded-none md:h-full md:w-[clamp(220px,90vw,560px)] md:max-w-[560px] md:min-h-0",
         // Layout
         "grid grid-cols-2 grid-rows-[3fr_1fr_3fr]",
         // Spacing
