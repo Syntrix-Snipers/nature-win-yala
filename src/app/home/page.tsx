@@ -23,24 +23,6 @@ const Home = () => {
     images.ElephantImg,
     images.SunsetImg,
   ];
-  const [collageIndex, setCollageIndex] = useState(0);
-
-  // Loop through images, changing one at a time every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCollageIndex((prev) => (prev + 1) % collageImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Rotate the array so all images are unique in the collage
-  const dynamicImages = [
-    collageImages[(collageIndex + 0) % collageImages.length],
-    collageImages[(collageIndex + 1) % collageImages.length],
-    collageImages[(collageIndex + 2) % collageImages.length],
-    collageImages[(collageIndex + 3) % collageImages.length],
-  ];
-
   return (
     <div className="pt-0 md:pt-12 flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -70,14 +52,16 @@ const Home = () => {
                 Unwind in spacious cabanas, enjoy campfire nights, and wake to
                 the sounds of nature like never before
               </p>
-              <BtnComponent variant="btn_2">Book Now</BtnComponent>
+                <BtnComponent variant={typeof window !== "undefined" && window.innerWidth < 768 ? "btn_2" : "btn_1"}>
+                Book Now
+                </BtnComponent>
             </div>
 
             <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-10 sm:pb-0 md:pt-0 md:pb-0">
               <div className="flex-1 min-h-0 flex items-end justify-center md:justify-end md:items-stretch">
                 <HomeTopImageCollage
                   className="w-full md:h-full"
-                  images={dynamicImages}
+                  images={collageImages}
                 />
               </div>
             </div>
