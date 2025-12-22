@@ -1,3 +1,4 @@
+
 import React from "react";
 import { images as importedImages } from "../../../../public/assets/images/images";
 
@@ -34,42 +35,22 @@ const HomeTopImageCollage: React.FC<HomeTopImageCollageProps> = ({
     >
       {/* Bottom Left – TALL */}
       <div className="row-start-2 row-end-4 overflow-hidden md:rounded-b-none rounded-t-[15px] rounded-b-[15px] ">
-        <img
-          src={images[2]}
-          alt="2"
-          className="h-full w-full object-cover transition-all duration-700 ease-in-out opacity-80 scale-100 animate-collage"
-          key={images[2]}
-        />
+        <img src={images[2]} alt="2" className="h-full w-full object-cover" />
       </div>
 
       {/* Bottom Right – SMALL */}
       <div className="overflow-hidden md:rounded-b-none rounded-t-[15px] rounded-b-[15px]">
-        <img
-          src={images[0]}
-          alt="3"
-          className="h-full w-full object-cover transition-all duration-700 ease-in-out opacity-80 scale-100 animate-collage"
-          key={images[0]}
-        />
+        <img src={images[0]} alt="3" className="h-full w-full object-cover" />
       </div>
 
       {/* Top Left – SMALL */}
       <div className="overflow-hidden rounded-[15px] md:rounded-none">
-        <img
-          src={images[3]}
-          alt="0"
-          className="h-full w-full object-cover transition-all duration-700 ease-in-out opacity-80 scale-100 animate-collage"
-          key={images[3]}
-        />
+        <img src={images[3]} alt="0" className="h-full w-full object-cover" />
       </div>
 
       {/* Top Right – TALL */}
       <div className="row-start-1 row-end-3 overflow-hidden rounded-[15px] md:rounded-[15px]">
-        <img
-          src={images[1]}
-          alt="1"
-          className="h-full w-full object-cover transition-all duration-700 ease-in-out opacity-80 scale-100 animate-collage"
-          key={images[1]}
-        />
+        <img src={images[1]} alt="1" className="h-full w-full object-cover" />
       </div>
     </div>
   );
