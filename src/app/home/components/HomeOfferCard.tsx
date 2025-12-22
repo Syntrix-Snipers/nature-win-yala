@@ -19,7 +19,7 @@ const HomeOfferCard: React.FC<HomeOfferCardProps> = ({
         alt={title}
         className="w-24 h-24 mb-2"
       />
-      <h3 className="text-lg font-semibold font-serif text-center mb-2">
+      <h3 className="text-lg text-[#124734] font-semibold font-serif text-center mb-2">
         {title}
       </h3>
       <p className="text-sm text-[#124734] font-serif text-center">
