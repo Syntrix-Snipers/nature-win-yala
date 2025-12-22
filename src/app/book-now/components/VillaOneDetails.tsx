@@ -1,11 +1,30 @@
-
 "use client";
 // SEO metadata for the Two-Bedroom Villa page
+import { BtnComponent } from "../../components/BtnComponent";
 export const metadata = {
-  title: "Two-Bedroom Villa | Luxury Safari Accommodation in Yala | Nature Win Yala",
+  title: "Two-Bedroom Villa | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
   description:
-    "Experience luxury and comfort at Nature Win Yala's two-bedroom villa. Perfect for families and groups, featuring private kitchen, pet-friendly amenities, balcony views, and easy access to Yala National Park safaris.",
+    "Book your luxury two-bedroom villa in Yala, Sri Lanka. Enjoy a unique safari experience, wildlife adventures, and family-friendly travel near Yala National Park. Pet-friendly, private kitchen, balcony views, and the best Yala safari accommodation for travelers exploring Yala, Sri Lanka.",
+  keywords: [
+    "Yala",
+    "Yala Sri Lanka",
+    "Yala safari",
+    "Yala National Park",
+    "safari villa Yala",
+    "travel Yala",
+    "Sri Lanka travel",
+    "luxury villa Yala",
+    "family accommodation Yala",
+    "pet friendly Yala",
+    "wildlife Yala",
+    "Nature Win Yala",
+    "Yala safari stay",
+    "Yala travel guide",
+    "Yala accommodation",
+    "Yala safari hotel"
+  ],
 };
+
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -14,29 +33,31 @@ import {
   PawPrint, ShowerHead, LandPlot, Mountain,
   ChevronLeft, ChevronRight, ChevronRightIcon 
 } from "lucide-react";
+// Import images from the auto-generated images.js file
+import { images as villaImages } from "../../../../public/assets/images/images";
 
 const VillaDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
     {
-      src: "/assets/images/thumb-1.png",
+      src: villaImages.thumb1,
       alt: "Luxury two-bedroom villa exterior with private pool at Nature Win Yala"
     },
     {
-      src: "/assets/images/thumb-2.png",
+      src: villaImages.thumb2,
       alt: "Spacious bedroom with twin beds in Yala safari villa at Nature Win Yala"
     },
     {
-      src: "/assets/images/thumb-3.png",
+      src: villaImages.thumb3,
       alt: "Modern kitchen and dining area in private villa near Yala National Park"
     },
     {
-      src: "/assets/images/thumb-4.png",
+      src: villaImages.thumb4,
       alt: "Balcony view overlooking Yala National Park jungle from villa"
     },
     {
-      src: "/assets/images/thumb-5.png",
+      src: villaImages.thumb5,
       alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
     }
   ];
@@ -70,47 +91,56 @@ const VillaDetails = () => {
           <div className="space-y-4">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden group">
               <div 
-                className="flex transition-transform duration-500 ease-out h-full w-full"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              className="flex transition-transform duration-500 ease-out h-full w-full"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {images.map((img, idx) => (
-                  <div key={`main-${idx}`} className="relative min-w-full w-full h-full flex-shrink-0">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
-                      priority={idx === 0}
-                    />
-                  </div>
-                ))}
+              {images.map((img, idx) => (
+                <div key={`main-${idx}`} className="relative min-w-full w-full h-full flex-shrink-0">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority={idx === 0}
+                />
+                </div>
+              ))}
               </div>
 
               {/* Slider Arrows */}
-              <button 
-                onClick={prevSlide}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full text-gray-800 shadow-md hover:bg-white z-10 transition-transform active:scale-90"
+              <button
+              type="button"
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white hover:shadow-lg hover:border-white focus:outline-none focus:ring-2 focus:ring-[#124734]"
+              style={{ minWidth: 0 }}
               >
-                <ChevronLeft size={18} />
+              <ChevronLeft size={18} />
               </button>
-              <button 
-                onClick={nextSlide}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full text-gray-800 shadow-md hover:bg-white z-10 transition-transform active:scale-90"
+              <button
+              type="button"
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white hover:shadow-lg hover:border-white focus:outline-none focus:ring-2 focus:ring-[#124734]"
+              style={{ minWidth: 0 }}
               >
-                <ChevronRight size={18} />
+              <ChevronRight size={18} />
               </button>
             </div>
 
             {/* Clickable Thumbnails */}
             <div className="grid grid-cols-5 gap-2">
               {images.map((img, i) => (
-                <button 
+                <BtnComponent
                   key={`thumb-${i}`}
+                  type="button"
                   onClick={() => setCurrentIndex(i)}
-                  className={`relative aspect-square rounded overflow-hidden border-2 transition-all ${
-                    i === currentIndex ? 'border-yellow-400 scale-95 opacity-100' : 'border-transparent opacity-60'
+                  variant="btn_2"
+                  className={`relative aspect-square rounded overflow-hidden border-2 transition-all duration-150 p-0 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#124734] hover:shadow-lg hover:scale-[1.05] ${
+                    i === currentIndex
+                      ? 'border-[#124734] opacity-100 shadow-lg'
+                      : 'border-transparent opacity-60'
                   }`}
+                  style={{ minWidth: 0 }}
                 >
                   <Image
                     src={img.src}
@@ -118,7 +148,7 @@ const VillaDetails = () => {
                     fill
                     className="object-cover"
                   />
-                </button>
+                </BtnComponent>
               ))}
             </div>
           </div>
@@ -146,9 +176,11 @@ const VillaDetails = () => {
               <span className="text-gray-300 text-xl font-light"> / Night Per Person</span>
             </div>
 
-            <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-4 rounded-md font-bold w-full md:w-fit hover:bg-gray-100 transition-colors">
+            <BtnComponent
+              variant="btn_1"
+            >
               Book Now <ChevronRightIcon size={18} />
-            </button>
+            </BtnComponent>
           </div>
         </div>
 
@@ -162,10 +194,10 @@ const VillaDetails = () => {
           {amenities.map((item, index) => (
             <div 
               key={index} 
-              className="flex items-center gap-3 border border-emerald-700/50 rounded-lg p-3 md:p-4 text-white/90 hover:bg-emerald-800/30 transition-colors"
+              className="flex items-center gap-3 border border-emerald-700/50 rounded-lg p-3 md:p-4 text-white/90 hover:bg-white hover:text-emerald-600 transition-colors group"
             >
-              <div className="text-emerald-400 shrink-0">{item.icon}</div>
-              <span className="text-xs sm:text-sm font-medium leading-tight">{item.label}</span>
+              <div className="text-emerald-400 shrink-0 group-hover:text-emerald-600 transition-colors">{item.icon}</div>
+              <span className="text-xs sm:text-sm font-medium leading-tight group-hover:text-emerald-600 transition-colors">{item.label}</span>
             </div>
           ))}
         </div>
