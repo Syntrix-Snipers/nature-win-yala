@@ -12,11 +12,11 @@ const HomeOfferCard: React.FC<HomeOfferCardProps> = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl w-72 hover:shadow-lg transition-shadow duration-400">
+    <div className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl w-72 cursor-pointer transition-shadow duration-300 hover:shadow-lg active:shadow-lg focus:shadow-lg focus:outline-none">
       <img
-        src={`/assets/icons/${icon}`}
-        alt={title}
-        className="w-24 h-24 mb-2"
+      src={`/assets/icons/${icon}`}
+      alt={title}
+      className="w-24 h-24 mb-2"
       />
       <h3 className="text-lg font-semibold font-serif text-center mb-2">
         {title}
