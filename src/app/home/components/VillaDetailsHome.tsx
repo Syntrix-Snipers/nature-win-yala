@@ -45,7 +45,7 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
 
   return (
     <section
-      className="py-16 px-4 md:px-8"
+      className="pt-18 pb-6 px-4 md:px-8"
       style={{ backgroundColor: bgColor }}
     >
       <div className="max-w-6xl mx-auto p-8 md:p-10">
