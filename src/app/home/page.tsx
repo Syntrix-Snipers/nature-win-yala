@@ -50,9 +50,12 @@ const Home = () => {
                 Unwind in spacious cabanas, enjoy campfire nights, and wake to
                 the sounds of nature like never before
               </p>
-                <BtnComponent variant={typeof window !== "undefined" && window.innerWidth < 768 ? "btn_2" : "btn_1"}>
+              <BtnComponent variant="btn_2" className="md:hidden">
                 <Link href="/book-now">Book Now</Link>
-                </BtnComponent>
+              </BtnComponent>
+              <BtnComponent variant="btn_1" className="hidden md:flex">
+                <Link href="/book-now">Book Now</Link>
+              </BtnComponent>
             </div>
 
             <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-10 sm:pb-0 md:pt-0 md:pb-0">
