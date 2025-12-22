@@ -51,13 +51,16 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
       <div className="max-w-6xl mx-auto p-8 md:p-10">
         {/* Small screens: About row on top */}
         <div
-          className="flex items-center gap-4 mb-6 lg:hidden"
+          className="flex w-full items-center gap-4 mb-6 lg:hidden"
           style={{ color: aboutTextColor || "white" }}
         >
           <p className="text-sm md:text-xl font-serif whitespace-nowrap">
             {aboutText}
           </p>
-          <div className="h-px grow bg-current"></div>
+          <div
+            className="h-px grow"
+            style={{ backgroundColor: aboutTextColor || "white" }}
+          ></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 lg:items-stretch">
@@ -116,13 +119,16 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
           >
             {/* Large screens: About row stays inside text column */}
             <div
-              className="hidden lg:flex items-center gap-4 mb-6"
+              className="hidden lg:flex w-full items-center gap-4 mb-6"
               style={{ color: aboutTextColor || "white" }}
             >
               <p className="text-sm md:text-xl font-serif whitespace-nowrap">
                 {aboutText}
               </p>
-              <div className="h-px grow bg-current"></div>
+              <div
+                className="h-px grow"
+                style={{ backgroundColor: aboutTextColor || "white" }}
+              ></div>
             </div>
 
             <h2
