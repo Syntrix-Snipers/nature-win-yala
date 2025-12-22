@@ -1,7 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import Image from "next/image";
+import { useState } from "react";
 import { ChevronRight } from "lucide-react";
+import { BtnComponent } from "../../components/BtnComponent";
 
 const inputBase =
   "w-full p-3 bg-gray-100 border border-gray-200 rounded-md text-base text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition-all";
@@ -42,7 +45,9 @@ const BookingForm: React.FC = () => {
 
   // Handle inputs, selects, textareas
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     const { name, value, type } = e.target;
     const key = name as keyof BookingFormData;
@@ -129,7 +134,9 @@ const BookingForm: React.FC = () => {
                   name={name as string}
                   placeholder={label}
                   className={inputBase}
-                  value={formData[name as keyof BookingFormData] as string | number}
+                  value={
+                    formData[name as keyof BookingFormData] as string | number
+                  }
                   onChange={handleChange}
                   required
                 />
@@ -233,7 +240,9 @@ const BookingForm: React.FC = () => {
 
           {/* Meals */}
           <div className="space-y-4">
-            <p className="text-base font-medium text-gray-700">Meals Required</p>
+            <p className="text-base font-medium text-gray-700">
+              Meals Required
+            </p>
             <div className="flex gap-10 flex-wrap">
               {["Breakfast", "Lunch", "Dinner"].map((meal) => (
                 <label
@@ -271,13 +280,12 @@ const BookingForm: React.FC = () => {
             />
           </div>
 
-          <button
-            type="submit"
-            className="flex items-center justify-center gap-2 bg-[#124734] text-white px-10 py-4 rounded-md text-lg font-semibold hover:bg-emerald-900 transition-all shadow-md group"
-          >
+          <BtnComponent type="submit" variant="btn_2">
             Book Now
-            <ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />
-          </button>
+            <ChevronRight
+              size={20}
+            />
+          </BtnComponent>
         </form>
       </div>
     </section>

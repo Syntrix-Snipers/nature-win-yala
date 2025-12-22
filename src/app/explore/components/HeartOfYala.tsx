@@ -17,7 +17,7 @@ const HeartOfYala = () => {
           className="object-cover"
           priority
         />
- 
+
       </div>
 
       {/* Content Container */}
@@ -29,13 +29,13 @@ const HeartOfYala = () => {
         </h2>
 
         <p className="text-xl w-[469px] md:text-1xl lg:text-1xl max-w-2xl leading-relaxed">
-          Located in Rota Wewa Yaya, our resort is surrounded by lakes, forest
-          trails, and wildlife zones giving you the perfect mix of peace and
-          adventure.
+          Located in Rota Wewa Yaya, near Tissamaharama, our villa is surrounded by lakes, forest
+          trails, and wildlife zones. We are perfectly positioned for easy access to the Yala National Park safari gates,
+          giving you the perfect mix of peace and adventure.
         </p>
       </div>
 
-      
+
     </section>
   );
 };
