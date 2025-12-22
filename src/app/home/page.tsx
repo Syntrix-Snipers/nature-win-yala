@@ -78,6 +78,7 @@ const Home = () => {
           </button>
         }
         aboutText="About Us"
+        aboutTextColor="#ffffff"
       />
 
       {/* Third Section */}

@@ -49,14 +49,25 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
       style={{ backgroundColor: bgColor }}
     >
       <div className="max-w-6xl mx-auto p-8 md:p-10">
+        {/* Small screens: About row on top */}
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 ${
-            reverse ? "lg:flex-row-reverse" : ""
-          }`}
+          className="flex items-center gap-4 mb-6 lg:hidden"
+          style={{ color: aboutTextColor || "white" }}
         >
+          <p className="text-sm md:text-xl font-serif whitespace-nowrap">
+            {aboutText}
+          </p>
+          <div className="h-px grow bg-current"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 lg:items-stretch">
           {/* Slider Section */}
-          <div className={`space-y-4 ${reverse ? "order-2 lg:order-2" : ""}`}>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+          <div
+            className={`flex flex-col gap-4 h-full order-2 ${
+              reverse ? "lg:order-2" : "lg:order-1"
+            }`}
+          >
+            <div className="relative flex-1 aspect-[4/3] lg:[aspect-ratio:auto] lg:h-full rounded-lg overflow-hidden">
               {/* Slider Images */}
               <div
                 className="flex transition-transform duration-500 ease-out h-full w-full"
@@ -99,21 +110,19 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
 
           {/* Content Section */}
           <div
-            className={`text-white flex flex-col justify-center ${
-              reverse ? "order-1 lg:order-1" : ""
+            className={`text-white flex flex-col justify-center items-center text-center lg:items-start lg:text-left order-3 h-full ${
+              reverse ? "lg:order-1" : "lg:order-2"
             }`}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <p
-                className="text-sm md:text-xl font-serif whitespace-nowrap"
-                style={aboutTextColor ? { color: aboutTextColor } : undefined}
-              >
+            {/* Large screens: About row stays inside text column */}
+            <div
+              className="hidden lg:flex items-center gap-4 mb-6"
+              style={{ color: aboutTextColor || "white" }}
+            >
+              <p className="text-sm md:text-xl font-serif whitespace-nowrap">
                 {aboutText}
               </p>
-              <div
-                className="h-px flex-grow"
-                style={{ backgroundColor: aboutTextColor || "white" }}
-              ></div>
+              <div className="h-px grow bg-current"></div>
             </div>
 
             <h2
