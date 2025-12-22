@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ChevronRight } from "lucide-react";
+import { BtnComponent } from "./BtnComponent";
 import Image from "next/image";
 import { contactData } from "../../../data/data";
 
@@ -19,7 +19,7 @@ const ContactUs = () => {
                         allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        className="grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+                        className="lg:grayscale lg:contrast-125 lg:hover:grayscale-0 transition-all duration-500"
                     ></iframe>
                 </div>
 
@@ -65,12 +65,13 @@ const ContactUs = () => {
                             />
                         </div>
 
-                        <button
-                            type="submit"
-                            className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors group mt-6"
-                        >
-                            Submit <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
-                        </button>
+                        <BtnComponent type="submit" variant="btn_1" className="mt-6 flex items-center gap-2">
+                            Submit
+                            {/* Right arrow icon (SVG) */}
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" width="20" height="20" className="inline-block">
+                                <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 10h10m0 0-4-4m4 4-4 4"/>
+                            </svg>
+                        </BtnComponent>
                     </form>
 
                 </div>

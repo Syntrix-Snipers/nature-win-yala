@@ -45,32 +45,32 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
 
   return (
     <section
-      className="pt-8 lg:pt-18 pb-6 px-4 md:px-8"
+      className="pt-8 lg:pt-18 pb-6 px-2 md:px-8"
       style={{ backgroundColor: bgColor }}
     >
-      <div className="max-w-6xl mx-auto p-8 md:p-10">
+      <div className="max-w-6xl mx-auto p-4 md:p-10">
         {/* Small screens: About row on top */}
         <div
-          className="flex w-full items-center gap-4 mb-8 lg:hidden"
-          style={{ color: aboutTextColor || "white" }}
+          className="flex w-full items-center gap-4 mb-6 lg:hidden"
+          style={{ color: aboutTextColor || "#124734" }}
         >
-          <p className="text-sm md:text-xl font-serif whitespace-nowrap">
+          <p className="text-base md:text-xl font-serif font-semibold whitespace-nowrap tracking-wide">
             {aboutText}
           </p>
           <div
             className="h-px grow"
-            style={{ backgroundColor: aboutTextColor || "white" }}
+            style={{ backgroundColor: aboutTextColor || "#124734" }}
           ></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 lg:items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 mb-8 lg:items-center">
           {/* Slider Section */}
           <div
             className={`flex flex-col gap-4 h-full order-2 ${
               reverse ? "lg:order-2" : "lg:order-1"
             }`}
           >
-            <div className="relative flex-1 aspect-[4/3] lg:[aspect-ratio:auto] lg:h-full rounded-lg overflow-hidden">
+            <div className="relative flex-1 aspect-[4/3] lg:aspect-[5/3] rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-transform duration-300 scale-100 hover:scale-105">
               {/* Slider Images */}
               <div
                 className="flex transition-transform duration-500 ease-out h-full w-full"
@@ -93,16 +93,40 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
                 ))}
               </div>
 
+              {/* Slider Controls */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#124734] rounded-full p-2 shadow-md z-10"
+                onClick={() =>
+                  setCurrentIndex(
+                    currentIndex === 0 ? images.length - 1 : currentIndex - 1
+                  )
+                }
+                aria-label="Previous image"
+                style={{ display: images.length > 1 ? "block" : "none" }}
+              >
+                <span className="text-lg font-bold">&#8592;</span>
+              </button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#124734] rounded-full p-2 shadow-md z-10"
+                onClick={() =>
+                  setCurrentIndex((currentIndex + 1) % images.length)
+                }
+                aria-label="Next image"
+                style={{ display: images.length > 1 ? "block" : "none" }}
+              >
+                <span className="text-lg font-bold">&#8594;</span>
+              </button>
+
               {/* Dots Indicators */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {images.map((_, idx) => (
                   <button
                     key={`dot-${idx}`}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+                    className={`h-3 w-3 rounded-full border-2 border-white transition-all duration-300 ${
                       idx === currentIndex
-                        ? "bg-white scale-110"
-                        : "bg-white/50 hover:bg-white/80"
+                        ? "bg-[#124734] scale-110 shadow"
+                        : "bg-white/70 hover:bg-[#124734]/60"
                     }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
@@ -113,37 +137,38 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
 
           {/* Content Section */}
           <div
-            className={`text-white flex flex-col justify-center items-center text-center lg:items-start lg:text-left order-3 h-full ${
+            className={`flex flex-col justify-center items-center text-center lg:items-start lg:text-left order-3 h-full ${
               reverse ? "lg:order-1" : "lg:order-2"
             }`}
+            style={{ color: headingColor || "#ffffffff" }}
           >
             {/* Large screens: About row stays inside text column */}
             <div
               className="hidden lg:flex w-full items-center gap-4 mb-6"
-              style={{ color: aboutTextColor || "white" }}
+              style={{ color: aboutTextColor || "#ffffffff" }}
             >
-              <p className="text-sm md:text-xl font-serif whitespace-nowrap">
+              <p className="text-base md:text-xl font-serif font-semibold whitespace-nowrap tracking-wide">
                 {aboutText}
               </p>
               <div
                 className="h-px grow"
-                style={{ backgroundColor: aboutTextColor || "white" }}
+                style={{ backgroundColor: aboutTextColor || "#ffffffff" }}
               ></div>
             </div>
 
             <h2
-              className="text-4xl md:text-5xl font-serif mb-6"
+              className="text-4xl md:text-5xl font-serif mb-6 drop-shadow"
               style={headingColor ? { color: headingColor } : undefined}
             >
               {heading}
             </h2>
 
             <p
-              className="leading-relaxed mb-8 text-sm md:text-base"
+              className="leading-relaxed mb-8 text-base md:text-lg font-sans"
               style={
                 paragraphColor
                   ? { color: paragraphColor }
-                  : { color: "#d1d5db" }
+                  : { color: "#ffffffff" }
               }
             >
               {paragraph}
@@ -152,7 +177,7 @@ const VillaDetailsHome: React.FC<VillaDetailsHomeProps> = ({
             {button
               ? button
               : buttonText && (
-                  <button className="flex items-center justify-center gap-2 bg-white text-[#124734] px-8 py-3 rounded-md font-semibold w-fit hover:bg-gray-100 transition-colors">
+                  <button className="flex items-center justify-center gap-2 bg-[#124734] text-white px-8 py-3 rounded-lg font-semibold w-fit hover:bg-[#17603e] transition-colors shadow-md">
                     {buttonText}
                   </button>
                 )}

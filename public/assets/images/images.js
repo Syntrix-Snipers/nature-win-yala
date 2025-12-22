@@ -1,5 +1,3 @@
-// Auto-generated image exports for all images in public/assets/images
-
 // Root images
 export const images = {
   dining1: '/assets/images/dining1.png',
