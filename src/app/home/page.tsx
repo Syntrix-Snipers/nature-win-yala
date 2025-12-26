@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import VillaDetailsHome from "./components/VillaDetailsHome";
 import { images } from "../../../public/assets/images/images";
 import HomeOfferCard from "./components/HomeOfferCard";
 import { icons } from "../../../public/assets/icons/icon";
-import { ChevronRightIcon } from "lucide-react";
 import HomeTopImageCollage from "./components/HomeTopImageCollage";
 import VillaHomeCard from "./components/villaHomeCard";
 import Link from "next/link";
@@ -18,10 +16,10 @@ import { BtnComponent } from "../components/BtnComponent";
 const Home = () => {
   // Images for HomeTopImageCollage
   const collageImages = [
-    images.FireCampImg,
+    images.SunsetImg,
     images.VillaImg,
     images.ElephantImg,
-    images.SunsetImg,
+    images.FireCampImg,
   ];
   return (
     <div className="pt-0 md:pt-12 flex flex-col min-h-screen">
@@ -52,9 +50,12 @@ const Home = () => {
                 Unwind in spacious cabanas, enjoy campfire nights, and wake to
                 the sounds of nature like never before
               </p>
-                <BtnComponent variant={typeof window !== "undefined" && window.innerWidth < 768 ? "btn_2" : "btn_1"}>
-                Book Now
-                </BtnComponent>
+              <BtnComponent variant="btn_2" className="md:hidden">
+                <Link href="/book-now">Book Now</Link>
+              </BtnComponent>
+              <BtnComponent variant="btn_1" className="hidden md:flex">
+                <Link href="/book-now">Book Now</Link>
+              </BtnComponent>
             </div>
 
             <div className="md:w-1/2 md:mt-0 flex flex-col pt-0 pb-10 sm:pb-0 md:pt-0 md:pb-0">
@@ -82,7 +83,7 @@ const Home = () => {
         heading="A Tranquil Escape in the Heart of Yala"
         paragraph="Nature Win Yala is where comfort meets the wild. Our cozy cabanas sit beside the untouched beauty of Yala, surrounded by birdsong, starry skies, and the warmth of campfire nights. It’s a peaceful escape for friends, families, and nature lovers - a place to unwind, explore, and create memories that stay with you long after your journey ends."
         buttonText="Discover More"
-        button={<BtnComponent variant="btn_1">Discover More</BtnComponent>}
+        button={<BtnComponent variant="btn_1"><Link href="/explore">Discover More</Link></BtnComponent>}
         aboutText="About Us"
         aboutTextColor="#ffffff"
       />
@@ -155,7 +156,7 @@ const Home = () => {
             </h2>
 
             <p className="text-gray-300 max-w-xl mx-auto leading-relaxed">
-              Whether you’re seeking relaxation, adventure, or a mix of both —
+              Whether you’re seeking relaxation, adventure, or a mix of both -
               we’ve crafted experiences to suit your style.
             </p>
           </div>

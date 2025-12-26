@@ -1,41 +1,42 @@
 import React, { useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { images } from "../../../../public/assets/images/images";
 
 // Example testimonials data
 const testimonials = [
   {
     description:
       "Such a peaceful place! The cabana was clean, spacious, and surrounded by pure nature. Perfect getaway near Yala - highly recommended!",
-    profileImage: "/assets/images/TestimonialPhoto.png",
+    profileImage: images.TestimonialPhoto,
     name: "John Doe",
   },
   {
     description:
       "We had an amazing stay! The hosts were very friendly and made us feel at home. A wonderful escape for families and friends.",
-    profileImage: "/assets/images/TestimonialPhoto.png",
-    name: "Jane Smith",
+    profileImage: images.TestimonialPhoto2,
+    name: "Nadeesha Fernando",
   },
   {
     description:
       "Beautiful cabana with great facilities. The meals were delicious and the environment was relaxing. Will definitely visit again!",
-    profileImage: "/assets/images/TestimonialPhoto.png",
-    name: "Emily Johnson",
+    profileImage: images.TestimonialPhoto3,
+    name: "Ishara Madushan",
   },
   {
-    description: "Peaceful and relaxing. Will visit again.",
-    profileImage: "/assets/images/TestimonialPhoto.png",
-    name: "Michael Lee",
+    description: "Loved the calm atmosphere. Clean and spacious cabana with nature all around. A perfect place to unwind near Yala National Park.",
+    profileImage: images.TestimonialPhoto4,
+    name: "Tharindi Madushani",
   },
   {
-    description: "Staff were friendly and helpful throughout our stay.",
-    profileImage: "/assets/images/TestimonialPhoto.png",
-    name: "Sara Kim",
+    description: "Peaceful and refreshing experience. Very clean cabana, plenty of space, and surrounded by greenery. Perfect spot for a quiet stay near Yala.",
+    profileImage: images.TestimonialPhoto5,
+    name: "Nadeeshan Perera",
   },
   {
-    description: "The villa was spacious and clean. Highly recommend!",
-    profileImage: "/assets/images/TestimonialPhoto.png",
-    name: "David Brown",
+    description: "Highly recommend this place! A clean, spacious cabana in the middle of nature. So calm and relaxing, and very close to Yala.",
+    profileImage: images.TestimonialPhoto6,
+    name: "Ishara Perera",
   },
 ];
 
