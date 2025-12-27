@@ -3,21 +3,13 @@ import ExploreContent from "./components/ExploreContent";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Explore Yala | Safari Adventures & Nature Experiences | Nature Win Yala",
-  description: "Discover the magic of Yala National Park. From thrilling wildlife safaris to serene bird watching and nature walks, explore the adventures awaiting you at Nature Win Yala.",
+  title: "Explore Yala Safari | Luxury Private Jeep Tours & Nature Walks | Nature Win Yala",
+  description: "Discover Yala National Park with exclusive private safari tours. Spot leopards, elephants, and bears with our personalized jeep safaris. Experience bird watching, nature walks, and the best luxury villa accommodation near Yala entrance.",
   keywords: [
-    "Yala National Park",
-    "Yala safari",
-    "wildlife adventure Sri Lanka",
-    "bird watching Yala",
-    "nature walks Yala",
-    "luxury safari accommodation",
-    "Nature Win Yala activities",
-    "best food in Yala",
-    "Yala tourism guide",
-    "Sri Lanka travel tips",
-    "how to get to Yala",
-    "safari booking Sri Lanka"
+    "Yala National Park", "Yala safari", "wildlife adventure Sri Lanka", "bird watching Yala", "nature walks Yala",
+    "luxury safari accommodation", "Nature Win Yala activities", "best food in Yala", "Yala tourism guide", "Sri Lanka travel tips",
+    "how to get to Yala", "safari booking Sri Lanka", "private jeep safari Yala", "leopard safari Yala", "Yala blocks guided tour",
+    "Sithulpawwa rock temple visit", "best time to visit yala"
   ],
   alternates: {
     canonical: "https://naturewinyala.com/explore",
@@ -32,7 +24,7 @@ export const metadata: Metadata = {
         url: "/assets/images/explore-images/Background.jpg",
         width: 1200,
         height: 630,
-        alt: "Explore Nature Win Yala",
+        alt: "Explore Nature Win Yala Safari Adventures",
       },
     ],
     locale: "en_US",
