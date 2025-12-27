@@ -27,7 +27,7 @@ const HeartOfYala = () => {
 
         <p className="text-xl md:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
           Located in Rota Wewa Yaya, our resort is surrounded by lakes, forest
-          trails, and wildlife zones — giving you the perfect mix of peace and
+          trails, and wildlife zones, giving you the perfect mix of peace and
           adventure.
         </p>
       </div>
