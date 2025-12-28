@@ -1,103 +1,102 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SOCIAL_LINKS } from "../../../data/links";
-
 import { contactData } from "../../../data/data";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#124734] pt-16 pb-8 border-t border-gray-100">
-      <div className="max-w-6xl mx-auto px-6">
+    <footer className="w-full bg-[#124734] pt-16 pb-8 border-t border-gray-300">
+      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-6">
+        
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-16">
-
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 items-start">
+          
           {/* Logo + Description + Socials */}
-          <div className="flex flex-col items-start gap-4 md:w-1/3">
-            <div className="flex items-center gap-4">
-              <Image
-                src="/assets/images/FooterLogo.png"
-                alt="Nature Win Yala Logo"
-                width={240}
-                height={160}
-                className="object-contain"
-              />
-            </div>
-            <p className="text-white text-sm max-w-xs">
-              Nature Win Yala is your private escape in Yala, offering cozy stays, relaxing spaces, and the perfect setting for families and groups.
+          <div className="md:col-span-5 flex flex-col gap-6">
+            <Image
+              src="/assets/images/FooterLogo.png"
+              alt="Nature Win Yala Logo"
+              width={220}
+              height={140}
+              className="object-contain"
+            />
+
+            <p className="text-white text-sm leading-relaxed max-w-sm">
+              Nature Win Yala is your private escape in Yala, offering cozy stays,
+              relaxing spaces, and the perfect setting for families and groups.
             </p>
-            <div className="flex gap-4 mt-2 text-sm">
+
+            <div className="flex gap-4">
               {SOCIAL_LINKS.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-[#F9C170] transition-colors"
+                  className="hover:opacity-80 transition-opacity"
                 >
-                  {social.name === "Facebook" && (
-                    <Image src="/assets/images/fb.png" alt="Facebook" width={24} height={24} />
-                  )}
-                  {social.name === "Instagram" && (
-                    <Image src="/assets/images/insta.png" alt="Instagram" width={24} height={24} />
-                  )}
-                  {social.name === "TikTok" && (
-                    <Image src="/assets/images/tiktok.png" alt="TikTok" width={24} height={24} />
-                  )}
+                  <Image
+                    src={`/assets/images/${social.name.toLowerCase()}.png`}
+                    alt={social.name}
+                    width={24}
+                    height={24}
+                    className="object-contain h-5 w-5"
+                  />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Links + Contact Section */}
-          <div className="flex flex-col sm:flex-row gap-8 md:w-2/3 w-full text-sm">
-            {/* Links Section */}
-            <div className="flex flex-col space-y-2 text-white w-full sm:w-1/2">
-              <h3 className="text-lg font-bold text-[#F5C27B]">Links</h3>
-              <ul className="space-y-1 font-medium">
-                <li>
-                  <Link href="/" className="hover:text-[#F5C27B] transition-colors whitespace-nowrap">
-                    Bookings
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/explore" className="hover:text-[#F5C27B] transition-colors whitespace-nowrap">
-                    Explore
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about-us" className="hover:text-[#F5C27B] transition-colors whitespace-nowrap">
-                    Packages
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about-us" className="hover:text-[#F5C27B] transition-colors whitespace-nowrap">
-                    Dine With Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Section */}
-            <div className="flex flex-col space-y-2 text-white w-full sm:w-1/2">
-              <h3 className="text-lg font-bold text-[#F5C27B]">Contact Us</h3>
-              <ul className="space-y-1 font-medium">
-                <li>Email: {contactData.email}</li>
-                <li>Phone: {contactData.phone}</li>
-                <li>Address: {contactData.address}</li>
-              </ul>
-            </div>
+          {/* Links */}
+          <div className="md:col-span-3 flex flex-col gap-4">
+            <h3 className="text-lg font-semibold text-[#F5C27B]">Links</h3>
+            <ul className="space-y-2 text-sm text-white">
+              <li>
+                <Link href="/" className="hover:text-[#F5C27B] transition-colors">
+                  Bookings
+                </Link>
+              </li>
+              <li>
+                <Link href="/explore" className="hover:text-[#F5C27B] transition-colors">
+                  Explore
+                </Link>
+              </li>
+              <li>
+                <Link href="/#dine-with-us" className="hover:text-[#F5C27B] transition-colors">
+                  Dine With Us
+                </Link>
+              </li>
+            </ul>
           </div>
+
+          {/* Contact */}
+          <div className="md:col-span-4 flex flex-col gap-4">
+            <h3 className="text-lg font-semibold text-[#F5C27B]">Contact Us</h3>
+            <ul className="space-y-2 text-sm text-white leading-relaxed">
+              <li>
+                <span className="font-medium">Email:</span> {contactData.email}
+              </li>
+              <li>
+                <span className="font-medium">Phone:</span> {contactData.phone}
+              </li>
+              <li>
+                <span className="font-medium">Address:</span>{" "}
+                {contactData.address}
+              </li>
+            </ul>
+          </div>
+
         </div>
 
-        {/* Divider Line */}
-        <div className="w-full h-px bg-gray-100 mb-6" />
+        {/* Divider */}
+        <div className="w-full h-px bg-white/20 mb-6" />
 
-        {/* Copyright Section */}
-        <div className="text-center text-gray-300 text-xs">
+        {/* Copyright */}
+        <p className="text-center text-white/70 text-xs">
           © {currentYear} Nature Win Yala | All Rights Reserved
-        </div>
+        </p>
       </div>
     </footer>
   );

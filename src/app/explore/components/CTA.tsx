@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { BtnComponent } from "../../components/BtnComponent";
+
 
 const CTA = () => {
   return (
@@ -22,13 +24,12 @@ const CTA = () => {
 
           {/* Right: CTA Button */}
           <div className="flex justify-center md:justify-end">
-            <Link
-              href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-green-900 font-medium text-lg rounded-lg hover:bg-gray-100 transition shadow-lg"
-            >
-              Contact Us Now
-              <span className="ml-2 text-xl">→</span>
-            </Link>
+            <BtnComponent variant="btn_1">
+              <Link href="/#contact" className="flex items-center gap-2">
+                Contact Us Now
+                <span className="text-xl">→</span>
+              </Link>
+            </BtnComponent>
           </div>
         </div>
       </div>

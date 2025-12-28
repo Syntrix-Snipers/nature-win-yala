@@ -40,7 +40,7 @@ const Home = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl px-4 md:h-full">
+        <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1400px] px-4 md:h-full">
           <div className="text-white flex flex-col md:flex-row md:items-stretch md:justify-between md:h-full min-h-[500px] md:min-h-0 gap-10">
             <div className="md:w-1/2 flex flex-col justify-center py-8 md:py-12 text-center md:text-left items-center md:items-start gap-6">
               <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-serif pt-24 md:pt-48 mb-4 text-[#124734] md:text-white">
@@ -140,7 +140,7 @@ const Home = () => {
 
       {/* Fourth Section */}
       <div className="flex-1 bg-[#124734] py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl 2xl:max-w-[1536px] mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -229,27 +229,39 @@ const Home = () => {
       </div>
 
       {/* Fisth Section */}
-      <VillaDetailsHome
-        bgColor="#fff"
-        images={[
-          images.dining1,
-          images.dining2,
-          images.dining3,
-          images.dining4,
-        ]}
-        heading="A Tranquil Escape in the Heart of Yala"
-        paragraph="Nature Win Yala is where comfort meets the wild. 
-        Our cozy cabanas sit beside the untouched beauty of Yala, surrounded by birdsong, starry skies, and the warmth of campfire nights. 
-        It’s a peaceful escape for friends, families, and nature lovers - a place to unwind, 
-        explore, and create memories that stay with you long after your journey ends."
-        headingColor="#124734"
-        paragraphColor="#124734"
-        buttonText="Download Menu"
-        button={<BtnComponent variant="btn_2">Download Menu</BtnComponent>}
-        aboutText="Dine With Us"
-        aboutTextColor="#124734"
-        reverse={true}
-      />
+      <div id="dine-with-us">
+        <VillaDetailsHome
+          bgColor="#fff"
+          images={[
+            images.dining1,
+            images.dining2,
+            images.dining3,
+            images.dining4,
+          ]}
+          heading="A Tranquil Escape in the Heart of Yala"
+          paragraph="Nature Win Yala is where comfort meets the wild. 
+          Our cozy cabanas sit beside the untouched beauty of Yala, surrounded by birdsong, starry skies, and the warmth of campfire nights. 
+          It’s a peaceful escape for friends, families, and nature lovers - a place to unwind, 
+          explore, and create memories that stay with you long after your journey ends."
+          headingColor="#124734"
+          paragraphColor="#124734"
+          aboutText="Dine With Us"
+          aboutTextColor="#124734"
+          reverse={true}
+          button={
+            <a
+              href="/assets/menu/Menu.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BtnComponent variant="btn_2">
+                Download Menu
+              </BtnComponent>
+            </a>
+          }
+        />
+      </div>
 
       {/* Sixth Section */}
       <div className="flex-1 bg-[#124734] py-16 px-4">
