@@ -21,7 +21,7 @@ const HomeOfferCard: React.FC<HomeOfferCardProps> = ({
         /* Added filter to ensure icon appears dark green if the source image is gray */
         className="w-24 h-24 mb-6 object-contain"
       />
-      <h3 className="text-l font-bold font-serif text-[#124734] text-center mb-3">
+      <h3 className="text-lg text-[#124734] font-semibold font-serif text-center mb-2">
         {title}
       </h3>
       <p className="text-[14px] text-[#124734] font-serif text-center leading-relaxed">
