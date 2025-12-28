@@ -110,8 +110,8 @@ const HomeTestimonialSection: React.FC = () => {
                 key={idx}
                 onClick={() => goToSlide(idx)}
                 className={`h-3 w-3 rounded-full transition-all duration-300 ${idx === currentSlide
-                    ? "bg-white opacity-100 scale-110"
-                    : "bg-white opacity-40 hover:opacity-70"
+                  ? "bg-white opacity-100 scale-110"
+                  : "bg-white opacity-40 hover:opacity-70"
                   }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />

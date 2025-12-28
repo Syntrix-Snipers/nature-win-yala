@@ -42,7 +42,7 @@ export default function BookNowContent() {
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="h-[1px] w-12 md:w-24 bg-gray-300"></div>
               <span className="uppercase tracking-widest text-[#124734] font-medium text-sm">
-                Choose Your Private Safari Villa
+                Select Your Luxury Accommodation Package in Yala
               </span>
               <div className="h-[1px] w-12 md:w-24 bg-gray-300"></div>
             </div>
@@ -50,10 +50,9 @@ export default function BookNowContent() {
             <h2 className="text-4xl md:text-5xl font-serif text-[#124734] mb-6">
               Select Your Private Villa Package
             </h2>
-
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Secure your private luxury accommodation near Yala National Park. Use the form below to book your entire villa for an unforgettable safari experience.
-            </p>
+ <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Reserve the best private villa near Yala National Park. A superior choice compared to crowded Yala hotels, offering complete privacy, a private kitchen, and exclusive safari tours. Perfect for families and couples seeking a luxury nature escape.
+          </p>
           </div>
 
           {/* Cabana Grid */}

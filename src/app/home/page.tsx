@@ -29,7 +29,7 @@ const Home = () => {
         <div className="absolute inset-0 hidden md:block">
           <Image
             src={images.houseimg2}
-            alt="Nature Win Yala"
+            alt="Nature Win Yala Luxury Safari Villa in Yala National Park"
             fill
             style={{ objectFit: "cover" }}
             className="opacity-20"
@@ -100,24 +100,24 @@ const Home = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-serif font-medium text-[#124734] mb-6">
-            What We Offer for a <br /> Perfect Stay
+            What We Offer for the <br /> Perfect Yala Safari Stay
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16 mb-8 place-items-center">
             <HomeOfferCard
               icon="CampIcon"
-              title="Spacious Cabanas"
-              description="Spacious, airy, and designed for groups who want comfort without losing the magic of the wild"
+              title="Luxury Private Villas"
+              description="Spacious, air-conditioned accommodation designed for families and groups who want more privacy than a standard hotel room in Yala"
             />
             <HomeOfferCard
               icon="FireIcon"
               title="Starlit Campfire Evenings"
-              description="Unwind by the fire, share stories, and feel the calm of Yala's night sky - pure warmth, pure wonder"
+              description="Experience the magic of the wild with our exclusive campfire nights, a top-rated feature of our Yala accommodation"
             />
             <HomeOfferCard
               icon="PlateIcon"
               title="Fresh Local Meals"
-              description="Delicious breakfast, lunch, and dinner prepared with homely flavors to complete your stay"
+              description="Enjoy authentic Sri Lankan cuisine. Our private chef prepares the best local food in Yala, far superior to typical hotel buffets"
             />
             <HomeOfferCard
               icon="ParkIcon"
@@ -152,12 +152,11 @@ const Home = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-serif text-[#ffffff] mb-6">
-              Choose Your Perfect Stay
+              Choose Your Perfect Yala Holiday Package
             </h2>
 
             <p className="text-gray-300 max-w-xl mx-auto leading-relaxed">
-              Whether you’re seeking relaxation, adventure, or a mix of both -
-              we’ve crafted experiences to suit your style.
+              Whether you’re seeking a luxury family villa, a romantic couple's getaway, or a thrilling safari adventure - we have the best accommodation packages in Yala.
             </p>
           </div>
 
@@ -165,8 +164,8 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
             <VillaHomeCard
               image={images.houseimg1}
-              alt="Two-Bedroom Villa"
-              title="Two-Bedroom Villa"
+              alt="2 Bedroom Luxury Villa Accommodation Yala"
+              title="Luxury Two-Bedroom Villa"
               price="Rs. 12,500.00/night"
               features={[
                 {
@@ -195,8 +194,8 @@ const Home = () => {
             />
             <VillaHomeCard
               image={images.houseimg2}
-              alt="Three-Bedroom Villa"
-              title="Three-Bedroom Villa"
+              alt="3 Bedroom Family Villa Yala National Park"
+              title="Luxury Three-Bedroom Villa"
               price="Rs. 15,500.00/night"
               features={[
                 {
@@ -238,11 +237,8 @@ const Home = () => {
             images.dining3,
             images.dining4,
           ]}
-          heading="A Tranquil Escape in the Heart of Yala"
-          paragraph="Nature Win Yala is where comfort meets the wild. 
-          Our cozy cabanas sit beside the untouched beauty of Yala, surrounded by birdsong, starry skies, and the warmth of campfire nights. 
-          It’s a peaceful escape for friends, families, and nature lovers - a place to unwind, 
-          explore, and create memories that stay with you long after your journey ends."
+          heading="Dining at Nature Win Yala"
+          paragraph="Experience the best food in Yala. Our dining experience goes beyond what you find in standard Yala hotels. We serve fresh, organic, home-cooked Sri Lankan meals prepared with love. Enjoy your breakfast before your safari or a candlelit dinner under the stars. Our culinary offerings are a highlight of the Nature Win Yala accommodation experience."
           headingColor="#124734"
           paragraphColor="#124734"
           aboutText="Dine With Us"

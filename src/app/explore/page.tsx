@@ -4,12 +4,20 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Explore Yala Safari | Luxury Private Jeep Tours & Nature Walks | Nature Win Yala",
-  description: "Discover Yala National Park with exclusive private safari tours. Spot leopards, elephants, and bears with our personalized jeep safaris. Experience bird watching, nature walks, and the best luxury villa accommodation near Yala entrance.",
+  description: "Discover the best Yala National Park safari experience. We offer exclusive private jeep safaris, expert guides for leopard spotting, and luxury villa accommodation near the Palatupana and Katagamuwa entrances. Explore bird watching, ancient Sithulpawwa temple, and serene nature walks. The ultimate guide to Yala tourism.",
   keywords: [
     "Yala National Park", "Yala safari", "wildlife adventure Sri Lanka", "bird watching Yala", "nature walks Yala",
     "luxury safari accommodation", "Nature Win Yala activities", "best food in Yala", "Yala tourism guide", "Sri Lanka travel tips",
     "how to get to Yala", "safari booking Sri Lanka", "private jeep safari Yala", "leopard safari Yala", "Yala blocks guided tour",
-    "Sithulpawwa rock temple visit", "best time to visit yala"
+    "Sithulpawwa rock temple visit", "best time to visit yala", "yala safari price", "yala jeep hire", "safari hotels yala",
+    "camping in yala", "yala national park entrance fee", "katagamuwa entrance safari", "palatupana entrance safari", "yala block 1 safari",
+    "yala block 5 safari", "sloth bear sighting yala", "elephant gathering yala", "magul maha viharaya history", "kataragama temple visit",
+    "best safari driver yala", "luxury camping yala", "glamping yala sri lanka", "hotels near yala safari entrance",
+    "yala leopard tracker", "morning safari yala", "afternoon safari yala", "full day safari yala", "private safari jeep cost",
+    "yala bird list", "Kumana National Park", "Bundala National Park", "Lunugamvehera National Park", "Kirinda Beach",
+    "Tissamaharama Lake", "Debarawewa Lake", "Yala night safari", "wildlife photography yala", "sri lanka leopard tour",
+    "yala flora and fauna", "best safari guide yala", "family safari yala", "kids safari yala", "yala jeep safari booking online",
+    "sri lanka southern province tourism", "hambantota hotels", "mattala airport to yala", "mirissa to yala safari"
   ],
   alternates: {
     canonical: "https://naturewinyala.com/explore",
@@ -44,42 +52,42 @@ const faqJsonLd = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is Nature Win Yala?",
+      "name": "What is the best way to explore Yala National Park?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nature Win Yala is a unique eco-friendly villa experience located near Yala National Park, offering luxury stays and curated wildlife adventures."
+        "text": "The best way to explore Yala is through a private jeep safari. At Nature Win Yala, we arrange exclusive safaris with experienced drivers who know the best spots for leopard and bear sightings, ensuring a premium wildlife photography experience."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I book a stay?",
+      "name": "How close is Nature Win Yala to the safari entrance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can book your stay directly through our website's 'Book Now' page or contact us for personalized assistance."
+        "text": "We are located just minutes away from the Katagamuwa and Palatupana entrances, giving you a head start for the morning safari to beat the queues and see wildlife when they are most active."
       }
     },
     {
       "@type": "Question",
-      "name": "Are meals included?",
+      "name": "Do you offer food and accommodation packages?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we offer a variety of meal plans including local and international cuisine. Please check your booking details for included options."
+        "text": "Yes, we offer full-board and half-board packages including authentic Sri Lankan rice and curry, fresh lake fish, and BBQ dinners using organic vegetables from our garden. Our luxury villas provide a private and comfortable stay."
       }
     },
     {
       "@type": "Question",
-      "name": "Is transportation provided?",
+      "name": "Can we visit Sithulpawwa or Kataragama from the hotel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We can arrange airport transfers and safari transport upon request. Please contact us in advance to schedule your transportation."
+        "text": "Yes, Nature Win Yala is centrally located. We can arrange transport for you to visit the ancient Sithulpawwa Rock Temple (inside the park) and the sacred Kataragama Temple nearby."
       }
     },
     {
       "@type": "Question",
-      "name": "What activities are available?",
+      "name": "What makes Nature Win Yala better than other hotels?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Guests can enjoy guided safaris, bird watching, nature walks, and cultural experiences. Check our Explore page for more details."
+        "text": "Unlike large commercial hotels, we offer a private villa experience with personalized service, 1000m² of private land, and direct access to nature. You get the luxury of a hotel with the privacy of a home."
       }
     }
   ]

@@ -11,7 +11,7 @@ import CTA from "./CTA";
 const faqs = [
     {
         question: "How close is your villa to Yala National Park?",
-        answer: "Nature Win Yala is located just minutes away from the Yala National Park entrance (Katagamuwa and Palatupana gates). Our prime location allows you to be among the first to enter the park for early morning safaris, significantly increasing your chances of spotting leopards and bears.",
+        answer: "Nature Win Yala is located just minutes away from the Yala National Park entrance (Katagamuwa and Palatupana gates). Our prime location allows you to be among the first to enter the park for early morning safaris, beating the jeep queues and significantly increasing your chances of spotting leopards, bears, and elephants.",
     },
     {
         question: "Do you provide private safari tours?",
@@ -56,6 +56,10 @@ const faqs = [
     {
         question: "How do I make a reservation?",
         answer: "Booking is easy! Simply visit our 'Book Now' page to check availability and reserve your stay online. Alternatively, you can contact us via WhatsApp for instant inquiries and customized package offers.",
+    },
+    {
+        question: "Why choose Nature Win Yala over a hotel?",
+        answer: "Unlike crowded Yala hotels or resorts, Nature Win Yala offers a private luxury villa experience. You get the entire property to yourself, ensuring privacy, safety, and a personalized safari experience. It is the best value alternative to high-end resorts like Cinnamon Wild or Jetwing Yala, offering the same access to wildlife with more space, better home-cooked food, and a true connection to nature.",
     },
 ];
 
