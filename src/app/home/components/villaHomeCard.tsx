@@ -30,12 +30,18 @@ const VillaHomeCard: React.FC<VillaHomeCardProps> = ({
   actionButton,
 }) => {
   return (
-    <div className="relative rounded-2xl overflow-hidden">
+    <div
+      className={`relative rounded-2xl overflow-hidden group ${
+        comingSoon
+          ? "cursor-default"
+          : "cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+      }`}
+    >
       <div
         className={`group transition-transform ${
           comingSoon
             ? "blur-[2px] pointer-events-none select-none"
-            : "cursor-pointer hover:scale-[1.02]"
+            : ""
         } rounded-2xl overflow-hidden`}
       >
         {/* Image Section */}

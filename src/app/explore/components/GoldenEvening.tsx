@@ -28,7 +28,7 @@ const GoldenEvening = () => {
           <div className="text-white text-base sm:text-lg md:text-xl lg:text-[20px] text-center lg:text-justify">
             <p>
               Just minutes from the resort, Bembawa Wewa offers one of Yala's
-              most magical sunsets — calm waters, golden skies, and a view that
+              most magical sunsets, calm waters, golden skies, and a view that
               feels like a painting.
             </p>
           </div>

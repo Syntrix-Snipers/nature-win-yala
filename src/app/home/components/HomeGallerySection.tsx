@@ -23,33 +23,33 @@ const HomeGallerySection: React.FC = () => {
           <div className="grid grid-cols-2 gap-6 h-full">
             {/* Left Subcolumn: 2 rows */}
             <div className="flex flex-col gap-6">
-              <div className="relative w-full h-48 md:h-56 lg:h-64">
+              <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[0]}
                   alt="Gallery 1"
                   fill
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
               </div>
-              <div className="relative w-full h-48 md:h-56 lg:h-64">
+              <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[1]}
                   alt="Gallery 2"
                   fill
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
             {/* Right Subcolumn: 1 image */}
-            <div className="relative w-full h-full min-h-96">
+            <div className="group relative w-full h-full min-h-96 rounded-xl group-hover:z-10">
               <Image
                 src={images[2]}
                 alt="Gallery 3"
                 fill
-                className="object-cover rounded-xl"
+                className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -58,32 +58,32 @@ const HomeGallerySection: React.FC = () => {
           {/* Right Column */}
           <div className="grid grid-rows-2 gap-6 h-full">
             {/* Top Row: 1 image */}
-            <div className="relative w-full h-48 md:h-56 lg:h-64">
+            <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
               <Image
                 src={images[3]}
                 alt="Gallery 4"
                 fill
-                className="object-cover rounded-xl"
+                className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             {/* Bottom Row: 2 columns */}
             <div className="grid grid-cols-2 gap-6 h-full">
-              <div className="relative w-full h-48 md:h-56 lg:h-64">
+              <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[4]}
                   alt="Gallery 5"
                   fill
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>
-              <div className="relative w-full h-48 md:h-56 lg:h-64">
+              <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[5]}
                   alt="Gallery 6"
                   fill
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>
