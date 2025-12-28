@@ -44,11 +44,11 @@ const Destinations = () => {
 
           <div className="text-center lg:text-left lg:pl-12">
             <h3 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
-              Yala National Park – The Untamed Icon
+              Yala National Park - The Untamed Icon
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed max-w-[420px] mx-auto lg:mx-0">
               Just a short drive away, Yala welcomes you with its world-famous
-              wildlife. Leopards, elephants, bears, crocodiles, birds — this is
+              wildlife. Leopards, elephants, bears, crocodiles, birds, this is
               the place where nature puts on its greatest show.
             </p>
           </div>
@@ -96,7 +96,7 @@ const Destinations = () => {
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed max-w-[420px] mx-auto lg:mx-0">
               Where the ocean meets mythology. Golden sands, crashing waves, and
-              the historic Kirinda Vihara overlooking the sea — a perfect sunset
+              the historic Kirinda Vihara overlooking the sea, a perfect sunset
               spot.
             </p>
           </div>
