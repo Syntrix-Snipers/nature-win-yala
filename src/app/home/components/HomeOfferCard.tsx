@@ -13,7 +13,7 @@ const HomeOfferCard: React.FC<HomeOfferCardProps> = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl w-72 cursor-pointer transition-shadow duration-300 hover:shadow-lg active:shadow-lg focus:shadow-lg focus:outline-none">
+    <div className="relative flex h-full min-h-[260px] flex-col items-center justify-center rounded-2xl bg-white p-4 w-72 cursor-pointer transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,0,0,0.25)] hover:z-10 focus:outline-none">
       <img
         src={icons[icon]}
         alt={title}
