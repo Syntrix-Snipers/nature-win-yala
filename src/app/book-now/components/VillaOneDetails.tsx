@@ -42,7 +42,7 @@ const VillaDetails = () => {
   const images = [
     {
       src: villaImages.thumb1,
-      alt: "Luxury two-bedroom villa exterior with private pool at Nature Win Yala"
+      alt: "Luxury two-bedroom villa exterior at Nature Win Yala"
     },
     {
       src: villaImages.thumb2,
