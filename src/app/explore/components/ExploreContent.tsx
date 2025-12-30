@@ -10,29 +10,56 @@ import CTA from "./CTA";
 
 const faqs = [
     {
-        question: "What is Nature Win Yala?",
-        answer:
-            "Nature Win Yala is a unique eco-friendly villa experience located near Yala National Park, offering luxury stays and curated wildlife adventures.",
+        question: "How close is your villa to Yala National Park?",
+        answer: "Nature Win Yala is located just minutes away from the Yala National Park entrance (Katagamuwa and Palatupana gates). Our prime location allows you to be among the first to enter the park for early morning safaris, beating the jeep queues and significantly increasing your chances of spotting leopards, bears, and elephants.",
     },
     {
-        question: "How do I book a stay?",
-        answer:
-            "You can book your stay directly through our website's 'Book Now' page or contact us for personalized assistance.",
+        question: "Do you provide private safari tours?",
+        answer: "Yes, we arrange exclusive private safari jeep tours with experienced drivers/guides who know the park's best wildlife spots. We offer half-day (morning/evening) and full-day safari packages tailored to your preferences, ensuring a personalized and uncrowded experience.",
     },
     {
-        question: "Are meals included?",
-        answer:
-            "Yes, we offer a variety of meal plans including local and international cuisine. Please check your booking details for included options.",
+        question: "Is the villa suitable for families?",
+        answer: "Absolutely. Nature Win Yala is one of the best family-friendly accommodations in Yala. Our secure, enclosed property features a spacious garden, a private kitchen for preparing kid-friendly meals, and a safe environment. Kids love our campfire evenings and spotting peacocks and monkeys in the garden.",
     },
     {
-        question: "Is transportation provided?",
-        answer:
-            "We can arrange airport transfers and safari transport upon request. Please contact us in advance to schedule your transportation.",
+        question: "Do you serve authentic Sri Lankan food?",
+        answer: "Yes, one of our highlights is our authentic homemade Sri Lankan cuisine. Our local chef prepares delicious breakfast, lunch, and dinner using fresh, organic ingredients. Guests rave about our traditional rice and curry, hoppers, and private BBQ dinners under the stars.",
     },
     {
-        question: "What activities are available?",
-        answer:
-            "Guests can enjoy guided safaris, bird watching, nature walks, and cultural experiences. Check our Explore page for more details.",
+        question: "Is the villa air-conditioned?",
+        answer: "Our luxury villa is designed to be cool and airy, with high ceilings and fans to complement the natural breeze. For specific air-conditioning requirements, please check the room amenities or contact us directly during booking.",
+    },
+    {
+        question: "Can I book the entire villa?",
+        answer: "Yes! Unlike a hotel room, you can book the entire 2-bedroom or 3-bedroom luxury villa for complete privacy. This makes it perfect for couples seeking romance or groups of friends and families wanting their own private space in the wild.",
+    },
+    {
+        question: "Is there internet access?",
+        answer: "Yes, we provide free high-speed Wi-Fi throughout the property, allowing you to stay connected and share your safari photos instantly. It's also suitable for remote work if you wish to extend your stay in nature.",
+    },
+    {
+        question: "What is the best time to visit Yala?",
+        answer: "Yala offers great sightings year-round. The dry season (February to July) is often cited as the best time for spotting leopards as they gather at waterholes. However, the lush green season offers beautiful scenery and migratory birds. We are open all year to host you.",
+    },
+    {
+        question: "Do you offer airport transfers?",
+        answer: "We can arrange reliable private transportation to and from Colombo (BIA) or any other location in Sri Lanka upon request. Please let us know your travel plans when booking so we can coordinate your smooth arrival.",
+    },
+    {
+        question: "Is the property pet-friendly?",
+        answer: "Yes, Nature Win Yala is a pet-friendly villa. We understand that pets are family, and they are welcome to enjoy the spacious garden and nature with you. Please inform us in advance if you are bringing a pet.",
+    },
+    {
+        question: "What other activities can we do nearby?",
+        answer: "Beyond Yala safaris, you can visit the Sithulpawwa Rock Temple, enjoy bird watching at the nearby lakes (Debarawewa, Tissa Wewa), visit the Kataragama Temple, or take a relaxing walk through the rural village surroundings of our villa.",
+    },
+    {
+        question: "How do I make a reservation?",
+        answer: "Booking is easy! Simply visit our 'Book Now' page to check availability and reserve your stay online. Alternatively, you can contact us via WhatsApp for instant inquiries and customized package offers.",
+    },
+    {
+        question: "Why choose Nature Win Yala over a hotel?",
+        answer: "Unlike crowded Yala hotels or resorts, Nature Win Yala offers a private luxury villa experience. You get the entire property to yourself, ensuring privacy, safety, and a personalized safari experience. It is the best value alternative to high-end resorts like Cinnamon Wild or Jetwing Yala, offering the same access to wildlife with more space, better home-cooked food, and a true connection to nature.",
     },
 ];
 
@@ -51,7 +78,7 @@ function FAQSection() {
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-serif text-[#124734] text-center mb-16">
-                    Common Questions
+                    Frequently Asked Questions About Yala Luxury Safaris
                 </h2>
 
                 <div className="space-y-6">

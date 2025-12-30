@@ -14,7 +14,7 @@ export default function BookNowContent() {
         {/* Background Image */}
         <Image
           src="/assets/images/houseimg1.png"
-          alt="Nature Win Yala"
+          alt="Book Luxury Safari Villa in Yala National Park"
           fill
           style={{ objectFit: "cover" }}
           className="opacity-20"
@@ -26,10 +26,10 @@ export default function BookNowContent() {
         {/* Text */}
         <div className="relative text-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-serif mb-4">
-            Find the Perfect Stay
+            Book Your Luxury Private Villa in Yala
           </h1>
           <p className="text-lg md:text-xl">
-            Home &gt; <span className="text-[#F9C170]">Book Now</span>
+            Home &gt; <span className="text-[#F9C170]">Book Luxury Stay</span>
           </p>
         </div>
       </div>
@@ -42,19 +42,17 @@ export default function BookNowContent() {
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="h-[1px] w-12 md:w-24 bg-gray-300"></div>
               <span className="uppercase tracking-widest text-[#124734] font-medium text-sm">
-                Choose Your Cabana
+                Select Your Luxury Accommodation Package in Yala
               </span>
               <div className="h-[1px] w-12 md:w-24 bg-gray-300"></div>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-serif text-[#124734] mb-6">
-              Pick Your Cabana & Begin Your Journey
+              Select Your Private Villa Package
             </h2>
-
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Choose your preferred cabana and follow the steps to check details
-              and secure your booking
-            </p>
+ <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Reserve the best private villa near Yala National Park. A superior choice compared to crowded Yala hotels, offering complete privacy, a private kitchen, and exclusive safari tours. Perfect for families and couples seeking a luxury nature escape.
+          </p>
           </div>
 
           {/* Cabana Grid */}
@@ -64,14 +62,14 @@ export default function BookNowContent() {
               <div className="relative h-[300px] w-full">
                 <Image
                   src="/assets/images/houseimg1.png"
-                  alt="Two-Bedroom Villa"
+                  alt="Luxury 2-Bedroom Private Villa Yala"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="bg-[#124734] text-center p-6">
                 <h3 className="text-white text-2xl font-serif mb-1">
-                  Two-Bedroom Villa
+                  Luxury 2-Bedroom Villa
                 </h3>
                 <p className="text-gray-300">LKR 12,500/night</p>
               </div>
@@ -82,7 +80,7 @@ export default function BookNowContent() {
               <div className="relative h-[300px] w-full bg-gray-100">
                 <Image
                   src="/assets/images/houseimg2.png"
-                  alt="Three-Bedroom Villa"
+                  alt="Royal 3-Bedroom Villa Yala (Coming Soon)"
                   fill
                   className="object-cover opacity-60 grayscale-[50%]"
                 />
@@ -95,9 +93,9 @@ export default function BookNowContent() {
               </div>
               <div className="bg-white text-center p-6 border-t border-gray-100">
                 <h3 className="text-[#124734] text-2xl font-serif mb-1">
-                  Three-Bedroom Villa
+                  Royal 3-Bedroom Villa
                 </h3>
-                <p className="text-gray-500">LKR 12,500/night</p>
+                <p className="text-gray-500">LKR 15,500/night</p>
               </div>
             </div>
           </div>
@@ -119,7 +117,7 @@ export default function BookNowContent() {
               Need Help With Your Booking?
             </h2>
             <p className="text-gray-300 text-lg">
-              Have questions or want to book faster? Reach us anytime
+              Have questions or want to book faster? Reach us anytime on WhatsApp
             </p>
           </div>
 

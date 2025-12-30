@@ -7,36 +7,36 @@ import { images } from "../../../../public/assets/images/images";
 const testimonials = [
   {
     description:
-      "Such a peaceful place! The cabana was clean, spacious, and surrounded by pure nature. Perfect getaway near Yala - highly recommended!",
+      "The best luxury villa in Yala! We had the entire 2-bedroom villa to ourselves, and it was so close to the Yala National Park entrance. The private safari arranged by the host was incredible—we saw three leopards! The homemade Sri Lankan food was the highlight.",
     profileImage: images.TestimonialPhoto,
-    name: "John Doe",
+    name: "Sarah Jenkins",
   },
   {
     description:
-      "We had an amazing stay! The hosts were very friendly and made us feel at home. A wonderful escape for families and friends.",
+      "Perfect family stay. Unlike the crowded hotels, Nature Win Yala gave us total privacy and space. The kids loved the campfire and the huge garden. Unbeatable value for a luxury safari accommodation near the park.",
     profileImage: images.TestimonialPhoto2,
-    name: "Nadeesha Fernando",
+    name: "Kasun Perera",
   },
   {
     description:
-      "Beautiful cabana with great facilities. The meals were delicious and the environment was relaxing. Will definitely visit again!",
+      "Serene, clean, and absolutely beautiful. The private kitchen was a huge plus, and the attached bathrooms were modern and spotless. Waking up to the sounds of peacocks and enjoying breakfast on the balcony was magical.",
     profileImage: images.TestimonialPhoto3,
-    name: "Ishara Madushan",
+    name: "Emma Lewis",
   },
   {
-    description: "Loved the calm atmosphere. Clean and spacious cabana with nature all around. A perfect place to unwind near Yala National Park.",
+    description: "We stayed at large resorts before, but Nature Win Yala was a far more authentic and personal experience. Being minutes from the entrance meant we were the first ones in the park. 10/10 service and location.",
     profileImage: images.TestimonialPhoto4,
-    name: "Tharindi Madushani",
+    name: "David Muller",
   },
   {
-    description: "Peaceful and refreshing experience. Very clean cabana, plenty of space, and surrounded by greenery. Perfect spot for a quiet stay near Yala.",
+    description: "A hidden gem for luxury travelers. The villa is spacious (1000sqft) and the nature views are stunning. The private BBQ night under the stars was unforgettable. Highly recommend for a private safari getaway.",
     profileImage: images.TestimonialPhoto5,
-    name: "Nadeeshan Perera",
+    name: "Nadeeshan P.",
   },
   {
-    description: "Highly recommend this place! A clean, spacious cabana in the middle of nature. So calm and relaxing, and very close to Yala.",
+    description: "Excellent value for money. You get a whole luxury villa for the price of a hotel room. Very close to Yala safari entrance. The host organized everything perfectly, from the jeep to the meals.",
     profileImage: images.TestimonialPhoto6,
-    name: "Ishara Perera",
+    name: "Ishara M.",
   },
 ];
 
@@ -109,11 +109,10 @@ const HomeTestimonialSection: React.FC = () => {
               <button
                 key={idx}
                 onClick={() => goToSlide(idx)}
-                className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                  idx === currentSlide
-                    ? "bg-white opacity-100 scale-110"
-                    : "bg-white opacity-40 hover:opacity-70"
-                }`}
+                className={`h-3 w-3 rounded-full transition-all duration-300 ${idx === currentSlide
+                  ? "bg-white opacity-100 scale-110"
+                  : "bg-white opacity-40 hover:opacity-70"
+                  }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}

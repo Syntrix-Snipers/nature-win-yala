@@ -26,7 +26,7 @@ const HomeGallerySection: React.FC = () => {
               <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[0]}
-                  alt="Gallery 1"
+                  alt="Luxury Bedroom with Nature View - Nature Win Yala Safari Villa"
                   fill
                   className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -36,7 +36,7 @@ const HomeGallerySection: React.FC = () => {
               <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[1]}
-                  alt="Gallery 2"
+                  alt="Modern Bathroom Amenities in Private Safari Villa Yala"
                   fill
                   className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -47,7 +47,7 @@ const HomeGallerySection: React.FC = () => {
             <div className="group relative w-full h-full min-h-96 rounded-xl group-hover:z-10">
               <Image
                 src={images[2]}
-                alt="Gallery 3"
+                alt="Spacious Living Area at Nature Win Yala Luxury Villa"
                 fill
                 className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -61,7 +61,7 @@ const HomeGallerySection: React.FC = () => {
             <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
               <Image
                 src={images[3]}
-                alt="Gallery 4"
+                alt="Outdoor Nature Views Near Yala National Park Entrance"
                 fill
                 className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -72,7 +72,7 @@ const HomeGallerySection: React.FC = () => {
               <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[4]}
-                  alt="Gallery 5"
+                  alt="Private Garden and Relaxing Area for Safari Guests"
                   fill
                   className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -81,7 +81,7 @@ const HomeGallerySection: React.FC = () => {
               <div className="group relative w-full h-48 md:h-56 lg:h-64 rounded-xl group-hover:z-10">
                 <Image
                   src={images[5]}
-                  alt="Gallery 6"
+                  alt="Night View of Luxury Villa Nature Win Yala"
                   fill
                   className="object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 25vw"
