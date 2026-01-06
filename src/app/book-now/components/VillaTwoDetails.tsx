@@ -2,7 +2,7 @@
 // SEO metadata for the Two-Bedroom Villa page
 import { BtnComponent } from "../../components/BtnComponent";
 export const metadata = {
-  title: "Two-Bedroom Villa | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
+  title: "Rotawewa Cabana | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
   description:
     "Book your luxury two-bedroom villa in Yala, Sri Lanka. Enjoy a unique safari experience, wildlife adventures, and family-friendly travel near Yala National Park. Pet-friendly, private kitchen, balcony views, and the best Yala safari accommodation for travelers exploring Yala, Sri Lanka.",
   keywords: [
@@ -41,23 +41,23 @@ const VillaTwoDetails = () => {
 
   const images = [
     {
-      src: villaImages.thumb1,
-      alt: "Luxury two-bedroom villa exterior with private pool at Nature Win Yala"
+      src: villaImages.thumb6,
+      alt: "Rotawewa Cabana at Nature Win Yala"
     },
     {
-      src: villaImages.thumb2,
+      src: villaImages.thumb7,
       alt: "Spacious bedroom with twin beds in Yala safari villa at Nature Win Yala"
     },
     {
-      src: villaImages.thumb3,
+      src: villaImages.thumb8,
       alt: "Modern kitchen and dining area in private villa near Yala National Park"
     },
     {
-      src: villaImages.thumb4,
+      src: villaImages.thumb9,
       alt: "Balcony view overlooking Yala National Park jungle from villa"
     },
     {
-      src: villaImages.thumb5,
+      src: villaImages.thumb10,
       alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
     }
   ];
@@ -155,7 +155,7 @@ const VillaTwoDetails = () => {
 
           {/* Villa Details Info */}
           <div className="text-white flex flex-col justify-center">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6">Royal 3-Bedroom Villa</h2>
+            <h2 className="text-3xl md:text-5xl font-serif mb-6">Rotawewa Cabana</h2>
             
             <div className="space-y-2 text-gray-200 mb-6 font-light text-sm md:text-base">
               <p><span className="font-semibold text-white">Number of guests :</span> 6 Members</p>
@@ -172,15 +172,15 @@ const VillaTwoDetails = () => {
             </p>
 
             <div className="mb-8">
-              <span className="text-3xl font-semibold">LKR 12,500.00</span>
+              <span className="text-3xl font-semibold">USD 50</span>
               <span className="text-gray-300 text-xl font-light"> / Night Per Person</span>
             </div>
 
-            <BtnComponent
-              variant="btn_1"
-            >
-              Book Now <ChevronRightIcon size={18} />
-            </BtnComponent>
+            <a href="#booking-form">
+                <BtnComponent variant="btn_1">
+                    Book Now <ChevronRightIcon size={18} />
+                </BtnComponent>
+              </a>
           </div>
         </div>
 

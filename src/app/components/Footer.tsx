@@ -95,7 +95,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-white/70 text-xs">
-          © {currentYear} Nature Win Yala | All Rights Reserved
+          © {currentYear} Nature Win Yala | All Rights Reserved | Developed by Syntrix
         </p>
       </div>
     </footer>

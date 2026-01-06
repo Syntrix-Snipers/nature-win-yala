@@ -24,6 +24,12 @@ export const images = {
   thumb3: '/assets/images/thumb-3.png',
   thumb4: '/assets/images/thumb-4.png',
   thumb5: '/assets/images/thumb-5.png',
+  thumb6: '/assets/images/thumb-6.jpeg',
+  thumb7: '/assets/images/thumb-7.jpeg',
+  thumb8: '/assets/images/thumb-8.jpeg',
+  thumb9: '/assets/images/thumb-9.jpeg',
+  thumb10: '/assets/images/thumb-10.jpeg',
+  thumb11: '/assets/images/thumb-11.jpeg',
   tiktok: '/assets/images/tiktok.png',
   VillaImg: '/assets/images/VillaImg.png',
 };

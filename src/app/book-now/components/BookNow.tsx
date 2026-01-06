@@ -148,7 +148,7 @@ const BookingForm: React.FC = () => {
   };
 
   return (
-    <section className="bg-white py-16 px-4 md:px-8">
+    <section id="booking-form" className="bg-white py-16 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <header className="mb-10">
           <h2 className="text-4xl md:text-5xl font-serif text-[#124734] mb-4">
@@ -224,8 +224,8 @@ const BookingForm: React.FC = () => {
                   required
                 >
                   <option value="">Select Your Cabana</option>
-                  <option>Two-Bedroom Villa</option>
-                  <option>Royal 3-Bedroom Villa</option>
+                  <option>Gal Kaduwa Cabana</option>
+                  <option>Rotawewa Cabana</option>
                 </select>
               </div>
 

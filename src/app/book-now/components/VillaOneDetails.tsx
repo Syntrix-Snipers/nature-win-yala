@@ -2,7 +2,7 @@
 // SEO metadata for the Two-Bedroom Villa page
 import { BtnComponent } from "../../components/BtnComponent";
 export const metadata = {
-  title: "Two-Bedroom Villa | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
+  title: "Gal Kaduwa Cabana | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
   description:
     "Book your luxury two-bedroom villa in Yala, Sri Lanka. Enjoy a unique safari experience, wildlife adventures, and family-friendly travel near Yala National Park. Pet-friendly, private kitchen, balcony views, and the best Yala safari accommodation for travelers exploring Yala, Sri Lanka.",
   keywords: [
@@ -42,7 +42,7 @@ const VillaOneDetails = () => {
   const images = [
     {
       src: villaImages.thumb1,
-      alt: "Luxury two-bedroom villa exterior with private pool at Nature Win Yala"
+      alt: "Galkaduwa Cabana at Nature Win Yala"
     },
     {
       src: villaImages.thumb2,
@@ -58,6 +58,10 @@ const VillaOneDetails = () => {
     },
     {
       src: villaImages.thumb5,
+      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
+    },
+    {
+      src: villaImages.thumb11,
       alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
     }
   ];
@@ -128,7 +132,7 @@ const VillaOneDetails = () => {
             </div>
 
             {/* Clickable Thumbnails */}
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-6 gap-1 md:gap-2">
               {images.map((img, i) => (
                 <BtnComponent
                   key={`thumb-${i}`}
@@ -146,6 +150,7 @@ const VillaOneDetails = () => {
                     src={img.src}
                     alt={img.alt + ' (thumbnail)'}
                     fill
+                    sizes="(max-width: 768px) 20vw, 10vw"
                     className="object-cover"
                   />
                 </BtnComponent>
@@ -155,7 +160,7 @@ const VillaOneDetails = () => {
 
           {/* Villa Details Info */}
           <div className="text-white flex flex-col justify-center">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6">Two-Bedroom Villa</h2>
+            <h2 className="text-3xl md:text-5xl font-serif mb-6">Gal Kaduwa Cabana</h2>
             
             <div className="space-y-2 text-gray-200 mb-6 font-light text-sm md:text-base">
               <p><span className="font-semibold text-white">Number of guests :</span> 6 Members</p>
@@ -172,15 +177,15 @@ const VillaOneDetails = () => {
             </p>
 
             <div className="mb-8">
-              <span className="text-3xl font-semibold">LKR 12,500.00</span>
+              <span className="text-3xl font-semibold">USD 50</span>
               <span className="text-gray-300 text-xl font-light"> / Night Per Person</span>
             </div>
 
-            <BtnComponent
-              variant="btn_1"
-            >
-              Book Now <ChevronRightIcon size={18} />
-            </BtnComponent>
+            <a href="#booking-form">
+              <BtnComponent variant="btn_1">
+                Book Now <ChevronRightIcon size={18} />
+              </BtnComponent>
+            </a>
           </div>
         </div>
 

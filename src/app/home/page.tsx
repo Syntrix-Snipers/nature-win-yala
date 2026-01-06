@@ -160,31 +160,21 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Cabana Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+          {/* Cabana Grid - Now updated to 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+            
+            {/* Villa 1 */}
             <VillaHomeCard
               image={images.houseimg1}
-              alt="2 Bedroom Luxury Villa Accommodation Yala"
-              title="Luxury Two-Bedroom Villa"
-              price="Rs. 12,500.00/night"
+              alt="Gal Kaduwa Cabana"
+              title="Gal Kaduwa Cabana"
+              price="USD 50/night"
               features={[
-                {
-                  icon: icons.SmallHomeIcon,
-                  text: "Entire villa",
-                },
-                {
-                  icon: icons.SmallProfileIcon,
-                  text: "6 Persons",
-                },
+                { icon: icons.SmallHomeIcon, text: "Entire villa" },
+                { icon: icons.SmallProfileIcon, text: "6 Persons" },
                 { icon: icons.SmallBoxIcon, text: "1000 m²" },
-                {
-                  icon: icons.SmallKitchenIcon,
-                  text: "Private kitchen",
-                },
-                {
-                  icon: icons.SmallWashroomIcon,
-                  text: "Private bathroom",
-                },
+                { icon: icons.SmallKitchenIcon, text: "Private kitchen" },
+                { icon: icons.SmallWashroomIcon, text: "Private bathroom" },
               ]}
               actionButton={
                 <BtnComponent variant="btn_2">
@@ -192,29 +182,19 @@ const Home = () => {
                 </BtnComponent>
               }
             />
+
+            {/* Villa 2 */}
             <VillaHomeCard
               image={images.houseimg2}
-              alt="Royal 3-Bedroom Villa"
-              title="Royal 3-Bedroom Villa"
-              price="Rs. 15,000.00/night"
+              alt="Rotawewa Cabana"
+              title="Rotawewa Cabana"
+              price="USD 50/night"
               features={[
-                {
-                  icon: icons.SmallHomeIcon,
-                  text: "Entire villa",
-                },
-                {
-                  icon: icons.SmallProfileIcon,
-                  text: "6 Persons",
-                },
+                { icon: icons.SmallHomeIcon, text: "Entire villa" },
+                { icon: icons.SmallProfileIcon, text: "6 Persons" },
                 { icon: icons.SmallBoxIcon, text: "1000 m²" },
-                {
-                  icon: icons.SmallKitchenIcon,
-                  text: "Private kitchen",
-                },
-                {
-                  icon: icons.SmallWashroomIcon,
-                  text: "Private bathroom",
-                },
+                { icon: icons.SmallKitchenIcon, text: "Private kitchen" },
+                { icon: icons.SmallWashroomIcon, text: "Private bathroom" },
               ]}
               actionButton={
                 <BtnComponent variant="btn_2">
@@ -222,6 +202,41 @@ const Home = () => {
                 </BtnComponent>
               }
             />
+
+            {/* Villa 3 - New Cabana */}
+            <div className="relative overflow-hidden rounded-2xl">
+            {/* The Card with Blur Effect */}
+            <div className="blur-[2px] pointer-events-none select-none">
+              <VillaHomeCard
+                image={images.houseimg2}
+                alt="Palugas Wewa Cabana"
+                title="Palugas Wewa Cabana"
+                price="USD 50/night"
+                features={[
+                  { icon: icons.SmallHomeIcon, text: "Entire Cabana" },
+                  { icon: icons.SmallProfileIcon, text: "2 Persons" },
+                  { icon: icons.SmallBoxIcon, text: "500 m²" },
+                  { icon: icons.SmallKitchenIcon, text: "Private kitchen" },
+                  { icon: icons.SmallWashroomIcon, text: "Private bathroom" },
+                ]}
+                actionButton={
+                  <BtnComponent variant="btn_2">
+                    <span>Book Now</span>
+                  </BtnComponent>
+                }
+              />
+            </div>
+
+            {/* Center-aligned Coming Soon Button */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button 
+                className="bg-white text-[#113a2c] font-bold py-3 px-8 rounded-md shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-xl active:scale-95 cursor-default"
+                onClick={(e) => e.preventDefault()}
+              >
+                Coming Soon
+              </button>
+            </div>
+          </div>
           </div>
         </div>
       </div>
