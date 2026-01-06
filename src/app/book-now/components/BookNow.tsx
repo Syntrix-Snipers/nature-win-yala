@@ -12,6 +12,49 @@ const inputBase =
 const smallInput =
   "w-20 p-2 bg-gray-100 border border-gray-200 rounded text-center text-base text-gray-800 placeholder-gray-500 focus:outline-none";
 
+const countries = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Argentina",
+  "Australia",
+  "Austria",
+  "Bangladesh",
+  "Belgium",
+  "Brazil",
+  "Canada",
+  "China",
+  "Denmark",
+  "Finland",
+  "France",
+  "Germany",
+  "India",
+  "Indonesia",
+  "Ireland",
+  "Italy",
+  "Japan",
+  "Malaysia",
+  "Maldives",
+  "Netherlands",
+  "New Zealand",
+  "Norway",
+  "Pakistan",
+  "Philippines",
+  "Russia",
+  "Singapore",
+  "South Africa",
+  "Sri Lanka",
+  "Sweden",
+  "Switzerland",
+  "Thailand",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+];
+
+
 type BookingFormData = {
   firstName: string;
   lastName: string;
@@ -112,7 +155,7 @@ const BookingForm: React.FC = () => {
             Booking Form
           </h2>
           <p className="text-gray-600 text-lg">
-            Fill in your details below and our team will get back to you shortly
+            Fill in your details below and our team will get back to you shortly.
           </p>
         </header>
 
@@ -144,23 +187,26 @@ const BookingForm: React.FC = () => {
             ))}
 
             <div className="flex flex-col gap-2">
-              <label className="text-base font-medium text-gray-700">
-                Country <span className="text-red-500">*</span>
-              </label>
-              <select
-                name="country"
-                className={inputBase}
-                value={formData.country}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select Your Country</option>
-                <option>Sri Lanka</option>
-                <option>United Kingdom</option>
-                <option>Australia</option>
-                <option>Russia</option>
-              </select>
-            </div>
+            <label className="text-base font-medium text-gray-700">
+              Country <span className="text-red-500">*</span>
+            </label>
+
+            <select
+              name="country"
+              className={inputBase}
+              value={formData.country}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Your Country</option>
+
+              {countries.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
+          </div>
           </div>
 
           {/* Cabana & Guests */}
@@ -179,6 +225,7 @@ const BookingForm: React.FC = () => {
                 >
                   <option value="">Select Your Cabana</option>
                   <option>Two-Bedroom Villa</option>
+                  <option>Royal 3-Bedroom Villa</option>
                 </select>
               </div>
 

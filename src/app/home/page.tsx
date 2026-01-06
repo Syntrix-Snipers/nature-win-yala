@@ -194,9 +194,9 @@ const Home = () => {
             />
             <VillaHomeCard
               image={images.houseimg2}
-              alt="3 Bedroom Family Villa Yala National Park"
-              title="Luxury Three-Bedroom Villa"
-              price="Rs. 15,500.00/night"
+              alt="Royal 3-Bedroom Villa"
+              title="Royal 3-Bedroom Villa"
+              price="Rs. 15,000.00/night"
               features={[
                 {
                   icon: icons.SmallHomeIcon,
@@ -221,7 +221,6 @@ const Home = () => {
                   <Link href="/book-now">Book Now</Link>
                 </BtnComponent>
               }
-              comingSoon={true}
             />
           </div>
         </div>

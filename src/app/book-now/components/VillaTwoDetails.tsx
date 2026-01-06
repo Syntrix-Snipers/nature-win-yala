@@ -36,7 +36,7 @@ import {
 // Import images from the auto-generated images.js file
 import { images as villaImages } from "../../../../public/assets/images/images";
 
-const VillaOneDetails = () => {
+const VillaTwoDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
@@ -155,7 +155,7 @@ const VillaOneDetails = () => {
 
           {/* Villa Details Info */}
           <div className="text-white flex flex-col justify-center">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6">Two-Bedroom Villa</h2>
+            <h2 className="text-3xl md:text-5xl font-serif mb-6">Royal 3-Bedroom Villa</h2>
             
             <div className="space-y-2 text-gray-200 mb-6 font-light text-sm md:text-base">
               <p><span className="font-semibold text-white">Number of guests :</span> 6 Members</p>
@@ -207,4 +207,4 @@ const VillaOneDetails = () => {
   );
 };
 
-export default VillaOneDetails;
+export default VillaTwoDetails;

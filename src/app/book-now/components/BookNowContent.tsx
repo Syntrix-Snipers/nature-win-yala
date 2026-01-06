@@ -1,12 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import VillaDetails from "./VillaOneDetails";
+import VillaOneDetails from "./VillaOneDetails";
+import VillaTwoDetails from "./VillaTwoDetails";
 import BookingForm from "./BookNow";
 import { BtnComponent } from "../../components/BtnComponent";
 
 export default function BookNowContent() {
+  const [selectedVilla, setSelectedVilla] = useState<"villa1" | "villa2">(
+    "villa1"
+  );
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -58,7 +62,14 @@ export default function BookNowContent() {
           {/* Cabana Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {/* Two-Bedroom Villa Card */}
-            <div className="group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02]">
+            <div
+              onClick={() => setSelectedVilla("villa1")}
+              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${
+                selectedVilla === "villa1"
+                  ? "border-[#124734]"
+                  : "border-transparent"
+              }`}
+            >
               <div className="relative h-[300px] w-full">
                 <Image
                   src="/assets/images/houseimg1.png"
@@ -75,27 +86,29 @@ export default function BookNowContent() {
               </div>
             </div>
 
-            {/* Three-Bedroom Villa Card (Coming Soon) */}
-            <div className="group rounded-xl overflow-hidden border border-gray-200 shadow-md">
-              <div className="relative h-[300px] w-full bg-gray-100">
+            {/* Three-Bedroom Villa Card */}
+              <div
+                onClick={() => setSelectedVilla("villa2")}
+                className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${
+                  selectedVilla === "villa2"
+                    ? "border-[#124734]"
+                    : "border-transparent"
+                }`}
+              >
+              <div className="relative h-[300px] w-full">
                 <Image
                   src="/assets/images/houseimg2.png"
-                  alt="Royal 3-Bedroom Villa Yala (Coming Soon)"
+                  alt="Royal 3-Bedroom Villa Yala"
                   fill
-                  className="object-cover opacity-60 grayscale-[50%]"
+                  className="object-cover"
                 />
-                {/* Coming Soon Badge */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="bg-white px-8 py-3 rounded-full text-[#124734] font-bold shadow-xl border border-gray-100">
-                    Coming Soon
-                  </span>
-                </div>
               </div>
-              <div className="bg-white text-center p-6 border-t border-gray-100">
-                <h3 className="text-[#124734] text-2xl font-serif mb-1">
+
+              <div className="bg-[#124734] text-center p-6">
+                <h3 className="text-white text-2xl font-serif mb-1">
                   Royal 3-Bedroom Villa
                 </h3>
-                <p className="text-gray-500">LKR 15,500/night</p>
+                <p className="text-gray-300">LKR 15,500/night</p>
               </div>
             </div>
           </div>
@@ -103,8 +116,9 @@ export default function BookNowContent() {
       </div>
 
       {/* Third Section */}
-      <VillaDetails />
-
+      {selectedVilla === "villa1" && <VillaOneDetails />}
+      {selectedVilla === "villa2" && <VillaTwoDetails />}
+      
       {/* Fourth Section: New Booking Form */}
       <BookingForm />
 
