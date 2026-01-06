@@ -2,7 +2,7 @@
 // SEO metadata for the Two-Bedroom Villa page
 import { BtnComponent } from "../../components/BtnComponent";
 export const metadata = {
-  title: "Gal Kaduwa Cabana | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
+  title: "Rotawewa Cabana | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
   description:
     "Book your luxury two-bedroom villa in Yala, Sri Lanka. Enjoy a unique safari experience, wildlife adventures, and family-friendly travel near Yala National Park. Pet-friendly, private kitchen, balcony views, and the best Yala safari accommodation for travelers exploring Yala, Sri Lanka.",
   keywords: [
@@ -36,32 +36,28 @@ import {
 // Import images from the auto-generated images.js file
 import { images as villaImages } from "../../../../public/assets/images/images";
 
-const VillaOneDetails = () => {
+const VillaTwoDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
     {
-      src: villaImages.thumb1,
-      alt: "Galkaduwa Cabana at Nature Win Yala"
+      src: villaImages.thumb6,
+      alt: "Rotawewa Cabana at Nature Win Yala"
     },
     {
-      src: villaImages.thumb2,
+      src: villaImages.thumb7,
       alt: "Spacious bedroom with twin beds in Yala safari villa at Nature Win Yala"
     },
     {
-      src: villaImages.thumb3,
+      src: villaImages.thumb8,
       alt: "Modern kitchen and dining area in private villa near Yala National Park"
     },
     {
-      src: villaImages.thumb4,
+      src: villaImages.thumb9,
       alt: "Balcony view overlooking Yala National Park jungle from villa"
     },
     {
-      src: villaImages.thumb5,
-      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
-    },
-    {
-      src: villaImages.thumb11,
+      src: villaImages.thumb10,
       alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
     }
   ];
@@ -132,7 +128,7 @@ const VillaOneDetails = () => {
             </div>
 
             {/* Clickable Thumbnails */}
-            <div className="grid grid-cols-6 gap-1 md:gap-2">
+            <div className="grid grid-cols-5 gap-2">
               {images.map((img, i) => (
                 <BtnComponent
                   key={`thumb-${i}`}
@@ -150,7 +146,6 @@ const VillaOneDetails = () => {
                     src={img.src}
                     alt={img.alt + ' (thumbnail)'}
                     fill
-                    sizes="(max-width: 768px) 20vw, 10vw"
                     className="object-cover"
                   />
                 </BtnComponent>
@@ -160,7 +155,7 @@ const VillaOneDetails = () => {
 
           {/* Villa Details Info */}
           <div className="text-white flex flex-col justify-center">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6">Gal Kaduwa Cabana</h2>
+            <h2 className="text-3xl md:text-5xl font-serif mb-6">Rotawewa Cabana</h2>
             
             <div className="space-y-2 text-gray-200 mb-6 font-light text-sm md:text-base">
               <p><span className="font-semibold text-white">Number of guests :</span> 6 Members</p>
@@ -182,10 +177,10 @@ const VillaOneDetails = () => {
             </div>
 
             <a href="#booking-form">
-              <BtnComponent variant="btn_1">
-                Book Now <ChevronRightIcon size={18} />
-              </BtnComponent>
-            </a>
+                <BtnComponent variant="btn_1">
+                    Book Now <ChevronRightIcon size={18} />
+                </BtnComponent>
+              </a>
           </div>
         </div>
 
@@ -212,4 +207,4 @@ const VillaOneDetails = () => {
   );
 };
 
-export default VillaOneDetails;
+export default VillaTwoDetails;
