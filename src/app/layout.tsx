@@ -326,11 +326,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href={images.thumb1} />
-        <link rel="icon" type="image/png" sizes="16x16" href={images.thumb1} />
-        <link rel="apple-touch-icon" sizes="180x180" href={images.thumb2} />
-        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#124734" />
         <meta name="robots" content="max-image-preview:large" />
         <link rel="canonical" href="https://naturewinyala.com/" />
