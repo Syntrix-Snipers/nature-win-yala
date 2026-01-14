@@ -206,9 +206,8 @@ const Home = () => {
             {/* Villa 3 - New Cabana */}
             <div className="relative overflow-hidden rounded-2xl">
             {/* The Card with Blur Effect */}
-            <div className="blur-[2px] pointer-events-none select-none">
               <VillaHomeCard
-                image={images.houseimg2}
+                image={images.thumb15}
                 alt="Palugas Wewa Cabana"
                 title="Palugas Wewa Cabana"
                 price="USD 50/night"
@@ -221,21 +220,10 @@ const Home = () => {
                 ]}
                 actionButton={
                   <BtnComponent variant="btn_2">
-                    <span>Book Now</span>
+                    <Link href="/book-now">Book Now</Link>
                   </BtnComponent>
                 }
               />
-            </div>
-
-            {/* Center-aligned Coming Soon Button */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button 
-                className="bg-white text-[#113a2c] font-bold py-3 px-8 rounded-md shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-xl active:scale-95 cursor-default"
-                onClick={(e) => e.preventDefault()}
-              >
-                Coming Soon
-              </button>
-            </div>
           </div>
           </div>
         </div>
