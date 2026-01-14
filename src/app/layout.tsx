@@ -312,7 +312,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        <link rel="icon" href="/assets/images/LogoVersion2.png" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/LogoVersion2.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/LogoVersion2.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/FooterLogo.png" />
@@ -351,6 +351,50 @@ export default function RootLayout({
               "url": "https://naturewinyala.com/assets/images/thumb-1.png",
               "width": 1200,
               "height": 630
+            }
+          }) }}
+        />
+        {/* Organization JSON-LD (brand logo) */}
+        <Script
+          id="ld-json-organization"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Nature Win Yala",
+            "url": "https://naturewinyala.com",
+            "logo": "https://naturewinyala.com/assets/images/LogoVersion2.png"
+          }) }}
+        />
+
+        {/* Hotel JSON-LD to provide clear Hotel/LocalBusiness signals */}
+        <Script
+          id="ld-json-hotel"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Hotel",
+            "name": "Nature Win Yala",
+            "url": "https://naturewinyala.com",
+            "image": [
+              "https://naturewinyala.com/assets/images/thumb-1.png"
+            ],
+            "description": "Luxury cabanas & private safari accommodation beside Yala National Park.",
+            "telephone": contactData.phone,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rota Wewa Yaya, Uddhakandara, Thabarawa, Galkaduwa",
+              "addressLocality": "Yala",
+              "addressRegion": "Southern Province",
+              "postalCode": "82600",
+              "addressCountry": "LK"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 6.3386,
+              "longitude": 81.3965
             }
           }) }}
         />
