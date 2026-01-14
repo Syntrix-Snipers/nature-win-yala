@@ -4,22 +4,29 @@ import React, { useState } from "react";
 import Image from "next/image";
 import VillaOneDetails from "./VillaOneDetails";
 import VillaTwoDetails from "./VillaTwoDetails";
+import VillaThreeDetails from "./VillaThreeDetails";
 import BookingForm from "./BookNow";
 import { BtnComponent } from "../../components/BtnComponent";
 
 export default function BookNowContent() {
-  const [selectedVilla, setSelectedVilla] = useState<"villa1" | "villa2">(
+  const [selectedVilla, setSelectedVilla] = useState<"villa1" | "villa2" | "villa3">(
     "villa1"
   );
 
 const [isExiting, setIsExiting] = useState(false);
 
 const handleVillaChange = () => {
-  setIsExiting(true); 
+  setIsExiting(true);
+
   setTimeout(() => {
-    setSelectedVilla((prev) => (prev === "villa1" ? "villa2" : "villa1"));
+    setSelectedVilla((prev) => {
+      if (prev === "villa1") return "villa2";
+      if (prev === "villa2") return "villa3";
+      return "villa1";
+    });
+
     setIsExiting(false);
-  }, 300); 
+  }, 300);
 };
 
   return (
@@ -96,7 +103,7 @@ const handleVillaChange = () => {
               </div>
             </div>
 
-            {/* Card 2: Royal Three-Bedroom Villa */}
+            {/* Card 2: Rotawewa Cabana */}
             <div
               onClick={() => setSelectedVilla("villa2")}
               className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${
@@ -119,13 +126,17 @@ const handleVillaChange = () => {
               </div>
             </div>
 
-            {/* Card 3: Cozy Garden Cabana - BLURRED & COMING SOON */}
+            {/* Card 3: Palugas Wewa Cabana */}
+            <div
+              onClick={() => setSelectedVilla("villa3")}
+              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${
+                selectedVilla === "villa3" ? "border-[#124734]" : "border-transparent"
+              }`}
+            >
             <div className="relative group rounded-xl overflow-hidden shadow-lg border-2 border-transparent">
-              {/* Blurred Content Layer */}
-              <div className="blur-[3px] pointer-events-none select-none h-full flex flex-col">
                 <div className="relative h-[300px] w-full">
                   <Image
-                    src="/assets/images/houseimg2.png" 
+                    src="/assets/images/thumb-15.jpeg" 
                     alt="Palugas Wewa Cabana"
                     fill
                     className="object-cover"
@@ -137,59 +148,79 @@ const handleVillaChange = () => {
                   </h3>
                   <p className="text-gray-300">USD 50/night</p>
                 </div>
-              </div>
-
-              {/* Coming Soon Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-              <button 
-                className="bg-white text-[#113a2c] font-bold py-3 px-8 rounded-md shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-xl active:scale-95 cursor-default"
-                onClick={(e) => e.preventDefault()}
-              >
-                Coming Soon
-              </button>
-            </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Third Section: Animated Details with Arrows */}
-          <div className="relative bg-[#124734]">
-            {/* Navigation Arrows Container */}
-            <div className="absolute inset-y-0 w-full flex items-center justify-between px-4 md:px-10 pointer-events-none z-30">
-              {/* Left Arrow */}
-              <button
-                onClick={handleVillaChange}
-                className="pointer-events-auto bg-white/10 hover:bg-white text-white hover:text-[#124734] p-3 rounded-full transition-all duration-300 shadow-xl backdrop-blur-md border border-white/20 hover:-translate-x-1 active:scale-90"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
+      <div className="relative bg-[#124734] py-10 md:py-0">
+        
+        {/* Navigation Arrows - Repositioned for Mobile */}
+        <div className="flex items-center justify-between px-6 md:px-10 mb-6 md:mb-0 md:absolute md:inset-y-0 md:w-full z-30 pointer-events-none">
+          
+          {/* Previous Arrow */}
+          <button
+            onClick={() => {
+              setIsExiting(true);
+              setTimeout(() => {
+                setSelectedVilla((prev) => {
+                  if (prev === "villa1") return "villa3";
+                  if (prev === "villa2") return "villa1";
+                  return "villa2";
+                });
+                setIsExiting(false);
+              }, 300);
+            }}
+            className="pointer-events-auto bg-white/10 hover:bg-white text-white hover:text-[#124734] p-2 md:p-3 rounded-full transition-all duration-300 shadow-xl backdrop-blur-md border border-white/20 active:scale-90"
+            aria-label="Previous Villa"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
 
-              {/* Right Arrow */}
-              <button
-                onClick={handleVillaChange}
-                className="pointer-events-auto bg-white/10 hover:bg-white text-white hover:text-[#124734] p-3 rounded-full transition-all duration-300 shadow-xl backdrop-blur-md border border-white/20 hover:translate-x-1 active:scale-90"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+          {/* Villa Indicator (Visible on Mobile only to clear space) */}
+          <span className="text-white/50 text-xs uppercase tracking-widest font-medium md:hidden">
+            {selectedVilla === "villa1" ? "01 / 03" : selectedVilla === "villa2" ? "02 / 03" : "03 / 03"}
+          </span>
 
-            {/* Animated Content Wrapper */}
-            <div 
-              className={`transition-all duration-500 ease-in-out transform ${
-                isExiting 
-                ? "opacity-0 scale-[0.98] translate-y-4" 
-                : "opacity-100 scale-100 translate-y-0"
-              }`}
-            >
-              {selectedVilla === "villa1" && <VillaOneDetails />}
-              {selectedVilla === "villa2" && <VillaTwoDetails />}
-            </div>
-          </div>
+          {/* Next Arrow */}
+          <button
+            onClick={() => {
+              setIsExiting(true);
+              setTimeout(() => {
+                setSelectedVilla((prev) => {
+                  if (prev === "villa1") return "villa2";
+                  if (prev === "villa2") return "villa3";
+                  return "villa1";
+                });
+                setIsExiting(false);
+              }, 300);
+            }}
+            className="pointer-events-auto bg-white/10 hover:bg-white text-white hover:text-[#124734] p-2 md:p-3 rounded-full transition-all duration-300 shadow-xl backdrop-blur-md border border-white/20 active:scale-90"
+            aria-label="Next Villa"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Animated Content Wrapper */}
+        <div 
+          className={`transition-all duration-500 ease-in-out transform ${
+            isExiting 
+            ? "opacity-0 scale-[0.98] translate-y-4" 
+            : "opacity-100 scale-100 translate-y-0"
+          }`}
+        >
+          {selectedVilla === "villa1" && <VillaOneDetails />}
+          {selectedVilla === "villa2" && <VillaTwoDetails />}
+          {selectedVilla === "villa3" && <VillaThreeDetails />}
+        </div>
+      </div>
       
       {/* Fourth Section: New Booking Form */}
       <BookingForm />

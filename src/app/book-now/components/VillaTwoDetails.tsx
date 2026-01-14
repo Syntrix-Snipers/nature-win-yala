@@ -1,31 +1,5 @@
 "use client";
-// SEO metadata for the Two-Bedroom Villa page
 import { BtnComponent } from "../../components/BtnComponent";
-export const metadata = {
-  title: "Rotawewa Cabana | Yala Safari Stay | Travel Yala Sri Lanka | Nature Win Yala",
-  description:
-    "Book your luxury two-bedroom villa in Yala, Sri Lanka. Enjoy a unique safari experience, wildlife adventures, and family-friendly travel near Yala National Park. Pet-friendly, private kitchen, balcony views, and the best Yala safari accommodation for travelers exploring Yala, Sri Lanka.",
-  keywords: [
-    "Yala",
-    "Yala Sri Lanka",
-    "Yala safari",
-    "Yala National Park",
-    "safari villa Yala",
-    "travel Yala",
-    "Sri Lanka travel",
-    "luxury villa Yala",
-    "family accommodation Yala",
-    "pet friendly Yala",
-    "wildlife Yala",
-    "Nature Win Yala",
-    "Yala safari stay",
-    "Yala travel guide",
-    "Yala accommodation",
-    "Yala safari hotel"
-  ],
-};
-
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { 
@@ -33,13 +7,20 @@ import {
   PawPrint, ShowerHead, LandPlot, Mountain,
   ChevronLeft, ChevronRight, ChevronRightIcon 
 } from "lucide-react";
-// Import images from the auto-generated images.js file
 import { images as villaImages } from "../../../../public/assets/images/images";
+
+// Note: Metadata should be moved to a Server Component (page.js or layout.js)
+// Exporting metadata from a "use client" file will cause a Next.js warning.
 
 const VillaTwoDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Updated array: thumb9 is now first, thumb10 is removed
   const images = [
+    {
+      src: villaImages.thumb9,
+      alt: "Balcony view overlooking Yala National Park jungle from villa"
+    },
     {
       src: villaImages.thumb6,
       alt: "Rotawewa Cabana at Nature Win Yala"
@@ -51,14 +32,6 @@ const VillaTwoDetails = () => {
     {
       src: villaImages.thumb8,
       alt: "Modern kitchen and dining area in private villa near Yala National Park"
-    },
-    {
-      src: villaImages.thumb9,
-      alt: "Balcony view overlooking Yala National Park jungle from villa"
-    },
-    {
-      src: villaImages.thumb10,
-      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
     }
   ];
 
@@ -91,44 +64,42 @@ const VillaTwoDetails = () => {
           <div className="space-y-4">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden group">
               <div 
-              className="flex transition-transform duration-500 ease-out h-full w-full"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                className="flex transition-transform duration-500 ease-out h-full w-full"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-              {images.map((img, idx) => (
-                <div key={`main-${idx}`} className="relative min-w-full w-full h-full flex-shrink-0">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority={idx === 0}
-                />
-                </div>
-              ))}
+                {images.map((img, idx) => (
+                  <div key={`main-${idx}`} className="relative min-w-full w-full h-full flex-shrink-0">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                      priority={idx === 0}
+                    />
+                  </div>
+                ))}
               </div>
 
               {/* Slider Arrows */}
               <button
-              type="button"
-              onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white hover:shadow-lg hover:border-white focus:outline-none focus:ring-2 focus:ring-[#124734]"
-              style={{ minWidth: 0 }}
+                type="button"
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white"
               >
-              <ChevronLeft size={18} />
+                <ChevronLeft size={18} />
               </button>
               <button
-              type="button"
-              onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white hover:shadow-lg hover:border-white focus:outline-none focus:ring-2 focus:ring-[#124734]"
-              style={{ minWidth: 0 }}
+                type="button"
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white"
               >
-              <ChevronRight size={18} />
+                <ChevronRight size={18} />
               </button>
             </div>
 
-            {/* Clickable Thumbnails */}
-            <div className="grid grid-cols-5 gap-2">
+            {/* Clickable Thumbnails - Adjusted to grid-cols-4 for the remaining images */}
+            <div className="grid grid-cols-4 gap-2">
               {images.map((img, i) => (
                 <BtnComponent
                   key={`thumb-${i}`}
@@ -140,12 +111,12 @@ const VillaTwoDetails = () => {
                       ? 'border-[#124734] opacity-100 shadow-lg'
                       : 'border-transparent opacity-60'
                   }`}
-                  style={{ minWidth: 0 }}
                 >
                   <Image
                     src={img.src}
                     alt={img.alt + ' (thumbnail)'}
                     fill
+                    sizes="(max-width: 768px) 25vw, 12vw"
                     className="object-cover"
                   />
                 </BtnComponent>
@@ -177,19 +148,14 @@ const VillaTwoDetails = () => {
             </div>
 
             <a href="#booking-form">
-                <BtnComponent variant="btn_1">
-                    Book Now <ChevronRightIcon size={18} />
-                </BtnComponent>
-              </a>
+              <BtnComponent variant="btn_1">
+                Book Now <ChevronRightIcon size={18} />
+              </BtnComponent>
+            </a>
           </div>
         </div>
 
-        {/* Amenities Grid: 
-            - grid-cols-2: two columns on mobile
-            - grid-rows-4: forces exactly 4 rows
-            - grid-flow-col: fills vertically (1,2,3,4 on left | 5,6,7,8 on right)
-            - lg overrides: returns to 4-column horizontal layout for desktop
-        */}
+        {/* Amenities Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 grid-flow-col lg:grid-flow-row gap-3 md:gap-4">
           {amenities.map((item, index) => (
             <div 

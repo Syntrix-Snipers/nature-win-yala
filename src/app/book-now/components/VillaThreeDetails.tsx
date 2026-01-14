@@ -9,26 +9,29 @@ import {
 } from "lucide-react";
 import { images as villaImages } from "../../../../public/assets/images/images";
 
-const VillaOneDetails = () => {
+// Note: Metadata should be moved to a Server Component (page.js or layout.js)
+// Next.js will ignore metadata exported from a "use client" file.
+
+const VillaThreeDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Updated array: Removed thumb3 (now 4 images total)
+  // Updated array: thumb10 has been removed, leaving 4 images
   const images = [
     {
-      src: villaImages.thumb1,
-      alt: "Galkaduwa Cabana at Nature Win Yala"
+      src: villaImages.thumb15,
+      alt: "Palugas Wewa Cabana at Nature Win Yala"
     },
     {
-      src: villaImages.thumb4,
+      src: villaImages.thumb12,
+      alt: "Spacious bedroom with twin beds in Yala safari villa at Nature Win Yala"
+    },
+    {
+      src: villaImages.thumb13,
+      alt: "Modern kitchen and dining area in private villa near Yala National Park"
+    },
+    {
+      src: villaImages.thumb14,
       alt: "Balcony view overlooking Yala National Park jungle from villa"
-    },
-    {
-      src: villaImages.thumb5,
-      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
-    },
-    {
-      src: villaImages.thumb11,
-      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
     }
   ];
 
@@ -82,21 +85,21 @@ const VillaOneDetails = () => {
               <button
                 type="button"
                 onClick={prevSlide}
-                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white"
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white hover:shadow-lg hover:border-white focus:outline-none focus:ring-2 focus:ring-[#124734]"
               >
                 <ChevronLeft size={18} />
               </button>
               <button
                 type="button"
                 onClick={nextSlide}
-                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white"
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full text-[#124734] bg-white/90 border border-[#124734] shadow-sm z-10 transition-all duration-150 hover:bg-[#124734] hover:text-white hover:shadow-lg hover:border-white focus:outline-none focus:ring-2 focus:ring-[#124734]"
               >
                 <ChevronRight size={18} />
               </button>
             </div>
 
-            {/* Clickable Thumbnails - Fixed to grid-cols-4 for 4 images */}
-            <div className="grid grid-cols-4 gap-2 md:gap-4">
+            {/* Clickable Thumbnails - Adjusted to grid-cols-4 */}
+            <div className="grid grid-cols-4 gap-2">
               {images.map((img, i) => (
                 <BtnComponent
                   key={`thumb-${i}`}
@@ -105,7 +108,7 @@ const VillaOneDetails = () => {
                   variant="btn_2"
                   className={`relative aspect-square rounded overflow-hidden border-2 transition-all duration-150 p-0 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#124734] hover:shadow-lg hover:scale-[1.05] ${
                     i === currentIndex
-                      ? 'border-[#124734] opacity-100'
+                      ? 'border-[#124734] opacity-100 shadow-lg'
                       : 'border-transparent opacity-60'
                   }`}
                 >
@@ -113,7 +116,6 @@ const VillaOneDetails = () => {
                     src={img.src}
                     alt={img.alt + ' (thumbnail)'}
                     fill
-                    sizes="(max-width: 768px) 25vw, 15vw"
                     className="object-cover"
                   />
                 </BtnComponent>
@@ -123,7 +125,7 @@ const VillaOneDetails = () => {
 
           {/* Villa Details Info */}
           <div className="text-white flex flex-col justify-center">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6">Gal Kaduwa Cabana</h2>
+            <h2 className="text-3xl md:text-5xl font-serif mb-6">Palugas Wewa Cabana</h2>
             
             <div className="space-y-2 text-gray-200 mb-6 font-light text-sm md:text-base">
               <p><span className="font-semibold text-white">Number of guests :</span> 6 Members</p>
@@ -145,10 +147,10 @@ const VillaOneDetails = () => {
             </div>
 
             <a href="#booking-form">
-              <BtnComponent variant="btn_1">
-                Book Now <ChevronRightIcon size={18} />
-              </BtnComponent>
-            </a>
+                <BtnComponent variant="btn_1">
+                    Book Now <ChevronRightIcon size={18} />
+                </BtnComponent>
+              </a>
           </div>
         </div>
 
@@ -170,4 +172,4 @@ const VillaOneDetails = () => {
   );
 };
 
-export default VillaOneDetails;
+export default VillaThreeDetails;
