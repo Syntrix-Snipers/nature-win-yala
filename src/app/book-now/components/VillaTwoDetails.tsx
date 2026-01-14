@@ -9,23 +9,30 @@ import {
 } from "lucide-react";
 import { images as villaImages } from "../../../../public/assets/images/images";
 
-const VillaOneDetails = () => {
+// Note: Metadata should be moved to a Server Component (page.js or layout.js)
+// Exporting metadata from a "use client" file will cause a Next.js warning.
+
+const VillaTwoDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Use 3 images for the cabana slider
+  // Updated array: thumb9 is now first, thumb10 is removed
   const images = [
     {
-      src: villaImages.thumb1,
-      alt: "Galkaduwa Cabana exterior at Nature Win Yala",
+      src: villaImages.thumb9,
+      alt: "Balcony view overlooking Yala National Park jungle from villa"
     },
     {
-      src: villaImages.thumb2,
-      alt: "Spacious bedroom in Galkaduwa Cabana",
+      src: villaImages.thumb6,
+      alt: "Rotawewa Cabana at Nature Win Yala"
     },
     {
-      src: villaImages.thumb4,
-      alt: "Balcony view from Galkaduwa Cabana overlooking the jungle",
+      src: villaImages.thumb7,
+      alt: "Spacious bedroom with twin beds in Yala safari villa at Nature Win Yala"
     },
+    {
+      src: villaImages.thumb8,
+      alt: "Modern kitchen and dining area in private villa near Yala National Park"
+    }
   ];
 
   const amenities = [
@@ -91,8 +98,8 @@ const VillaOneDetails = () => {
               </button>
             </div>
 
-            {/* Clickable Thumbnails - fixed to 3 images */}
-            <div className="grid grid-cols-3 gap-2 md:gap-4">
+            {/* Clickable Thumbnails - Adjusted to grid-cols-4 for the remaining images */}
+            <div className="grid grid-cols-4 gap-2">
               {images.map((img, i) => (
                 <BtnComponent
                   key={`thumb-${i}`}
@@ -101,7 +108,7 @@ const VillaOneDetails = () => {
                   variant="btn_2"
                   className={`relative aspect-square rounded overflow-hidden border-2 transition-all duration-150 p-0 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#124734] hover:shadow-lg hover:scale-[1.05] ${
                     i === currentIndex
-                      ? 'border-[#124734] opacity-100'
+                      ? 'border-[#124734] opacity-100 shadow-lg'
                       : 'border-transparent opacity-60'
                   }`}
                 >
@@ -109,7 +116,7 @@ const VillaOneDetails = () => {
                     src={img.src}
                     alt={img.alt + ' (thumbnail)'}
                     fill
-                    sizes="(max-width: 768px) 25vw, 15vw"
+                    sizes="(max-width: 768px) 25vw, 12vw"
                     className="object-cover"
                   />
                 </BtnComponent>
@@ -119,7 +126,7 @@ const VillaOneDetails = () => {
 
           {/* Villa Details Info */}
           <div className="text-white flex flex-col justify-center">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6">Gal Kaduwa Cabana</h2>
+            <h2 className="text-3xl md:text-5xl font-serif mb-6">Rotawewa Cabana</h2>
             
             <div className="space-y-2 text-gray-200 mb-6 font-light text-sm md:text-base">
               <p><span className="font-semibold text-white">Number of guests :</span> 6 Members</p>
@@ -166,4 +173,4 @@ const VillaOneDetails = () => {
   );
 };
 
-export default VillaOneDetails;
+export default VillaTwoDetails;

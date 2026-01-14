@@ -160,31 +160,21 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Cabana Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+          {/* Cabana Grid - Now updated to 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+            
+            {/* Villa 1 */}
             <VillaHomeCard
               image={images.houseimg1}
-              alt="2 Bedroom Luxury Villa Accommodation Yala"
-              title="Luxury Two-Bedroom Villa"
-              price="Rs. 12,500.00/night"
+              alt="Gal Kaduwa Cabana"
+              title="Gal Kaduwa Cabana"
+              price="USD 50/night"
               features={[
-                {
-                  icon: icons.SmallHomeIcon,
-                  text: "Entire villa",
-                },
-                {
-                  icon: icons.SmallProfileIcon,
-                  text: "6 Persons",
-                },
+                { icon: icons.SmallHomeIcon, text: "Entire villa" },
+                { icon: icons.SmallProfileIcon, text: "6 Persons" },
                 { icon: icons.SmallBoxIcon, text: "1000 m²" },
-                {
-                  icon: icons.SmallKitchenIcon,
-                  text: "Private kitchen",
-                },
-                {
-                  icon: icons.SmallWashroomIcon,
-                  text: "Private bathroom",
-                },
+                { icon: icons.SmallKitchenIcon, text: "Private kitchen" },
+                { icon: icons.SmallWashroomIcon, text: "Private bathroom" },
               ]}
               actionButton={
                 <BtnComponent variant="btn_2">
@@ -192,37 +182,49 @@ const Home = () => {
                 </BtnComponent>
               }
             />
+
+            {/* Villa 2 */}
             <VillaHomeCard
               image={images.houseimg2}
-              alt="3 Bedroom Family Villa Yala National Park"
-              title="Luxury Three-Bedroom Villa"
-              price="Rs. 15,500.00/night"
+              alt="Rotawewa Cabana"
+              title="Rotawewa Cabana"
+              price="USD 50/night"
               features={[
-                {
-                  icon: icons.SmallHomeIcon,
-                  text: "Entire villa",
-                },
-                {
-                  icon: icons.SmallProfileIcon,
-                  text: "6 Persons",
-                },
+                { icon: icons.SmallHomeIcon, text: "Entire villa" },
+                { icon: icons.SmallProfileIcon, text: "6 Persons" },
                 { icon: icons.SmallBoxIcon, text: "1000 m²" },
-                {
-                  icon: icons.SmallKitchenIcon,
-                  text: "Private kitchen",
-                },
-                {
-                  icon: icons.SmallWashroomIcon,
-                  text: "Private bathroom",
-                },
+                { icon: icons.SmallKitchenIcon, text: "Private kitchen" },
+                { icon: icons.SmallWashroomIcon, text: "Private bathroom" },
               ]}
               actionButton={
                 <BtnComponent variant="btn_2">
                   <Link href="/book-now">Book Now</Link>
                 </BtnComponent>
               }
-              comingSoon={true}
             />
+
+            {/* Villa 3 - New Cabana */}
+            <div className="relative overflow-hidden rounded-2xl">
+            {/* The Card with Blur Effect */}
+              <VillaHomeCard
+                image={images.thumb15}
+                alt="Palugas Wewa Cabana"
+                title="Palugas Wewa Cabana"
+                price="USD 50/night"
+                features={[
+                  { icon: icons.SmallHomeIcon, text: "Entire Cabana" },
+                  { icon: icons.SmallProfileIcon, text: "2 Persons" },
+                  { icon: icons.SmallBoxIcon, text: "500 m²" },
+                  { icon: icons.SmallKitchenIcon, text: "Private kitchen" },
+                  { icon: icons.SmallWashroomIcon, text: "Private bathroom" },
+                ]}
+                actionButton={
+                  <BtnComponent variant="btn_2">
+                    <Link href="/book-now">Book Now</Link>
+                  </BtnComponent>
+                }
+              />
+          </div>
           </div>
         </div>
       </div>
