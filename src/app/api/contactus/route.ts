@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     const domain =
       process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const logoUrl = `${domain}/assets/images/LogoVersion2.png`;
+    const logoUrl = `${domain}/assets/images/thumb-1.png`;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
