@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SOCIAL_LINKS } from "../../../data/links";
 import { contactData } from "../../../data/data";
+import { images } from "../../../public/assets/images/images";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,14 +10,12 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#124734] pt-16 pb-8 border-t border-gray-300">
       <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-6">
-        
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 items-start">
-          
           {/* Logo + Description + Socials */}
           <div className="md:col-span-5 flex flex-col gap-6">
             <Image
-              src="/assets/images/FooterLogo.png"
+              src={images.FooterLogo}
               alt="Nature Win Yala — Luxury Villa & Safari Accommodation"
               width={220}
               height={140}
@@ -24,28 +23,34 @@ export default function Footer() {
             />
 
             <p className="text-white text-sm leading-relaxed max-w-sm">
-              Nature Win Yala is your private escape in Yala, offering cozy stays,
-              relaxing spaces, and the perfect setting for families and groups.
+              Nature Win Yala is your private escape in Yala, offering cozy
+              stays, relaxing spaces, and the perfect setting for families and
+              groups.
             </p>
 
             <div className="flex gap-4">
-              {SOCIAL_LINKS.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-80 transition-opacity"
-                >
-                  <Image
-                    src={`/assets/images/${social.name.toLowerCase()}.png`}
-                    alt={social.name}
-                    width={24}
-                    height={24}
-                    className="object-contain h-5 w-5"
-                  />
-                </a>
-              ))}
+              {SOCIAL_LINKS.map((social) => {
+                const key = social.name.toLowerCase();
+                const iconSrc =
+                  (images as any)[key] ?? `/assets/images/${key}.png`;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src={iconSrc}
+                      alt={social.name}
+                      width={24}
+                      height={24}
+                      className="object-contain h-5 w-5"
+                    />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -54,17 +59,26 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-[#F5C27B]">Links</h3>
             <ul className="space-y-2 text-sm text-white">
               <li>
-                <Link href="/" className="hover:text-[#F5C27B] transition-colors">
+                <Link
+                  href="/"
+                  className="hover:text-[#F5C27B] transition-colors"
+                >
                   Bookings
                 </Link>
               </li>
               <li>
-                <Link href="/explore" className="hover:text-[#F5C27B] transition-colors">
+                <Link
+                  href="/explore"
+                  className="hover:text-[#F5C27B] transition-colors"
+                >
                   Explore
                 </Link>
               </li>
               <li>
-                <Link href="/#dine-with-us" className="hover:text-[#F5C27B] transition-colors">
+                <Link
+                  href="/#dine-with-us"
+                  className="hover:text-[#F5C27B] transition-colors"
+                >
                   Dine With Us
                 </Link>
               </li>
@@ -87,7 +101,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
         </div>
 
         {/* Divider */}
@@ -95,7 +108,8 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-white/70 text-xs">
-          © {currentYear} Nature Win Yala | All Rights Reserved | Developed by Syntrix
+          © {currentYear} Nature Win Yala | All Rights Reserved | Developed by
+          Syntrix
         </p>
       </div>
     </footer>
