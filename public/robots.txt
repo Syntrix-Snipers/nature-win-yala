@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naturewinyala.com/sitemap.xml
+Sitemap: https://naturewinyala.com/image-sitemap.xml
