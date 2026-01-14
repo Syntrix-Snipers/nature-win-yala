@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col gap-6">
             <Image
               src="/assets/images/FooterLogo.png"
-              alt="Nature Win Yala Logo"
+              alt="Nature Win Yala — Luxury Villa & Safari Accommodation"
               width={220}
               height={140}
               className="object-contain"

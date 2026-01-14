@@ -55,7 +55,7 @@ export async function POST(req) {
       <body>
         <div class="container">
           <div class="header">
-            <img src="${logoUrl}" alt="Nature Win Yala Logo" class="logo" />
+            <img src="${logoUrl}" alt="Nature Win Yala" class="logo" />
             <h1>New Booking Request</h1>
           </div>
           

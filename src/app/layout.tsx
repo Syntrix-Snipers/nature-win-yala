@@ -310,7 +310,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <head />
+      <head>
+        <link rel="icon" href="/assets/images/LogoVersion2.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/LogoVersion2.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/LogoVersion2.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/FooterLogo.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#124734" />
+      </head>
       <body className="antialiased">
         <Script
           id="ld-json-lodgingbusiness"
