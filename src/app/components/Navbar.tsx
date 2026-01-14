@@ -21,7 +21,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/assets/images/LogoVersion2.png"
-            alt="Nature Win Yala Logo"
+            alt="Nature Win Yala"
             width={200} // Reduced width for better layout fit
             height={60}
             className="object-contain w-auto h-12"

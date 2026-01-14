@@ -96,7 +96,7 @@ export async function POST(req: Request) {
     <body>
       <div class="container">
         <div class="header">
-          <img src="${logoUrl}" alt="Nature Win Yala Logo" class="logo" />
+          <img src="${logoUrl}" alt="Nature Win Yala" class="logo" />
           <h2>New Contact Message</h2>
         </div>
 

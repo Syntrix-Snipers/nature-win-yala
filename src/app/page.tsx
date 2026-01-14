@@ -2,8 +2,23 @@ import Home from "./home/page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best Yala National Park Hotels & Luxury Villas Sri Lanka 2025-2026",
-  description: "Discover the best luxury villas, resorts, and safari accommodations near Yala National Park Sri Lanka for 2025-2026. Private pools, authentic cuisine, proximity to Palatupana entrance, leopard safaris & more. Book top stays like Jetwing Yala, Cinnamon Wild, Kotiyagala, O2 Villas & Wild Coast Tented Lodge.",
+  title: "Best Yala National Park Hotels & Luxury Villas Sri Lanka 2026",
+  description: "Discover the best luxury villas, resorts, and safari accommodations near Yala National Park Sri Lanka for 2026. Private pools, authentic cuisine, proximity to Palatupana entrance, leopard safaris & more. Book top stays like Jetwing Yala, Cinnamon Wild, Kotiyagala, O2 Villas & Wild Coast Tented Lodge.",
+  openGraph: {
+    title: "Nature Win Yala | Luxury Villa & Safari Accommodation in Yala National Park 2026",
+    description:
+      "Luxury two-bedroom villa near Yala National Park. Private kitchen, pet-friendly, local food, and safari experiences. Your ultimate Yala adventure starts here.",
+    url: "https://naturewinyala.com/",
+    type: "website",
+    images: [
+      {
+        url: "/assets/images/thumb-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Nature Win Yala Luxury Villa and Safari"
+      }
+    ]
+  },
   keywords: [
     // Original keywords (kept intact)
     "yala national park accommodation", "yala accommodation", "hotels in yala", "yala national park hotels", "best place to stay in yala",
@@ -72,11 +87,7 @@ export const metadata: Metadata = {
     "luxury villa yala near palatupana entrance", "yala accommodation with ocean view", "best value luxury stay yala", "yala private villa with chef",
     "kotiyagala luxury villas reviews 2025", "o2 villas yala luxury", "wild coast tented lodge 2026", "cinnamon wild yala offers 2026"
   ],
-  openGraph: {
-    title: "Best Yala National Park Hotels & Luxury Villas Sri Lanka 2025-2026",
-    description: "Luxury safari stays, private villas with pools, eco-friendly resorts near Yala entrance. Top picks including Hilton Yala, Uga Chena Huts & more.",
-    images: ["/assets/images/houseimg1.png"], // Assuming default image usage
-  },
+
   alternates: {
     canonical: "https://naturewinyala.com",
   }

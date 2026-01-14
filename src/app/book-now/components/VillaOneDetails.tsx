@@ -12,24 +12,20 @@ import { images as villaImages } from "../../../../public/assets/images/images";
 const VillaOneDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Updated array: Removed thumb3 (now 4 images total)
+  // Use 3 images for the cabana slider
   const images = [
     {
       src: villaImages.thumb1,
-      alt: "Galkaduwa Cabana at Nature Win Yala"
+      alt: "Galkaduwa Cabana exterior at Nature Win Yala",
+    },
+    {
+      src: villaImages.thumb2,
+      alt: "Spacious bedroom in Galkaduwa Cabana",
     },
     {
       src: villaImages.thumb4,
-      alt: "Balcony view overlooking Yala National Park jungle from villa"
+      alt: "Balcony view from Galkaduwa Cabana overlooking the jungle",
     },
-    {
-      src: villaImages.thumb5,
-      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
-    },
-    {
-      src: villaImages.thumb11,
-      alt: "Pet-friendly villa with free parking and garden at Nature Win Yala"
-    }
   ];
 
   const amenities = [
@@ -95,8 +91,8 @@ const VillaOneDetails = () => {
               </button>
             </div>
 
-            {/* Clickable Thumbnails - Fixed to grid-cols-4 for 4 images */}
-            <div className="grid grid-cols-4 gap-2 md:gap-4">
+            {/* Clickable Thumbnails - fixed to 3 images */}
+            <div className="grid grid-cols-3 gap-2 md:gap-4">
               {images.map((img, i) => (
                 <BtnComponent
                   key={`thumb-${i}`}
