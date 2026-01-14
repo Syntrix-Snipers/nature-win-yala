@@ -7,6 +7,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppFloatingIcon from "./components/whatsapp";
 import { contactData } from "../../data/data";
+import { images } from "../../public/assets/images/images.js";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://naturewinyala.com";
+
+export const metadataBase = new URL(SITE_URL);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -110,10 +115,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://naturewinyala.com/assets/images/thumb-1.png",
+        url: `${SITE_URL}${images.thumb1}`,
         width: 1200,
         height: 630,
         alt: "Nature Win Yala Luxury Villa and Private Safari Accommodation"
+      },
+      {
+        url: `${SITE_URL}${images.thumb2}`,
+        width: 800,
+        height: 418,
+        alt: "Nature Win Yala cabana view"
       }
     ]
   },
@@ -123,7 +134,8 @@ export const metadata: Metadata = {
     description:
       "Experience luxury in the wild. Private 2-bedroom villa near Yala National Park entrance with authentic cuisine and personalized safaris.",
     images: [
-      "https://naturewinyala.com/assets/images/thumb-1.png"
+      `${SITE_URL}${images.thumb1}`,
+      `${SITE_URL}${images.thumb2}`
     ],
     site: "@naturewinyala"
   }
@@ -140,8 +152,10 @@ const jsonLd = {
       "url": "https://naturewinyala.com/",
       "telephone": contactData.phone,
       "email": contactData.email,
-      "image": "https://naturewinyala.com/assets/images/thumb-1.png",
-      "logo": "https://naturewinyala.com/assets/images/LogoVersion2.png",
+      "image": [
+        `${SITE_URL}${images.thumb1}`,
+        `${SITE_URL}${images.thumb2}`
+      ],
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
@@ -313,20 +327,12 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/LogoVersion2.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/LogoVersion2.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/FooterLogo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href={images.LogoVersion2} />
+        <link rel="icon" type="image/png" sizes="16x16" href={images.LogoVersion2} />
+        <link rel="apple-touch-icon" sizes="180x180" href={images.FooterLogo} />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#124734" />
-        {/* Explicit social meta tags to prefer thumb-1 for previews */}
-        <meta property="og:image" content="https://naturewinyala.com/assets/images/thumb-1.png" />
-        <meta property="og:image:alt" content="Nature Win Yala Luxury Villa and Private Safari Accommodation" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://naturewinyala.com/assets/images/thumb-1.png" />
-        <link rel="image_src" href="https://naturewinyala.com/assets/images/thumb-1.png" />
-        <meta itemProp="image" content="https://naturewinyala.com/assets/images/thumb-1.png" />
-        <title>Nature Win Yala | Luxury Villa & Safari Accommodation</title>
+        <link rel="canonical" href="https://naturewinyala.com/" />
       </head>
       <body className="antialiased">
         <Script
@@ -348,25 +354,13 @@ export default function RootLayout({
             "description": "Experience the ultimate luxury villa in Yala National Park.",
             "primaryImageOfPage": {
               "@type": "ImageObject",
-              "url": "https://naturewinyala.com/assets/images/thumb-1.png",
+              "url": `${SITE_URL}${images.thumb1}`,
               "width": 1200,
               "height": 630
             }
           }) }}
         />
-        {/* Organization JSON-LD (brand logo) */}
-        <Script
-          id="ld-json-organization"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Nature Win Yala",
-            "url": "https://naturewinyala.com",
-            "logo": "https://naturewinyala.com/assets/images/LogoVersion2.png"
-          }) }}
-        />
+        {/* Organization JSON-LD removed to reduce logo prominence for search previews */}
 
         {/* Hotel JSON-LD to provide clear Hotel/LocalBusiness signals */}
         <Script
@@ -379,7 +373,7 @@ export default function RootLayout({
             "name": "Nature Win Yala",
             "url": "https://naturewinyala.com",
             "image": [
-              "https://naturewinyala.com/assets/images/thumb-1.png"
+              `${SITE_URL}${images.thumb1}`
             ],
             "description": "Luxury cabanas & private safari accommodation beside Yala National Park.",
             "telephone": contactData.phone,
