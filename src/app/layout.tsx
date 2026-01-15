@@ -24,6 +24,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/assets/images/LogoVersion2.png",
+  },
   title: "Nature Win Yala | Luxury Villa & Safari Accommodation in Yala National Park, Sri Lanka",
   description:
     "Experience the ultimate luxury villa in Yala National Park. Private 2-bedroom villa near Yala entrance, authentic Sri Lankan cuisine, personalized private safaris, and serene nature views. The best value alternative to large resorts for families and couples.",
