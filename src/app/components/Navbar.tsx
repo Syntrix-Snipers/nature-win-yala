@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { images } from "../../../public/assets/images/images";
 
 const navLinkClass =
   "relative font-bold text-[#124734] transition " +
@@ -18,22 +19,29 @@ export default function Navbar() {
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3" data-nosnippet>
           <Image
-            src="/assets/images/LogoVersion2.png"
+            src={images.LogoVersion2}
             alt="Nature Win Yala"
             width={200} // Reduced width for better layout fit
             height={60}
             className="object-contain w-auto h-12"
-            priority
+            loading="lazy"
+            data-nosnippet
           />
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-lg font-medium items-center">
-          <Link href="/" className={navLinkClass}>Home</Link>
-          <Link href="/explore" className={navLinkClass}>Explore</Link>
-          <Link href="/#contact" className={navLinkClass}>Contact Us</Link>
+          <Link href="/" className={navLinkClass}>
+            Home
+          </Link>
+          <Link href="/explore" className={navLinkClass}>
+            Explore
+          </Link>
+          <Link href="/#contact" className={navLinkClass}>
+            Contact Us
+          </Link>
           <Link
             href="/book-now"
             className="bg-[#124734] text-white px-5 py-2 rounded-lg shadow-md border border-[#124734] font-bold hover:bg-white hover:text-[#124734] transition-all duration-300"
@@ -54,8 +62,9 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-screen border-t border-gray-100" : "max-h-0"
-          }`}
+        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "max-h-screen border-t border-gray-100" : "max-h-0"
+        }`}
       >
         <div className="flex flex-col px-6 py-6 space-y-6 text-lg">
           <Link

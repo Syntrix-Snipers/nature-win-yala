@@ -11,8 +11,7 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: [
       'https://naturewinyala.com/sitemap.xml',
-      'https://www.naturewinyala.com/sitemap.xml',
     ],
-    host: 'https://www.naturewinyala.com',
+    host: 'https://naturewinyala.com',
   };
 }

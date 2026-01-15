@@ -83,7 +83,11 @@ const Home = () => {
         heading="A Tranquil Escape in the Heart of Yala"
         paragraph="Nature Win Yala is where comfort meets the wild. Our cozy cabanas sit beside the untouched beauty of Yala, surrounded by birdsong, starry skies, and the warmth of campfire nights. It’s a peaceful escape for friends, families, and nature lovers - a place to unwind, explore, and create memories that stay with you long after your journey ends."
         buttonText="Discover More"
-        button={<BtnComponent variant="btn_1"><Link href="/explore">Discover More</Link></BtnComponent>}
+        button={
+          <BtnComponent variant="btn_1">
+            <Link href="/explore">Discover More</Link>
+          </BtnComponent>
+        }
         aboutText="About Us"
         aboutTextColor="#ffffff"
       />
@@ -156,13 +160,14 @@ const Home = () => {
             </h2>
 
             <p className="text-gray-300 max-w-xl mx-auto leading-relaxed">
-              Whether you’re seeking a luxury family villa, a romantic couple's getaway, or a thrilling safari adventure - we have the best accommodation packages in Yala.
+              Whether you’re seeking a luxury family villa, a romantic couple's
+              getaway, or a thrilling safari adventure - we have the best
+              accommodation packages in Yala.
             </p>
           </div>
 
           {/* Cabana Grid - Now updated to 3 columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-            
             {/* Villa 1 */}
             <VillaHomeCard
               image={images.houseimg1}
@@ -205,7 +210,7 @@ const Home = () => {
 
             {/* Villa 3 - New Cabana */}
             <div className="relative overflow-hidden rounded-2xl">
-            {/* The Card with Blur Effect */}
+              {/* The Card with Blur Effect */}
               <VillaHomeCard
                 image={images.thumb15}
                 alt="Palugas Wewa Cabana"
@@ -224,7 +229,7 @@ const Home = () => {
                   </BtnComponent>
                 }
               />
-          </div>
+            </div>
           </div>
         </div>
       </div>
@@ -253,9 +258,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BtnComponent variant="btn_2">
-                Download Menu
-              </BtnComponent>
+              <BtnComponent variant="btn_2">Download Menu</BtnComponent>
             </a>
           }
         />
