@@ -19,10 +19,10 @@ export default function Navbar() {
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3" data-nosnippet>
+        <Link href="/" className="flex items-center gap-3" aria-label="Nature Win Yala Homepage" data-nosnippet>
           <Image
             src={images.LogoVersion2}
-            alt="Nature Win Yala"
+            alt="Nature Win Yala - Luxury Villa & Safari"
             width={200} // Reduced width for better layout fit
             height={60}
             className="object-contain w-auto h-12"
@@ -62,9 +62,8 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out ${
-          open ? "max-h-screen border-t border-gray-100" : "max-h-0"
-        }`}
+        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-screen border-t border-gray-100" : "max-h-0"
+          }`}
       >
         <div className="flex flex-col px-6 py-6 space-y-6 text-lg">
           <Link
