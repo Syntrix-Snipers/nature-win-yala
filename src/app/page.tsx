@@ -2,30 +2,65 @@ import Home from "./home/page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nature Win Yala | Luxury Safari Villa in Yala National Park",
-  description: "Experience the ultimate private luxury villa in Yala National Park. Nature Win Yala offers spacious cabanas, authentic Sri Lankan cuisine, and exclusive safari tours near the park entrance. Perfect for families and couples seeking a serene alternative to crowded hotels.",
+  title: "Nature Win Yala | Private Luxury Safari Villa | Yala National Park, Sri Lanka",
+  description: "Stay at Nature Win Yala, the premier private luxury villa near Yala National Park entrance. Enjoy spacious cabanas, private kitchens, authentic Sri Lankan dining, and exclusive jeep safaris. The perfect serene eyewear for families and couples seeking a unique wildlife experience in Sri Lanka.",
   openGraph: {
-    title: "Nature Win Yala | Luxury Safari Villa in Yala National Park",
+    title: "Nature Win Yala | Private Luxury Safari Villa | Yala National Park",
     description:
-      "Luxury two-bedroom villa near Yala National Park. Private kitchen, pet-friendly, local food, and safari experiences. Your ultimate Yala adventure starts here.",
+      "Your exclusive wildlife escape. Private luxury villas with kitchens, minutes from the Yala Safari entrance. Authentic food, personalized safaris, and total serenity.",
     url: "https://naturewinyala.com/",
     type: "website",
     siteName: "Nature Win Yala",
+    locale: "en_US",
     images: [
       {
         url: "/assets/images/thumb-1.png",
         width: 1200,
         height: 630,
-        alt: "Nature Win Yala Luxury Villa and Safari"
+        alt: "Nature Win Yala Private Luxury Villa Exterior"
+      },
+      {
+        url: "/assets/images/thumb-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Luxury Cabana Bedroom with Nature View"
+      },
+      {
+        url: "/assets/images/dining1.png",
+        width: 1200,
+        height: 630,
+        alt: "Authentic Sri Lankan Dining at Nature Win Yala"
+      },
+      {
+        url: "/assets/images/ElephantImg.png",
+        width: 1200,
+        height: 630,
+        alt: "Wild Elephant Safari in Yala National Park"
       }
     ]
   },
   keywords: [
-    "Nature Win Yala", "Yala National Park Accommodation", "Luxury Villa Yala", "Yala Safari Hotel",
-    "Private Villa Sri Lanka", "Yala Jeep Safari", "Best Hotels in Yala", "Family Accommodation Yala",
-    "Yala Glamping", "Sri Lanka Safari", "Yala National Park Entrance Hotel", "Katagamuwa Entrance",
-    "Palatupana Entrance", "Luxury Cabanas Yala", "Nature Resort Yala"
+    // Brand & Core
+    "Nature Win Yala", "Nature Win Yala Hotel", "Yala National Park Accommodation",
+
+    // Specific Accommodation Types
+    "Luxury Villa Yala", "Private Villa Yala", "Yala Cabanas", "Yala Safari Lodge",
+    "Private Villa with Kitchen Yala", "Luxury Bungalow Yala", "Glamping Yala",
+
+    // Location Specific
+    "Hotels near Yala Entrance", "Katagamuwa Entrance Hotels", "Palatupana Entrance Accommodation",
+    "Yala National Park Sri Lanka", "Tissamaharama Hotels",
+
+    // Experience & Features
+    "Yala Jeep Safari", "Best Safari Stay Yala", "Family Friendly Hotel Yala",
+    "Yala Honeymoon Hotels", "Eco Resort Yala", "Bird Watching Yala",
+    "Leopard Safari Yala", "Authentic Sri Lankan Food Yala",
+
+    // Intent / Booking
+    "Book Yala Safari", "Best Hotels in Yala 2026", "Affordable Luxury Yala"
   ],
+  authors: [{ name: "Nature Win Yala" }],
+  category: "Travel & Tourism",
 
   alternates: {
     canonical: "https://naturewinyala.com",

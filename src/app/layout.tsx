@@ -153,8 +153,10 @@ const jsonLd = {
       "telephone": contactData.phone,
       "email": contactData.email,
       "image": [
-        `${SITE_URL}${images.thumb1}`,
-        `${SITE_URL}${images.thumb2}`
+        `${SITE_URL}/assets/images/thumb-1.png`,
+        `${SITE_URL}/assets/images/thumb-2.png`,
+        `${SITE_URL}/assets/images/dining1.png`,
+        `${SITE_URL}/assets/images/ElephantImg.png`
       ],
       "priceRange": "$$$",
       "address": {
@@ -342,19 +344,21 @@ export default function RootLayout({
           id="ld-json-webpage"
           type="application/ld+json"
           strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "url": "https://naturewinyala.com/",
-            "name": "Nature Win Yala | Luxury Villa & Safari Accommodation",
-            "description": "Experience the ultimate luxury villa in Yala National Park.",
-            "primaryImageOfPage": {
-              "@type": "ImageObject",
-              "url": `${SITE_URL}${images.thumb1}`,
-              "width": 1200,
-              "height": 630
-            }
-          }) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "url": "https://naturewinyala.com/",
+              "name": "Nature Win Yala | Luxury Villa & Safari Accommodation",
+              "description": "Experience the ultimate luxury villa in Yala National Park.",
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": `${SITE_URL}${images.thumb1}`,
+                "width": 1200,
+                "height": 630
+              }
+            })
+          }}
         />
         {/* Organization JSON-LD removed to reduce logo prominence for search previews */}
 
@@ -363,30 +367,35 @@ export default function RootLayout({
           id="ld-json-hotel"
           type="application/ld+json"
           strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Hotel",
-            "name": "Nature Win Yala",
-            "url": "https://naturewinyala.com",
-            "image": [
-              `${SITE_URL}${images.thumb1}`
-            ],
-            "description": "Luxury cabanas & private safari accommodation beside Yala National Park.",
-            "telephone": contactData.phone,
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Rota Wewa Yaya, Uddhakandara, Thabarawa, Galkaduwa",
-              "addressLocality": "Yala",
-              "addressRegion": "Southern Province",
-              "postalCode": "82600",
-              "addressCountry": "LK"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 6.3386,
-              "longitude": 81.3965
-            }
-          }) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              "name": "Nature Win Yala",
+              "url": "https://naturewinyala.com",
+              "image": [
+                `${SITE_URL}/assets/images/thumb-1.png`,
+                `${SITE_URL}/assets/images/thumb-2.png`,
+                `${SITE_URL}/assets/images/dining1.png`,
+                `${SITE_URL}/assets/images/ElephantImg.png`
+              ],
+              "description": "Luxury cabanas & private safari accommodation beside Yala National Park.",
+              "telephone": contactData.phone,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rota Wewa Yaya, Uddhakandara, Thabarawa, Galkaduwa",
+                "addressLocality": "Yala",
+                "addressRegion": "Southern Province",
+                "postalCode": "82600",
+                "addressCountry": "LK"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 6.3386,
+                "longitude": 81.3965
+              }
+            })
+          }}
         />
         <Navbar />
         {children}
