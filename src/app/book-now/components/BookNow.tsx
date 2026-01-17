@@ -226,6 +226,7 @@ const BookingForm: React.FC = () => {
                   <option value="">Select Your Cabana</option>
                   <option>Gal Kaduwa Cabana</option>
                   <option>Rotawewa Cabana</option>
+                  <option>Palugas Wewa Cabana</option>
                 </select>
               </div>
 
