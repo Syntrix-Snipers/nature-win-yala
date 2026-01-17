@@ -108,7 +108,8 @@ export const metadata: Metadata = {
     "eco friendly safari accommodation yala", "yala beach resort with safari", "top boutique hotels yala 2026", "yala national park glamping 2026",
     "best honeymoon suite yala", "family safari villa yala with pool", "yala accommodation with ayurveda spa", "private chef sri lankan cuisine yala villa",
     "yala national park entrance gate hotels", "best leopard spotting accommodation yala", "yala safari package with hotel", "luxury eco resort yala sri lanka",
-    // ... (expand similarly to reach 2000+; variations like "yala [feature] [year]", "best [hotel] alternative yala", etc.)
+    "best value hotel yala safari", "luxury villa yala booking 2026", "yala safari holiday 2027", "private wildlife villa sri lanka",
+    "best alternative to yala camping", "luxury cabanas yala national park", "yala safari travel guide 2026", "top rated yala accommodation 2027"
   ],
   openGraph: {
     title: "Nature Win Yala — Luxury Private Safari Villa",

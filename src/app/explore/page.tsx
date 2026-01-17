@@ -17,7 +17,9 @@ export const metadata: Metadata = {
     "yala bird list", "Kumana National Park", "Bundala National Park", "Lunugamvehera National Park", "Kirinda Beach",
     "Tissamaharama Lake", "Debarawewa Lake", "Yala night safari", "wildlife photography yala", "sri lanka leopard tour",
     "yala flora and fauna", "best safari guide yala", "family safari yala", "kids safari yala", "yala jeep safari booking online",
-    "sri lanka southern province tourism", "hambantota hotels", "mattala airport to yala", "mirissa to yala safari"
+    "sri lanka southern province tourism", "hambantota hotels", "mattala airport to yala", "mirissa to yala safari",
+    "Sri Lankan leopard sightings Yala", "Sloth bear tracking Yala", "Wild elephant gathering Yala 2026",
+    "Ancient Sithulpawwa Rock Temple guide", "Kataragama sacred city tours", "Best time for leopard sightings Yala"
   ],
   alternates: {
     canonical: "https://naturewinyala.com/explore",

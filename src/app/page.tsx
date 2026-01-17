@@ -57,7 +57,9 @@ export const metadata: Metadata = {
     "Leopard Safari Yala", "Authentic Sri Lankan Food Yala",
 
     // Intent / Booking
-    "Book Yala Safari", "Best Hotels in Yala 2026", "Affordable Luxury Yala"
+    "Book Yala Safari", "Best Hotels in Yala 2026", "Affordable Luxury Yala",
+    "Yala safari booking 2026", "Luxury villa Yala near park entrance", "Best value Yala safari stay",
+    "Private safari jeep tours Yala", "2 bedroom villa Yala for family", "Yala accommodation with private kitchen"
   ],
   authors: [{ name: "Nature Win Yala" }],
   category: "Travel & Tourism",
