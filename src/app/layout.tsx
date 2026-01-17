@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/assets/images/LogoVersion2.png",
+    apple: "/assets/images/nature-win-yala-symbol.png",
   },
   title: "Nature Win Yala — Luxury Safari Villa & Cabanas in Yala, Sri Lanka",
   description:
@@ -365,7 +365,7 @@ export default function RootLayout({
             })
           }}
         />
-        {/* Organization JSON-LD removed to reduce logo prominence for search previews */}
+        {/* WebPage JSON-LD to emphasize the primary image for the homepage */}
 
         {/* Hotel JSON-LD to provide clear Hotel/LocalBusiness signals */}
         <Script
