@@ -2,10 +2,10 @@ import Home from "./home/page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nature Win Yala | Private Luxury Safari Villa | Yala National Park, Sri Lanka",
-  description: "Stay at Nature Win Yala, the premier private luxury villa near Yala National Park entrance. Enjoy spacious cabanas, private kitchens, authentic Sri Lankan dining, and exclusive jeep safaris. The perfect serene eyewear for families and couples seeking a unique wildlife experience in Sri Lanka.",
+  title: "Nature Win Yala — Private Luxury Safari Villa",
+  description: "Nature Win Yala is the premier private luxury villa near Yala National Park entrance. Enjoy spacious cabanas, private kitchens, authentic dining, and exclusive jeep safaris. The perfect serene escape for families and couples.",
   openGraph: {
-    title: "Nature Win Yala | Private Luxury Safari Villa | Yala National Park",
+    title: "Nature Win Yala — Private Luxury Safari Villa",
     description:
       "Your exclusive wildlife escape. Private luxury villas with kitchens, minutes from the Yala Safari entrance. Authentic food, personalized safaris, and total serenity.",
     url: "https://naturewinyala.com/",

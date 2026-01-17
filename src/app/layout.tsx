@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/assets/images/LogoVersion2.png",
   },
-  title: "Nature Win Yala | Luxury Villa & Safari Accommodation in Yala National Park, Sri Lanka",
+  title: "Nature Win Yala — Luxury Safari Villa & Cabanas in Yala, Sri Lanka",
   description:
-    "Experience the ultimate luxury villa in Yala National Park. Private 2-bedroom villa near Yala entrance, authentic Sri Lankan cuisine, personalized private safaris, and serene nature views. The best value alternative to large resorts for families and couples.",
+    "Experience the ultimate private luxury villa in Yala National Park. Two & three-bedroom villas near Yala entrance, authentic cuisine, and exclusive safaris. A serene escape for families and couples.",
   keywords: [
     // Original core + expansions
     "yala national park accommodation", "yala accommodation", "hotels in yala", "yala national park hotels", "best place to stay in yala",
@@ -111,9 +111,9 @@ export const metadata: Metadata = {
     // ... (expand similarly to reach 2000+; variations like "yala [feature] [year]", "best [hotel] alternative yala", etc.)
   ],
   openGraph: {
-    title: "Nature Win Yala | Luxury Villa & Safari Accommodation in Yala National Park",
+    title: "Nature Win Yala — Luxury Private Safari Villa",
     description:
-      "Your private luxury escape in Yala. 2-bedroom villa, 1000m² of serenity, private kitchen, and exclusive safari tours. The top-rated alternative to crowded resorts.",
+      "Your private luxury escape in Yala. 2 & 3 bedroom villas, private kitchen, and exclusive safari tours. The top-rated alternative to large resorts in Yala.",
     url: "https://naturewinyala.com/",
     type: "website",
     siteName: "Nature Win Yala",
@@ -135,7 +135,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nature Win Yala | Luxury Villa & Safari Stay",
+    title: "Nature Win Yala — Luxury Villa & Safari Stay",
     description:
       "Experience luxury in the wild. Private 2-bedroom villa near Yala National Park entrance with authentic cuisine and personalized safaris.",
     images: [
@@ -399,6 +399,21 @@ export default function RootLayout({
                 "latitude": 6.3386,
                 "longitude": 81.3965
               }
+            })
+          }}
+        />
+        {/* WebSite JSON-LD for Site Name recognition */}
+        <Script
+          id="ld-json-website"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Nature Win Yala",
+              "url": "https://naturewinyala.com",
+              "alternateName": ["NatureWinYala"]
             })
           }}
         />
