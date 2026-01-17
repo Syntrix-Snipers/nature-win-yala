@@ -1,6 +1,6 @@
 # Nature Win Yala 🌿🦒
 
-![Nature Win Yala](https://www.naturewinyala.com/_next/image?url=%2Fassets%2Fimages%2FFooterLogo.png&w=640&q=75)
+![Nature Win Yala](https://www.naturewinyala.com/_next/image?url=%2Fassets%2Fimages%2Fnature-win-yala-footer.png&w=640&q=75)
 
 **Your private getaway for comfort, relaxation, and celebration in Yala National Park, Sri Lanka**
 

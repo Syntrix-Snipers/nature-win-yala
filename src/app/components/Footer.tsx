@@ -12,10 +12,10 @@ export default function Footer() {
       <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 items-start">
-          {/* Logo + Description + Socials */}
+          {/* Brand Identity + Description + Socials */}
           <div className="md:col-span-5 flex flex-col gap-6">
             <Image
-              src={images.FooterLogo}
+              src={images.BrandFooter}
               alt="Nature Win Yala — Luxury Villa & Safari Accommodation"
               width={220}
               height={140}

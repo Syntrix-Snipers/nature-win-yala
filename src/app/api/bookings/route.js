@@ -21,7 +21,7 @@ export async function POST(req) {
 
     // IMPORTANT: Replace with your actual live domain (e.g., https://naturewinyala.com)
     const domain = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const logoUrl = `${domain}/assets/images/LogoVersion2.png`;
+    const logoUrl = `${domain}/assets/images/nature-win-yala-symbol.png`;
     // Please replace the logo path as well if necessary
 
     const transporter = nodemailer.createTransport({
