@@ -20,6 +20,7 @@ export default function Footer() {
               width={220}
               height={140}
               className="object-contain"
+              data-nosnippet
             />
 
             <p className="text-white text-sm leading-relaxed max-w-sm">
