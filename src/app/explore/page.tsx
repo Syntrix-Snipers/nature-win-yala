@@ -3,7 +3,7 @@ import ExploreContent from "./components/ExploreContent";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Explore Yala Safari | Luxury Private Jeep Tours & Nature Walks | Nature Win Yala",
+  title: "Explore Yala Safari | Tours & Nature Walks | Nature Win Yala",
   description: "Discover the best Yala National Park safari experience. We offer exclusive private jeep safaris, expert guides for leopard spotting, and luxury villa accommodation near the Palatupana and Katagamuwa entrances. Explore bird watching, ancient Sithulpawwa temple, and serene nature walks. The ultimate guide to Yala tourism.",
   keywords: [
     "Yala National Park", "Yala safari", "wildlife adventure Sri Lanka", "bird watching Yala", "nature walks Yala",
