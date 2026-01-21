@@ -25,9 +25,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" }
+    ],
     shortcut: "/favicon.ico",
-    apple: "/assets/images/nature-win-yala-symbol.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "android-chrome", url: "/android-chrome-192x192.png", sizes: "192x192" },
+      { rel: "android-chrome", url: "/android-chrome-512x512.png", sizes: "512x512" }
+    ]
   },
   title: "Nature Win Yala — Luxury Safari Villa & Cabanas in Yala, Sri Lanka",
   description:
@@ -337,6 +345,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#124734" />
         <meta name="robots" content="max-image-preview:large" />
         <link rel="canonical" href="https://naturewinyala.com/" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="antialiased">
         <Script

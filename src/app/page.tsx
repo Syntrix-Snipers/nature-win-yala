@@ -14,25 +14,25 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/assets/images/thumb-1.png",
+        url: "https://naturewinyala.com/assets/images/thumb-1.png",
         width: 1200,
         height: 630,
         alt: "Nature Win Yala Private Luxury Villa Exterior"
       },
       {
-        url: "/assets/images/thumb-2.png",
+        url: "https://naturewinyala.com/assets/images/thumb-2.png",
         width: 1200,
         height: 630,
         alt: "Luxury Cabana Bedroom with Nature View"
       },
       {
-        url: "/assets/images/dining1.png",
+        url: "https://naturewinyala.com/assets/images/dining1.png",
         width: 1200,
         height: 630,
         alt: "Authentic Sri Lankan Dining at Nature Win Yala"
       },
       {
-        url: "/assets/images/ElephantImg.png",
+        url: "https://naturewinyala.com/assets/images/ElephantImg.png",
         width: 1200,
         height: 630,
         alt: "Wild Elephant Safari in Yala National Park"
