@@ -174,7 +174,7 @@ const Home = () => {
               image={images.houseimg1}
               alt="Gal Kaduwa Cabana"
               title="Gal Kaduwa Cabana"
-              price="USD 50/night"
+              price="USD 60/night"
               features={[
                 { icon: icons.SmallHomeIcon, text: "Entire villa" },
                 { icon: icons.SmallProfileIcon, text: "6 Persons" },
@@ -194,7 +194,7 @@ const Home = () => {
               image={images.houseimg2}
               alt="Rotawewa Cabana"
               title="Rotawewa Cabana"
-              price="USD 50/night"
+              price="USD 60/night"
               features={[
                 { icon: icons.SmallHomeIcon, text: "Entire villa" },
                 { icon: icons.SmallProfileIcon, text: "6 Persons" },
@@ -216,7 +216,7 @@ const Home = () => {
                 image={images.thumb15}
                 alt="Palugas Wewa Cabana"
                 title="Palugas Wewa Cabana"
-                price="USD 50/night"
+                price="USD 60/night"
                 features={[
                   { icon: icons.SmallHomeIcon, text: "Entire Cabana" },
                   { icon: icons.SmallProfileIcon, text: "2 Persons" },
