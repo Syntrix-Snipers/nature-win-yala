@@ -2,12 +2,12 @@ import Home from "./home/page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nature Win Yala — Private Luxury Safari Villa",
-  description: "Nature Win Yala is the premier private luxury villa near Yala National Park entrance. Enjoy spacious cabanas, private kitchens, authentic dining, and exclusive jeep safaris. The perfect serene escape for families and couples.",
+  title: "Nature Win Yala — Safari Villa & Private Cabana",
+  description: "Nature Win Yala is the premier private cabana near Yala National Park entrance. Enjoy spacious cabanas, private kitchens, authentic dining, and exclusive jeep safaris. The perfect serene escape for families and couples.",
   openGraph: {
-    title: "Nature Win Yala — Private Luxury Safari Villa",
+    title: "Nature Win Yala — Safari Villa & Private Cabana",
     description:
-      "Your exclusive wildlife escape. Private luxury villas with kitchens, minutes from the Yala Safari entrance. Authentic food, personalized safaris, and total serenity.",
+      "Your exclusive wildlife escape. Private cabanas with kitchens, minutes from the Yala Safari entrance. Authentic food, personalized safaris, and total serenity.",
     url: "https://naturewinyala.com/",
     type: "website",
     siteName: "Nature Win Yala",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "https://naturewinyala.com/assets/images/thumb-1.png",
         width: 1200,
         height: 630,
-        alt: "Nature Win Yala Private Luxury Villa Exterior"
+        alt: "Nature Win Yala Private cabana Exterior"
       },
       {
         url: "https://naturewinyala.com/assets/images/thumb-2.png",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "Nature Win Yala", "Nature Win Yala Hotel", "Yala National Park Accommodation",
 
     // Specific Accommodation Types
-    "Luxury Villa Yala", "Private Villa Yala", "Yala Cabanas", "Yala Safari Lodge",
+    "cabana Yala", "Private Villa Yala", "Yala Cabanas", "Yala Safari Lodge",
     "Private Villa with Kitchen Yala", "Luxury Bungalow Yala", "Glamping Yala",
 
     // Location Specific
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 
     // Intent / Booking
     "Book Yala Safari", "Best Hotels in Yala 2026", "Affordable Luxury Yala",
-    "Yala safari booking 2026", "Luxury villa Yala near park entrance", "Best value Yala safari stay",
+    "Yala safari booking 2026", "cabana Yala near park entrance", "Best value Yala safari stay",
     "Private safari jeep tours Yala", "2 bedroom villa Yala for family", "Yala accommodation with private kitchen"
   ],
   authors: [{ name: "Nature Win Yala" }],

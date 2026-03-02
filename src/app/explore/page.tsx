@@ -4,10 +4,10 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Explore Yala Safari | Tours & Nature Walks | Nature Win Yala",
-  description: "Discover the best Yala National Park safari experience. We offer exclusive private jeep safaris, expert guides for leopard spotting, and luxury villa accommodation near the Palatupana and Katagamuwa entrances. Explore bird watching, ancient Sithulpawwa temple, and serene nature walks. The ultimate guide to Yala tourism.",
+  description: "Discover the best Yala National Park safari experience. We offer exclusive private jeep safaris, expert guides for leopard spotting, and cabana accommodation near the Palatupana and Katagamuwa entrances. Explore bird watching, ancient Sithulpawwa temple, and serene nature walks. The ultimate guide to Yala tourism.",
   keywords: [
     "Yala National Park", "Yala safari", "wildlife adventure Sri Lanka", "bird watching Yala", "nature walks Yala",
-    "luxury safari accommodation", "Nature Win Yala activities", "best food in Yala", "Yala tourism guide", "Sri Lanka travel tips",
+    "Safari accommodation", "Nature Win Yala activities", "best food in Yala", "Yala tourism guide", "Sri Lanka travel tips",
     "how to get to Yala", "safari booking Sri Lanka", "private jeep safari Yala", "leopard safari Yala", "Yala blocks guided tour",
     "Sithulpawwa rock temple visit", "best time to visit yala", "yala safari price", "yala jeep hire", "safari hotels yala",
     "camping in yala", "yala national park entrance fee", "katagamuwa entrance safari", "palatupana entrance safari", "yala block 1 safari",
@@ -73,7 +73,7 @@ const faqJsonLd = {
       "name": "Do you offer food and accommodation packages?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we offer full-board and half-board packages including authentic Sri Lankan rice and curry, fresh lake fish, and BBQ dinners using organic vegetables from our garden. Our luxury villas provide a private and comfortable stay."
+        "text": "Yes, we offer full-board and half-board packages including authentic Sri Lankan rice and curry, fresh lake fish, and BBQ dinners using organic vegetables from our garden. Our cabanas provide a private and comfortable stay."
       }
     },
     {

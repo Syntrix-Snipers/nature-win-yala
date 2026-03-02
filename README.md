@@ -11,7 +11,7 @@
 
 **Live Site:** [www.naturewinyala.com](https://www.naturewinyala.com)
 
-A modern, responsive web application built for **Nature Win Yala** – an exclusive luxury villa experience nestled in the wild heart of Yala National Park. Offering private two-bedroom (and upcoming three-bedroom) villas with authentic rustic charm, combined with thrilling safari adventures.
+A modern, responsive web application built for **Nature Win Yala** – an exclusive cabana experience nestled in the wild heart of Yala National Park. Offering private two-bedroom (and upcoming three-bedroom) villas with authentic rustic charm, combined with thrilling safari adventures.
 
 ### Gallery
 

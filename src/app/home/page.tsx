@@ -29,7 +29,7 @@ const Home = () => {
         <div className="absolute inset-0 hidden md:block">
           <Image
             src={images.houseimg2}
-            alt="Nature Win Yala Luxury Safari Villa in Yala National Park"
+            alt="Nature Win Yala Safari Villa in Yala National Park"
             fill
             style={{ objectFit: "cover" }}
             className="opacity-20"

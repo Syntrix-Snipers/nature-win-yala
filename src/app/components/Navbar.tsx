@@ -22,7 +22,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3" aria-label="Nature Win Yala Homepage" data-nosnippet>
           <Image
             src={images.BrandSymbol}
-            alt="Nature Win Yala — Luxury Villa & Safari"
+            alt="Nature Win Yala — cabana & Safari"
             width={200} // Reduced width for better layout fit
             height={60}
             className="object-contain w-auto h-12"

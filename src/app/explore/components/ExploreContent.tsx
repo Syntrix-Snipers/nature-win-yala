@@ -27,11 +27,11 @@ const faqs = [
     },
     {
         question: "Is the villa air-conditioned?",
-        answer: "Our luxury villa is designed to be cool and airy, with high ceilings and fans to complement the natural breeze. For specific air-conditioning requirements, please check the room amenities or contact us directly during booking.",
+        answer: "Our cabana is designed to be cool and airy, with high ceilings and fans to complement the natural breeze. For specific air-conditioning requirements, please check the room amenities or contact us directly during booking.",
     },
     {
         question: "Can I book the entire villa?",
-        answer: "Yes! Unlike a hotel room, you can book the entire 2-bedroom or 3-bedroom luxury villa for complete privacy. This makes it perfect for couples seeking romance or groups of friends and families wanting their own private space in the wild.",
+        answer: "Yes! Unlike a hotel room, you can book the entire 2-bedroom or 3-bedroom cabana for complete privacy. This makes it perfect for couples seeking romance or groups of friends and families wanting their own private space in the wild.",
     },
     {
         question: "Is there internet access?",
@@ -59,7 +59,7 @@ const faqs = [
     },
     {
         question: "Why choose Nature Win Yala over a hotel?",
-        answer: "Unlike crowded Yala hotels or resorts, Nature Win Yala offers a private luxury villa experience. You get the entire property to yourself, ensuring privacy, safety, and a personalized safari experience. It is the best value alternative to high-end resorts like Cinnamon Wild or Jetwing Yala, offering the same access to wildlife with more space, better home-cooked food, and a true connection to nature.",
+        answer: "Unlike crowded Yala hotels or resorts, Nature Win Yala offers a private cabana experience. You get the entire property to yourself, ensuring privacy, safety, and a personalized safari experience. It is the best value alternative to high-end resorts like Cinnamon Wild or Jetwing Yala, offering the same access to wildlife with more space, better home-cooked food, and a true connection to nature.",
     },
 ];
 
@@ -78,7 +78,7 @@ function FAQSection() {
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-serif text-[#124734] text-center mb-16">
-                    Frequently Asked Questions About Yala Luxury Safaris
+                    Frequently Asked Questions About Yala Safaris
                 </h2>
 
                 <div className="space-y-6">
