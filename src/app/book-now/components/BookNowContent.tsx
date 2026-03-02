@@ -98,7 +98,7 @@ export default function BookNowContent() {
                 <h3 className="text-white text-xl font-serif mb-1">
                   Gal Kaduwa Cabana
                 </h3>
-                <p className="text-gray-300">USD 50/night</p>
+                <p className="text-gray-300">USD 60/night</p>
               </div>
             </div>
 
@@ -120,7 +120,7 @@ export default function BookNowContent() {
                 <h3 className="text-white text-xl font-serif mb-1">
                   Rotawewa Cabana
                 </h3>
-                <p className="text-gray-300">USD 50/night</p>
+                <p className="text-gray-300">USD 60/night</p>
               </div>
             </div>
 
@@ -143,7 +143,7 @@ export default function BookNowContent() {
                   <h3 className="text-white text-xl font-serif mb-1">
                     Palugas Wewa Cabana
                   </h3>
-                  <p className="text-gray-300">USD 50/night</p>
+                  <p className="text-gray-300">USD 60/night</p>
                 </div>
               </div>
             </div>

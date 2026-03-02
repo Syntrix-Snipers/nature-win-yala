@@ -136,7 +136,7 @@ const VillaOneDetails = () => {
             </p>
 
             <div className="mb-8">
-              <span className="text-3xl font-semibold">USD 50</span>
+              <span className="text-3xl font-semibold">USD 60</span>
               <span className="text-gray-300 text-xl font-light"> / Night Per Person</span>
             </div>
 
