@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
-
-import { homeImages } from "../../../../public/assets/images/images";
+import { homeImages, galleryMore } from "../../../../public/assets/images/images";
+import BtnComponent from "../../components/BtnComponent";
 
 const images = [
   homeImages.galeryImage1,
@@ -16,7 +17,7 @@ const images = [
 
 const HomeGallerySection: React.FC = () => {
   return (
-    <section className="w-full pt-8 px-4 md:px-8">
+    <section id="gallery" className="w-full pt-8 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Left Column */}
@@ -88,6 +89,45 @@ const HomeGallerySection: React.FC = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* View More Button with Background Image */}
+        <div className="relative mt-12 rounded-2xl overflow-hidden group/cta">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={galleryMore[0].src}
+              alt="Scenic View of Yala National Park Entrance"
+              fill
+              className="object-cover transition-transform duration-1000 group-hover/cta:scale-110"
+            />
+            <div className="absolute inset-0 bg-[#124734]/40 group-hover/cta:bg-[#124734]/30 transition-colors duration-500"></div>
+          </div>
+
+          <div className="relative z-10 flex flex-col items-center justify-center py-16 px-6 text-center">
+            <h3 className="text-white text-2xl md:text-3xl font-bold mb-6 drop-shadow-md">
+              Hungry for More Nature?
+            </h3>
+            <Link href="/gallery">
+              <BtnComponent variant="btn_2" className="shadow-2xl">
+                Explore Full Gallery
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="ml-2"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </BtnComponent>
+            </Link>
           </div>
         </div>
       </div>
