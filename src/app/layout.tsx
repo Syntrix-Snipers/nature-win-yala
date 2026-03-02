@@ -37,35 +37,35 @@ export const metadata: Metadata = {
       { rel: "android-chrome", url: "/android-chrome-512x512.png", sizes: "512x512" }
     ]
   },
-  title: "Nature Win Yala — Luxury Safari Villa & Cabanas in Yala, Sri Lanka",
+  title: "Nature Win Yala — Safari Villa & Cabanas in Yala, Sri Lanka",
   description:
-    "Experience the ultimate private luxury villa in Yala National Park. Two & three-bedroom villas near Yala entrance, authentic cuisine, and exclusive safaris. A serene escape for families and couples.",
+    "Experience the ultimate private cabana in Yala National Park. Two & three-bedroom villas near Yala entrance, authentic cuisine, and exclusive safaris. A serene escape for families and couples.",
   keywords: [
     // Original core + expansions
     "yala national park accommodation", "yala accommodation", "hotels in yala", "yala national park hotels", "best place to stay in yala",
     "yala hotels sri lanka", "accommodation yala national park", "yala sri lanka hotels", "yala park accommodation", "where to stay yala national park",
-    "luxury villa yala", "private villa yala", "best luxury villa yala sri lanka", "yala villa", "2 bedroom luxury villa yala", "3 bedroom villa yala",
-    "luxury villas yala national park", "yala luxury villa", "private luxury villa yala", "best villa yala", "yala private villa", "luxury villa near yala national park",
-    "yala sri lanka luxury villa", "yala safari accommodation", "accommodation near yala national park entrance", "villa near yala entrance",
-    "best accommodation for yala safari", "luxury safari stay yala", "yala safari villa", "private safari accommodation yala", "yala national park safari accommodation",
+    "cabana yala", "private villa yala", "best cabana yala sri lanka", "yala villa", "2 bedroom cabana yala", "3 bedroom villa yala",
+    "cabanas yala national park", "yala cabana", "private cabana yala", "best villa yala", "yala private villa", "cabana near yala national park",
+    "yala sri lanka cabana", "yala safari accommodation", "accommodation near yala national park entrance", "villa near yala entrance",
+    "best accommodation for yala safari", "Safari stay yala", "yala safari villa", "private safari accommodation yala", "yala national park safari accommodation",
     "close to yala entrance villa", "yala safari hotels", "yala national park safari stay", "best place to stay for yala safari", "yala safari lodge",
     "luxury accommodation near yala entrance", "yala safari villa sri lanka", "affordable luxury yala", "best private villa yala", "luxury accommodation yala national park",
     "yala villa vs resort", "best alternative to wild coast yala", "affordable luxury accommodation yala", "yala luxury stay value", "best budget luxury yala",
-    "yala villa alternative to cinnamon wild", "private villa yala value", "luxury villa close to yala national park entrance", "best luxury accommodation yala sri lanka",
-    "where to stay in yala national park", "best place to stay near yala entrance", "luxury villa yala with private kitchen", "yala national park luxury stay",
+    "yala villa alternative to cinnamon wild", "private villa yala value", "cabana close to yala national park entrance", "best luxury accommodation yala sri lanka",
+    "where to stay in yala national park", "best place to stay near yala entrance", "cabana yala with private kitchen", "yala national park luxury stay",
     "best villa for yala safari", "yala accommodation with homemade food", "luxury 2 bedroom villa yala sri lanka", "private balcony view villa yala",
     "yala national park villa accommodation", "best hotels near yala national park entrance", "yala sri lanka villa safari", "luxury stay yala national park",
-    "yala entrance accommodation", "best luxury villa yala 2026", "yala safari accommodation near entrance", "private villa yala national park sri lanka",
-    "yala luxury villa with kitchen", "where to stay for yala safari", "yala national park best accommodation", "luxury villa near tissamaharama yala",
-    "yala safari private villa", "best place to stay in yala for families", "yala accommodation rota wewa", "luxury villa yala with balcony view",
-    "yala sri lanka best villa", "yala national park hotels near entrance", "affordable luxury villa yala", "yala safari accommodation with private kitchen",
+    "yala entrance accommodation", "best cabana yala 2026", "yala safari accommodation near entrance", "private villa yala national park sri lanka",
+    "yala cabana with kitchen", "where to stay for yala safari", "yala national park best accommodation", "cabana near tissamaharama yala",
+    "yala safari private villa", "best place to stay in yala for families", "yala accommodation rota wewa", "cabana yala with balcony view",
+    "yala sri lanka best villa", "yala national park hotels near entrance", "affordable cabana yala", "yala safari accommodation with private kitchen",
     "best luxury stay yala national park", "yala villa near park entrance", "luxury accommodation yala with safari", "yala national park private villa",
-    "best yala villa sri lanka", "yala safari hotels near entrance", "luxury villa yala authentic food", "yala accommodation close to entrance",
-    "private luxury stay yala", "yala national park villa with view", "best accommodation yala sri lanka 2026", "yala luxury villa private safari",
-    "yala entrance villa accommodation", "luxury safari accommodation yala sri lanka", "yala national park best villa", "best place to stay yala leopard safari",
-    "yala villa with authentic sri lankan meals", "luxury accommodation near yala park", "yala sri lanka private villa safari", "best luxury villa near yala entrance",
-    "yala national park accommodation with kitchen", "luxury villa yala family stay", "yala safari stay with private kitchen", "best yala accommodation value",
-    "yala luxury villa near entrance", "private villa yala with safari", "yala national park luxury villa 2 bedroom", "yala sri lanka safari accommodation luxury",
+    "best yala villa sri lanka", "yala safari hotels near entrance", "cabana yala authentic food", "yala accommodation close to entrance",
+    "private luxury stay yala", "yala national park villa with view", "best accommodation yala sri lanka 2026", "yala cabana private safari",
+    "yala entrance villa accommodation", "Safari accommodation yala sri lanka", "yala national park best villa", "best place to stay yala leopard safari",
+    "yala villa with authentic sri lankan meals", "luxury accommodation near yala park", "yala sri lanka private villa safari", "best cabana near yala entrance",
+    "yala national park accommodation with kitchen", "cabana yala family stay", "yala safari stay with private kitchen", "best yala accommodation value",
+    "yala cabana near entrance", "private villa yala with safari", "yala national park cabana 2 bedroom", "yala sri lanka safari accommodation luxury",
     "best villa yala national park", "luxury stay yala with balcony", "yala accommodation near yala entrance",
     "hotels near yala", "hotels near yala national park", "yala hotels", "yala resort", "yala resorts", "yala safari camp", "camping in yala", "glamping yala",
     "chena huts yala alternative", "cinnamon wild yala alternative", "jetwing yala alternative", "hilton yala alternative", "wild coast tented lodge alternative",
@@ -78,13 +78,13 @@ export const metadata: Metadata = {
 
     // New from popular hotels/resorts (2025-2026 trends)
     "jetwing yala hotel", "cinnamon wild yala", "wild coast tented lodge", "uga chena huts yala", "hilton yala resort", "mahoora tented safari camp yala",
-    "jetwing jungle lodge yala", "laya safari resort yala", "kotiyagala luxury villas", "o2 villas yala", "wild culture yala", "leopard nest glamping yala",
+    "jetwing jungle lodge yala", "laya safari resort yala", "kotiyagala cabanas", "o2 villas yala", "wild culture yala", "leopard nest glamping yala",
     "kulu safaris yala", "back of beyond safari lodge yala", "nikara yala beach villas", "thaulle ayurveda resort yala", "yala safari game lodge",
     "best jetwing yala reviews 2026", "cinnamon wild yala all inclusive", "wild coast tented lodge cocoons", "uga chena huts plunge pool",
-    "hilton yala resort private pool villa", "kotiyagala luxury villas private chef", "o2 villas yala serene escape", "wild culture yala pool",
+    "hilton yala resort private pool villa", "kotiyagala cabanas private chef", "o2 villas yala serene escape", "wild culture yala pool",
 
     // 2025/2026 future-focused
-    "best yala hotels 2026", "new luxury resorts yala 2026", "yala accommodation trends 2026", "best luxury villas yala 2026", "eco friendly hotels yala 2026",
+    "best yala hotels 2026", "new luxury resorts yala 2026", "yala accommodation trends 2026", "best cabanas yala 2026", "eco friendly hotels yala 2026",
     "sustainable safari stays yala 2026", "yala national park hotels 2026", "top yala resorts opening 2026", "best place to stay yala 2026",
     "yala safari accommodation 2026", "luxury glamping yala 2026", "all inclusive yala hotels 2026", "yala national park best accommodation 2026",
 
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     "yala safari for couples", "private pool villa yala honeymoon", "yala national park romantic getaway",
 
     // Budget & value
-    "budget hotels near yala entrance", "affordable safari lodges yala", "cheap luxury villas yala", "best value accommodation yala 2026",
+    "budget hotels near yala entrance", "affordable safari lodges yala", "cheap cabanas yala", "best value accommodation yala 2026",
 
     // Eco & unique
     "eco lodge yala national park", "sustainable villas yala", "glamping tents yala", "treehouse accommodation yala", "beach safari resort yala",
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     "eco friendly safari accommodation yala", "yala beach resort with safari", "top boutique hotels yala 2026", "yala national park glamping 2026",
     "best honeymoon suite yala", "family safari villa yala with pool", "yala accommodation with ayurveda spa", "private chef sri lankan cuisine yala villa",
     "yala national park entrance gate hotels", "best leopard spotting accommodation yala", "yala safari package with hotel", "luxury eco resort yala sri lanka",
-    "best value hotel yala safari", "luxury villa yala booking 2026", "yala safari holiday 2027", "private wildlife villa sri lanka",
+    "best value hotel yala safari", "cabana yala booking 2026", "yala safari holiday 2027", "private wildlife villa sri lanka",
     "best alternative to yala camping", "luxury cabanas yala national park", "yala safari travel guide 2026", "top rated yala accommodation 2027"
   ],
   openGraph: {
@@ -132,7 +132,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}${images.thumb1}`,
         width: 1200,
         height: 630,
-        alt: "Nature Win Yala Luxury Villa and Private Safari Accommodation"
+        alt: "Nature Win Yala cabana and Private Safari Accommodation"
       },
       {
         url: `${SITE_URL}${images.thumb2}`,
@@ -144,7 +144,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nature Win Yala — Luxury Villa & Safari Stay",
+    title: "Nature Win Yala — cabana & Safari Stay",
     description:
       "Experience luxury in the wild. Private 2-bedroom villa near Yala National Park entrance with authentic cuisine and personalized safaris.",
     images: [
@@ -161,8 +161,8 @@ const jsonLd = {
     {
       "@type": "LodgingBusiness",
       "@id": "https://naturewinyala.com/#lodging",
-      "name": "Nature Win Yala | Luxury Villa & Safari Accommodation",
-      "description": "Nature Win Yala is the premier choice for luxury accommodation in Yala National Park. Unlike typical hotels in Yala, we offer a private 2-bedroom and 3-bedroom luxury villa experience just minutes from the Yala Safari entrance. Perfect for families and couples, our accommodation features private kitchens, spacious 1000m² grounds, and authentic Sri Lankan cuisine. We provide exclusive private jeep safari tours to spot leopards, elephants, and bears. Experience a better alternative to crowded Yala resorts like Cinnamon Wild or Jetwing Yala with our personalized service and serene nature setting.",
+      "name": "Nature Win Yala | cabana & Safari Accommodation",
+      "description": "Nature Win Yala is the premier choice for luxury accommodation in Yala National Park. Unlike typical hotels in Yala, we offer a private 2-bedroom and 3-bedroom cabana experience just minutes from the Yala Safari entrance. Perfect for families and couples, our accommodation features private kitchens, spacious 1000m² grounds, and authentic Sri Lankan cuisine. We provide exclusive private jeep safari tours to spot leopards, elephants, and bears. Experience a better alternative to crowded Yala resorts like Cinnamon Wild or Jetwing Yala with our personalized service and serene nature setting.",
       "url": "https://naturewinyala.com/",
       "telephone": contactData.phone,
       "email": contactData.email,
@@ -194,7 +194,7 @@ const jsonLd = {
         "worstRating": "1"
       },
       "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Private Luxury Villa", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Private cabana", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Entire Villa Rental", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Close to Yala National Park Entrance", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Private Full Kitchen", "value": true },
@@ -246,7 +246,7 @@ const jsonLd = {
           "name": "Does the villa have a private kitchen and chef?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, our luxury villa features a private full kitchen for your convenience. We also specialize in serving authentic homemade Sri Lankan cuisine prepared by our local hosts, which guests rave about as a highlight of their stay."
+            "text": "Yes, our cabana features a private full kitchen for your convenience. We also specialize in serving authentic homemade Sri Lankan cuisine prepared by our local hosts, which guests rave about as a highlight of their stay."
           }
         },
         {
@@ -291,7 +291,7 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          "name": "What amenities are included in the luxury villa?",
+          "name": "What amenities are included in the cabana?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Our villa includes air-conditioned possibilities (check specific room), private attached bathrooms, hot water, free Wi-Fi, a private kitchen, a balcony with nature views, and an outdoor campfire area."
@@ -364,8 +364,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebPage",
               "url": "https://naturewinyala.com/",
-              "name": "Nature Win Yala | Luxury Villa & Safari Accommodation",
-              "description": "Experience the ultimate luxury villa in Yala National Park.",
+              "name": "Nature Win Yala | cabana & Safari Accommodation",
+              "description": "Experience the ultimate cabana in Yala National Park.",
               "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "url": `${SITE_URL}${images.thumb1}`,

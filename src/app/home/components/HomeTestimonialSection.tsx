@@ -7,13 +7,13 @@ import { images } from "../../../../public/assets/images/images";
 const testimonials = [
   {
     description:
-      "The best luxury villa in Yala! We had the entire 2-bedroom villa to ourselves, and it was so close to the Yala National Park entrance. The private safari arranged by the host was incredible—we saw three leopards! The homemade Sri Lankan food was the highlight.",
+      "The best cabana in Yala! We had the entire 2-bedroom villa to ourselves, and it was so close to the Yala National Park entrance. The private safari arranged by the host was incredible—we saw three leopards! The homemade Sri Lankan food was the highlight.",
     profileImage: images.TestimonialPhoto,
     name: "Sarah Jenkins",
   },
   {
     description:
-      "Perfect family stay. Unlike the crowded hotels, Nature Win Yala gave us total privacy and space. The kids loved the campfire and the huge garden. Unbeatable value for a luxury safari accommodation near the park.",
+      "Perfect family stay. Unlike the crowded hotels, Nature Win Yala gave us total privacy and space. The kids loved the campfire and the huge garden. Unbeatable value for a Safari accommodation near the park.",
     profileImage: images.TestimonialPhoto2,
     name: "Kasun Perera",
   },
@@ -34,7 +34,7 @@ const testimonials = [
     name: "Nadeeshan P.",
   },
   {
-    description: "Excellent value for money. You get a whole luxury villa for the price of a hotel room. Very close to Yala safari entrance. The host organized everything perfectly, from the jeep to the meals.",
+    description: "Excellent value for money. You get a whole cabana for the price of a hotel room. Very close to Yala safari entrance. The host organized everything perfectly, from the jeep to the meals.",
     profileImage: images.TestimonialPhoto6,
     name: "Ishara M.",
   },

@@ -13,21 +13,21 @@ export default function BookNowContent() {
     "villa1"
   );
 
-const [isExiting, setIsExiting] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
 
-const handleVillaChange = () => {
-  setIsExiting(true);
+  const handleVillaChange = () => {
+    setIsExiting(true);
 
-  setTimeout(() => {
-    setSelectedVilla((prev) => {
-      if (prev === "villa1") return "villa2";
-      if (prev === "villa2") return "villa3";
-      return "villa1";
-    });
+    setTimeout(() => {
+      setSelectedVilla((prev) => {
+        if (prev === "villa1") return "villa2";
+        if (prev === "villa2") return "villa3";
+        return "villa1";
+      });
 
-    setIsExiting(false);
-  }, 300);
-};
+      setIsExiting(false);
+    }, 300);
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -36,7 +36,7 @@ const handleVillaChange = () => {
         {/* Background Image */}
         <Image
           src="/assets/images/houseimg1.png"
-          alt="Book Luxury Safari Villa in Yala National Park"
+          alt="Book Safari Villa in Yala National Park"
           fill
           style={{ objectFit: "cover" }}
           className="opacity-20"
@@ -72,20 +72,19 @@ const handleVillaChange = () => {
             <h2 className="text-4xl md:text-5xl font-serif text-[#124734] mb-6">
               Select Your Private Villa Package
             </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Reserve the best private villa near Yala National Park. A superior choice compared to crowded Yala hotels, offering complete privacy, a private kitchen, and exclusive safari tours. Perfect for families and couples seeking a luxury nature escape.
-          </p>
+            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Reserve the best private villa near Yala National Park. A superior choice compared to crowded Yala hotels, offering complete privacy, a private kitchen, and exclusive safari tours. Perfect for families and couples seeking a luxury nature escape.
+            </p>
           </div>
 
           {/* Cabana Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-            
+
             {/* Card 1: Galkaduwa Cabana */}
             <div
               onClick={() => setSelectedVilla("villa1")}
-              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${
-                selectedVilla === "villa1" ? "border-[#124734]" : "border-transparent"
-              }`}
+              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${selectedVilla === "villa1" ? "border-[#124734]" : "border-transparent"
+                }`}
             >
               <div className="relative h-[300px] w-full">
                 <Image
@@ -106,9 +105,8 @@ const handleVillaChange = () => {
             {/* Card 2: Rotawewa Cabana */}
             <div
               onClick={() => setSelectedVilla("villa2")}
-              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${
-                selectedVilla === "villa2" ? "border-[#124734]" : "border-transparent"
-              }`}
+              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${selectedVilla === "villa2" ? "border-[#124734]" : "border-transparent"
+                }`}
             >
               <div className="relative h-[300px] w-full">
                 <Image
@@ -129,14 +127,13 @@ const handleVillaChange = () => {
             {/* Card 3: Palugas Wewa Cabana */}
             <div
               onClick={() => setSelectedVilla("villa3")}
-              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${
-                selectedVilla === "villa3" ? "border-[#124734]" : "border-transparent"
-              }`}
+              className={`group cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] border-2 ${selectedVilla === "villa3" ? "border-[#124734]" : "border-transparent"
+                }`}
             >
-            <div className="relative group rounded-xl overflow-hidden shadow-lg border-2 border-transparent">
+              <div className="relative group rounded-xl overflow-hidden shadow-lg border-2 border-transparent">
                 <div className="relative h-[300px] w-full">
                   <Image
-                    src="/assets/images/thumb-15.jpeg" 
+                    src="/assets/images/thumb-15.jpeg"
                     alt="Palugas Wewa Cabana"
                     fill
                     className="object-cover"
@@ -148,7 +145,7 @@ const handleVillaChange = () => {
                   </h3>
                   <p className="text-gray-300">USD 50/night</p>
                 </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -156,10 +153,10 @@ const handleVillaChange = () => {
 
       {/* Third Section: Animated Details with Arrows */}
       <div className="relative bg-[#124734] py-10 md:py-0">
-        
+
         {/* Navigation Arrows - Repositioned for Mobile */}
         <div className="flex items-center justify-between px-6 md:px-10 mb-6 md:mb-0 md:absolute md:inset-y-0 md:w-full z-30 pointer-events-none">
-          
+
           {/* Previous Arrow */}
           <button
             onClick={() => {
@@ -209,19 +206,18 @@ const handleVillaChange = () => {
         </div>
 
         {/* Animated Content Wrapper */}
-        <div 
-          className={`transition-all duration-500 ease-in-out transform ${
-            isExiting 
-            ? "opacity-0 scale-[0.98] translate-y-4" 
-            : "opacity-100 scale-100 translate-y-0"
-          }`}
+        <div
+          className={`transition-all duration-500 ease-in-out transform ${isExiting
+              ? "opacity-0 scale-[0.98] translate-y-4"
+              : "opacity-100 scale-100 translate-y-0"
+            }`}
         >
           {selectedVilla === "villa1" && <VillaOneDetails />}
           {selectedVilla === "villa2" && <VillaTwoDetails />}
           {selectedVilla === "villa3" && <VillaThreeDetails />}
         </div>
       </div>
-      
+
       {/* Fourth Section: New Booking Form */}
       <BookingForm />
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/images/houseimg1.png",
-        alt: "Book Nature Win Yala Luxury Villa Accommodation"
+        alt: "Book Nature Win Yala cabana Accommodation"
       }
     ],
     type: "website",
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book Luxury Villa Stay in Yala National Park",
+    title: "Book cabana Stay in Yala National Park",
     description: "Reserve your private 2-bedroom villa near Yala entrance. Perfect for families and safari lovers. Book now!",
     images: [
       {
         url: "/assets/images/houseimg1.png",
-        alt: "Book Nature Win Yala Luxury Villa Accommodation"
+        alt: "Book Nature Win Yala cabana Accommodation"
       }
     ]
   }

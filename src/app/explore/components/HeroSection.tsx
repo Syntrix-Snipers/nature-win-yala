@@ -12,7 +12,7 @@ const HeroSection = () => {
         {/* Background Image */}
         <Image
           src={backgroundImage}
-          alt="Yala National Park Safari Adventure and Luxury Villa Landscape"
+          alt="Yala National Park Safari Adventure and cabana Landscape"
           fill
           priority
           className="
